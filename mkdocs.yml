@@ -1,0 +1,33 @@
+#http://127.0.0.1:8000/
+
+site_name: ID4B Documentation
+site_name: CHESS ID4B
+site_url: https://example.com/
+#curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
+
+nav:
+    - Home: index.md
+    - SPEC commands ID4B: 'SPEC_commands.md'
+    - SPEC macros : SPEC_macros.md
+    - Sample alignment : sample_alignment.md
+    - Data processing : ID4B_Codes.md
+    - Publication : Publication.md
+    - About: about.md
+    
+
+theme: 
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+
+    analytics: 
+        gtag: G-ABC123
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+
+
