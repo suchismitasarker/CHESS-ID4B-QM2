@@ -1,18 +1,38 @@
+
 #http://127.0.0.1:8000/
+#https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md
 
 site_name: ID4B Documentation
 site_name: CHESS ID4B
 site_url: https://example.com/
+repo_url: https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md
 #curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
 
+
 nav:
-    - Home: index.md
-    - SPEC commands ID4B: 'SPEC_commands.md'
-    - SPEC macros : SPEC_macros.md
-    - Sample alignment : sample_alignment.md
-    - Data processing : ID4B_Codes.md
-    - Publication : Publication.md
-    - About: about.md
+    - Home: 
+        - Welcome : 'index.md'
+        - 'User Guide':
+            - Introduction: 'introduction.md'
+            - 'SPEC-ID4B':
+                - ID4B-SPEC commands: 'SPEC_commands.md'
+                - SPEC macros : SPEC_macros.md
+            - 'Sample Alignment':
+                - Sample alignment : sample_alignment.md
+            - 'Data Analysis':
+                - Data processing : ID4B_Codes.md
+        - Beamline details:
+            - Beamline setup : beamline_setup.md
+            - Device configuration : Device_configuration.md
+            - Detector information : Detector_information.md
+            - Publication : publications.md
+        - Frequently Asked Questions (FAQ) : 'FAQ.md'
+        
+        - About:
+            - About: about.md
+            - 'License': 'license.md'
+        - 'Release Notes': 'release-notes.md'
+    
     
 
 theme: 
@@ -21,6 +41,8 @@ theme:
     hljs_languages:
         - yaml
         - rust
+    features:
+        - navigation.indexes
 
     analytics: 
         gtag: G-ABC123
@@ -29,5 +51,12 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
+  - attr_list
+  - md_in_html
+  - codehilite:
+      guess_lang: false
+      use_pygments: true
+
+:root > * { --md-code-hl-string-color: #0FF1CE; }
 
 

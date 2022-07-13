@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/ID4B_Codes/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data processing - CHESS ID4B</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data processing";
+        var mkdocs_page_input_path = "ID4B_Codes.md";
+        var mkdocs_page_url = "/ID4B_Codes/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ABC123');
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CHESS ID4B
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SPEC_commands/">SPEC commands ID4B</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SPEC_macros/">SPEC macros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Data processing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#single-crystal-data-processing-steps">Single crystal data-processing steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-i-calibrate-detector-beamline">Step I :  Calibrate Detector &amp; Beamline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-ii-stack-data">STEP II :  Stack data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-iii-find-bragg-peaks">STEP III:  Find Bragg peaks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-iv-solve-orientation-matrix">STEP IV:  Solve orientation matrix</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-v-convert-stacks-of-data-to-hkl-volume">STEP V:  Convert stacks of data to HKL volume</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../publications/">Publication</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CHESS ID4B</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Data processing</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md/edit/master/docs/ID4B_Codes.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-data-processing-codes">Welcome to data processing Codes<a class="headerlink" href="#welcome-to-data-processing-codes" title="Permanent link">&para;</a></h1>
+<div class="admonition type">
+<p class="admonition-title">NOTE</p>
+<p>Single crystal data-processing codes are written by  <a href="https://www.chess.cornell.edu/about/staff-directory/jacob-ruff">Dr. Jacob Ruff</a> based on reference</p>
+<ul>
+<li>[1] <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1107/S0021889899001223">H. You, J. Appl. Cryst.(1999).32, 614-623</a> and </li>
+<li>[2] <a href="https://scripts.iucr.org/cgi-bin/paper?s0365110x67000970">W. R. &amp; Levy, H. A. (1967). Acta Cryst. 22, 457–464</a></li>
+</ul>
+</div>
+<hr />
+<h3 id="single-crystal-data-processing-steps">Single crystal data-processing steps<a class="headerlink" href="#single-crystal-data-processing-steps" title="Permanent link">&para;</a></h3>
+<hr />
+<ul>
+<li><code>STEP I</code>:  Calibrate Detector &amp; Beamline</li>
+<li><code>STEP II</code>:  Stack data</li>
+<li><code>STEP III</code>:  Find Bragg peaks</li>
+<li><code>STEP IV</code>:  Solve orientation matrix</li>
+<li><code>STEP V</code>:  Convert stacks of data to HKL volume </li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Detailed Descriptions</p>
+</div>
+<h5 id="step-i-calibrate-detector-beamline">Step I :  Calibrate Detector &amp; Beamline<a class="headerlink" href="#step-i-calibrate-detector-beamline" title="Permanent link">&para;</a></h5>
+<p>After collecting data from CeO2, LaB6, we calibrate the date by using pyFAI-calib2. Referemce shown below</p>
+<p>Reference: 
+pyFAI reference :<a href="https://pyfai.readthedocs.io/en/master/">pyFAI</a>.
+pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/calib-gui/index.html#cookbook-calibration-gui">calibration_video</a> Calibration of a diffraction setup using the Graphical User Interface (GUI) </p>
+<pre><code>``pyFAI-calib2``            #   generates .poni and mask.edf files
+</code></pre>
+<p>===========================================================================</p>
+<h5 id="step-ii-stack-data">STEP II :  Stack data<a class="headerlink" href="#step-ii-stack-data" title="Permanent link">&para;</a></h5>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all</a> -python script (edit to point to calibration files and project)</p>
+<p><code>python stack_em_all_cbf_2022.py</code>    chem_formula sample_id spec_scan_num temperature</p>
+<p>===========================================================================</p>
+<h5 id="step-iii-find-bragg-peaks">STEP III:  Find Bragg peaks<a class="headerlink" href="#step-iii-find-bragg-peaks" title="Permanent link">&para;</a></h5>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py">simple_peakfinder</a> script</p>
+<p><code>python simple_peakfinder.py</code> <em>/full/path/to/stack/ 0.95</em></p>
+<p>Would consider anything above 95% of max counts as a Bragg peak</p>
+<p>===========================================================================</p>
+<h5 id="step-iv-solve-orientation-matrix">STEP IV:  Solve orientation matrix<a class="headerlink" href="#step-iv-solve-orientation-matrix" title="Permanent link">&para;</a></h5>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py">auto_ormfinder</a> script </p>
+<p><code>python auto_ormfinder.py</code> <em>/full/path/to/stack/ peakfilename.nxs</em></p>
+<p>===========================================================================</p>
+<h5 id="step-v-convert-stacks-of-data-to-hkl-volume">STEP V:  Convert stacks of data to HKL volume<a class="headerlink" href="#step-v-convert-stacks-of-data-to-hkl-volume" title="Permanent link">&para;</a></h5>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
+<p><code>python  Pil6M_HKLConv_3D_2022.py</code> <em>temperature</em> </p>
+<p>===========================================================================</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sample_alignment/" class="btn btn-neutral float-left" title="Sample alignment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../publications/" class="btn btn-neutral float-right" title="Publication">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../sample_alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../publications/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
