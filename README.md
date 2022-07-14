@@ -1,6 +1,6 @@
-# CHESS-ID4B-QM2
 
-# Welcome to CHESS QM2 Beamline Documentation!
+
+# Welcome to CHESS ID4B - QM2 Beamline Documentation!
 
 The QM2 beamline is optimized to uncover intertwined quantum correlations of spins, charges and orbitals, over a wide temperature range and spanning entire phase diagrams. For full documentation of beamline capabilities, please visit [QM2 Documentation](https://suchismitasarker.github.io/CHESS-ID4B-QM2/).
 
