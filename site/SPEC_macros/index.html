@@ -50,39 +50,66 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../SPEC_commands/">SPEC commands ID4B</a>
-                </li>
-              </ul>
+              <p class="caption"><span class="caption-text">Home</span></p>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">SPEC macros</a>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#important-spec-commands-for-id4b">Important SPEC commands for ID4B</a>
+                <li class="toctree-l2"><a class="" href="../introduction.md">Introduction</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SPEC-ID4B</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">SPEC macros</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#important-spec-commands-for-id4b">Important SPEC commands for ID4B</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#detailed-description-of-macros">Detailed description of macros</a>
+    <li class="toctree-l4"><a class="reference internal" href="#detailed-description-of-macros">Detailed description of macros</a>
     </li>
     </ul>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+    </ul>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../publications/">Publication</a>
+    </ul>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Beamline details</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../Device_configuration.md">Device configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../Detector_information.md">Detector information</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../publications/">Publication</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQ/">Frequently Asked Questions (FAQ)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">About</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../about/">About</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../license.md">License</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../release-notes.md">Release Notes</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -97,7 +124,10 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>SPEC macros</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Home &raquo;</li>
+          <li>User Guide &raquo;</li>
+          <li>SPEC-ID4B &raquo;</li><li>SPEC macros</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md/edit/master/docs/SPEC_macros.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -118,7 +148,7 @@
 <p>In ID4B, SPEC code is used along with python and C commands. ID4B beamline specific macros are shown below.</p>
 <h2 id="important-spec-commands-for-id4b">Important SPEC commands for ID4B<a class="headerlink" href="#important-spec-commands-for-id4b" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/userlist.mac"><code>userlist.mac</code></a> - Important macos needed for the users, delaied descrispotion are shown below. <pre><code>``JRs_useful_macros.mac``          #   generate SPEC macros for beam, motor and slit positions
+<li><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/userlist.mac"><code>userlist.mac</code></a> - Important macos needed for the users, delaied descrispotion are shown below. <pre class="codehilite"><code>``JRs_useful_macros.mac``          #   generate SPEC macros for beam, motor and slit positions
   plotlast.mac                     #   generate??
   undulator_macro.mac              #   undulator stability
   syncmon.mac                      #   syncronoze the system
@@ -130,6 +160,7 @@
   energy_pv.mac                    #   Energy macros
   undulator_2A.mac                 #   Undulator stablibility macros
 </code></pre>
+
 </li>
 </ul>
 <div class="admonition important">
@@ -138,7 +169,7 @@
 </div>
 <h2 id="detailed-description-of-macros">Detailed description of macros<a class="headerlink" href="#detailed-description-of-macros" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/JRs_useful_macros.mac">JRs_useful_macros.mac</a></p>
-<pre><code>1.  Define a macro vbeamscan based on passing four arrguments start, finish, interval and time parameter scans
+<pre class="codehilite"><code>1.  Define a macro vbeamscan based on passing four arrguments start, finish, interval and time parameter scans
 2.  Define a macro newbeam based on passing four arrguments start, finish, interval and time parameter scans
 3.  Define a macro hbeamscan based on passing four arrguments start, finish, interval and time parameter scans
 4.  Define a macro monocromator position
@@ -155,7 +186,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../SPEC_commands/" class="btn btn-neutral float-left" title="SPEC commands ID4B"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SPEC_commands/" class="btn btn-neutral float-left" title="ID4B-SPEC commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../sample_alignment/" class="btn btn-neutral float-right" title="Sample alignment">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

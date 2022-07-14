@@ -1,30 +1,32 @@
 
 #http://127.0.0.1:8000/
-#https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md
 
-site_name: ID4B Documentation
-site_name: CHESS ID4B
+
+
+site_name: CHESS ID4B QM2
 site_url: https://example.com/
-repo_url: https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md
-#curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
+repo_url: https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md
+copyright: © Copyright 2022, Suchismita Sarker
+generator: false
 
+extra:
+  generator: false
 
 nav:
     - Home: 
         - Welcome : 'index.md'
         - 'User Guide':
             - Introduction: 'introduction.md'
-            - 'SPEC-ID4B':
-                - ID4B-SPEC commands: 'SPEC_commands.md'
-                - SPEC macros : SPEC_macros.md
+            - ID4B-SPEC commands: 'SPEC_commands.md'
             - 'Sample Alignment':
                 - Sample alignment : sample_alignment.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
-        - Beamline details:
+        - Admin Documentation :
             - Beamline setup : beamline_setup.md
-            - Device configuration : Device_configuration.md
-            - Detector information : Detector_information.md
+            - Energy change : energy_change.md
+            - SPEC macro : SPEC_macros.md
+            - Detector information : detector_information.md
             - Publication : publications.md
         - Frequently Asked Questions (FAQ) : 'FAQ.md'
         
@@ -37,6 +39,8 @@ nav:
 
 theme: 
     name: readthedocs
+    docs_dir: 'mkdocs-material/material'
+    theme_dir: material/material
     highlightjs: true
     hljs_languages:
         - yaml
@@ -60,3 +64,5 @@ markdown_extensions:
 :root > * { --md-code-hl-string-color: #0FF1CE; }
 
 
+extra:
+  generator: false

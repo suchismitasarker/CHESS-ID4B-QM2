@@ -17,7 +17,6 @@ This documents is a collection of codes usefull for the beamline ID4B at CHESS. 
 
 * [Getting Started](http://127.0.0.1:8000/getting_started/) 
 * [ID4B-SPEC commands](http://127.0.0.1:8000/SPEC_commands/) 
-* [SPEC macros](http://127.0.0.1:8000/SPEC_macros/) 
 * [Data processing](http://127.0.0.1:8000/ID4B_Codes/)
 
 
@@ -32,8 +31,9 @@ This documents is a collection of codes usefull for the beamline ID4B at CHESS. 
 # Admin Docuentation
 
 * [Beamline Setup](http://127.0.0.1:8000/beamline_setup/) 
-    * `Device configuration` : 
-    * `Detector information`
+    * [SPEC macros](http://127.0.0.1:8000/SPEC_macros/) 
+    * [Energy change](http://127.0.0.1:8000/energy_change/)
+    * [Detector information](http://127.0.0.1:8000/detector_information.md)
 * [Publications](http://127.0.0.1:8000/publication.md)
 
 

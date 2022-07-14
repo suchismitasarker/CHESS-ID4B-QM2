@@ -50,49 +50,64 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../SPEC_commands/">SPEC commands ID4B</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../SPEC_macros/">SPEC macros</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
-                </li>
-              </ul>
+              <p class="caption"><span class="caption-text">Home</span></p>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Data processing</a>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#single-crystal-data-processing-steps">Single crystal data-processing steps</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#step-i-calibrate-detector-beamline">Step I :  Calibrate Detector &amp; Beamline</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-ii-stack-data">STEP II :  Stack data</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-iii-find-bragg-peaks">STEP III:  Find Bragg peaks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-iv-solve-orientation-matrix">STEP IV:  Solve orientation matrix</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-v-convert-stacks-of-data-to-hkl-volume">STEP V:  Convert stacks of data to HKL volume</a>
-    </li>
-        </ul>
+                <li class="toctree-l2"><a class="" href="../introduction.md">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">SPEC-ID4B</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../SPEC_macros/">SPEC macros</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Data Analysis</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Data processing</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#single-crystal-data-processing-steps">Single crystal data-processing steps</a>
     </li>
     </ul>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../publications/">Publication</a>
+    </ul>
                 </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Beamline details</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
                 </li>
+                <li class="toctree-l2"><a class="" href="../Device_configuration.md">Device configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../Detector_information.md">Detector information</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../publications/">Publication</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQ/">Frequently Asked Questions (FAQ)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">About</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../about/">About</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../license.md">License</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../release-notes.md">Release Notes</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -107,7 +122,10 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Data processing</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Home &raquo;</li>
+          <li>User Guide &raquo;</li>
+          <li>Data Analysis &raquo;</li><li>Data processing</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B.github.io/blob/gh-pages/my-project/docs/index.md/edit/master/docs/ID4B_Codes.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -119,7 +137,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-data-processing-codes">Welcome to data processing Codes<a class="headerlink" href="#welcome-to-data-processing-codes" title="Permanent link">&para;</a></h1>
+                <h1 id="welcome-to-data-processing">Welcome to Data Processing<a class="headerlink" href="#welcome-to-data-processing" title="Permanent link">&para;</a></h1>
 <div class="admonition type">
 <p class="admonition-title">NOTE</p>
 <p>Single crystal data-processing codes are written by  <a href="https://www.chess.cornell.edu/about/staff-directory/jacob-ruff">Dr. Jacob Ruff</a> based on reference</p>
@@ -128,6 +146,8 @@
 <li>[2] <a href="https://scripts.iucr.org/cgi-bin/paper?s0365110x67000970">W. R. &amp; Levy, H. A. (1967). Acta Cryst. 22, 457–464</a></li>
 </ul>
 </div>
+<p>The purpose of this guide is to illustrate some of the main features that Jacob's code provides. It assumes a very basic working knowledge with python pakages. To download the package please go to the github link. </p>
+<p>The code provides various tools for stacking the raw data, finding Bragg peaks, solving orientation matrix and finally provide the HKL. The results are visible to <a href="https://nexpy.github.io/nexpy/">NeXpy GUI</a>. </p>
 <hr />
 <h3 id="single-crystal-data-processing-steps">Single crystal data-processing steps<a class="headerlink" href="#single-crystal-data-processing-steps" title="Permanent link">&para;</a></h3>
 <hr />
@@ -139,39 +159,59 @@
 <li><code>STEP V</code>:  Convert stacks of data to HKL volume </li>
 </ul>
 <div class="admonition danger">
-<p class="admonition-title">Detailed Descriptions</p>
+<p class="admonition-title">Usage</p>
 </div>
-<h5 id="step-i-calibrate-detector-beamline">Step I :  Calibrate Detector &amp; Beamline<a class="headerlink" href="#step-i-calibrate-detector-beamline" title="Permanent link">&para;</a></h5>
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title"> Step I :  Calibrate Detector &amp; Beamline</p>
+</div>
 <p>After collecting data from CeO2, LaB6, we calibrate the date by using pyFAI-calib2. Referemce shown below</p>
 <p>Reference: 
 pyFAI reference :<a href="https://pyfai.readthedocs.io/en/master/">pyFAI</a>.
 pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/calib-gui/index.html#cookbook-calibration-gui">calibration_video</a> Calibration of a diffraction setup using the Graphical User Interface (GUI) </p>
-<pre><code>``pyFAI-calib2``            #   generates .poni and mask.edf files
+<pre class="codehilite"><code>&gt;&gt;&gt;``pyFAI-calib2``            #   generates .poni and mask.edf files
 </code></pre>
+
 <p>===========================================================================</p>
-<h5 id="step-ii-stack-data">STEP II :  Stack data<a class="headerlink" href="#step-ii-stack-data" title="Permanent link">&para;</a></h5>
-<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all</a> -python script (edit to point to calibration files and project)</p>
-<p><code>python stack_em_all_cbf_2022.py</code>    chem_formula sample_id spec_scan_num temperature</p>
+<div class="admonition tip">
+<p class="admonition-title">STEP II :  Stack data</p>
+</div>
+<p>The script take all the detector's raw .cbf files and performed calibration. You can the get the <a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all</a>. </p>
+<pre class="codehilite"><code>&gt;&gt;&gt;``python stack_em_all_cbf_2022.py``    chem_formula sample_id spec_scan_num temperature
+</code></pre>
+
 <p>===========================================================================</p>
-<h5 id="step-iii-find-bragg-peaks">STEP III:  Find Bragg peaks<a class="headerlink" href="#step-iii-find-bragg-peaks" title="Permanent link">&para;</a></h5>
+<div class="admonition tip">
+<p class="admonition-title">STEP III:  Find Bragg peaks</p>
+</div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py">simple_peakfinder</a> script</p>
-<p><code>python simple_peakfinder.py</code> <em>/full/path/to/stack/ 0.95</em></p>
+<pre class="codehilite"><code>&gt;&gt;&gt;``python simple_peakfinder.py`` */full/path/to/stack/ 0.95*
+</code></pre>
+
 <p>Would consider anything above 95% of max counts as a Bragg peak</p>
 <p>===========================================================================</p>
-<h5 id="step-iv-solve-orientation-matrix">STEP IV:  Solve orientation matrix<a class="headerlink" href="#step-iv-solve-orientation-matrix" title="Permanent link">&para;</a></h5>
+<div class="admonition tip">
+<p class="admonition-title">STEP IV:  Solve orientation matrix</p>
+</div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py">auto_ormfinder</a> script </p>
-<p><code>python auto_ormfinder.py</code> <em>/full/path/to/stack/ peakfilename.nxs</em></p>
+<pre class="codehilite"><code>&gt;&gt;&gt;``python auto_ormfinder.py`` */full/path/to/stack/ peakfilename.nxs*
+</code></pre>
+
 <p>===========================================================================</p>
-<h5 id="step-v-convert-stacks-of-data-to-hkl-volume">STEP V:  Convert stacks of data to HKL volume<a class="headerlink" href="#step-v-convert-stacks-of-data-to-hkl-volume" title="Permanent link">&para;</a></h5>
+<div class="admonition tip">
+<p class="admonition-title">STEP V:  Convert stacks of data to HKL volume</p>
+</div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
-<p><code>python  Pil6M_HKLConv_3D_2022.py</code> <em>temperature</em> </p>
+<pre class="codehilite"><code>&gt;&gt;&gt;``python  Pil6M_HKLConv_3D_2022.py`` *temperature*
+</code></pre>
+
 <p>===========================================================================</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../sample_alignment/" class="btn btn-neutral float-left" title="Sample alignment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../publications/" class="btn btn-neutral float-right" title="Publication">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../beamline_setup/" class="btn btn-neutral float-right" title="Beamline setup">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -201,7 +241,7 @@ pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/ca
       <span><a href="../sample_alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../publications/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../beamline_setup/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
