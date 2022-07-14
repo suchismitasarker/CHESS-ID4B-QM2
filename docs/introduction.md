@@ -4,6 +4,7 @@
 </figure>
 
 This documents is created for the ID4B users in QM2 beamline at CHESS. 
+Overview of the beamline
 
 This is collection of codes usefull for the beamline. It chatagorize in four sections
     * User documentation 
