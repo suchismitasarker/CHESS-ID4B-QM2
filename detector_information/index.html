@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/detector_information/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Detector information - CHESS ID4B QM2</title>
+    <title>Detector - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Detector information";
+        var mkdocs_page_name = "Detector";
         var mkdocs_page_input_path = "detector_information.md";
         var mkdocs_page_url = "/detector_information/";
       </script>
@@ -54,8 +54,8 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">User Guide</a>
-    <ul>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
+    <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../introduction/">Introduction</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
@@ -64,27 +64,49 @@
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_change/">Sample Change</a>
+                </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../nexpy/">NeXpy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../pymca/">pyMCA</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Beamline equipments</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../PTZ_camera/">Cameras</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../diffractometer/">Diffractometer</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../cryocooler/">Cryocooler</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Detector</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../publications/">Publication</a>
+                </li>
     </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Admin Documentation</a>
-    <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
+    <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Detector information</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../publications/">Publication</a>
                 </li>
     </ul>
                   </li>
@@ -116,7 +138,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
-          <li>Admin Documentation &raquo;</li><li>Detector information</li>
+          <li>User Guide &raquo;</li>
+          <li>Beamline equipments &raquo;</li><li>Detector</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/detector_information.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -128,12 +151,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h5 id="6-megapixel-pilatus3">6-Megapixel Pilatus3<a class="headerlink" href="#6-megapixel-pilatus3" title="Permanent link">&para;</a></h5>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/detector.png?raw=true" /></p>
+</figure>
+<p>The large Dectris Pilatus 6M photon counting detector shown above. The detectos are used to count the x-rays from desired bunches.</p>
+<p>Table 1 : Names of the Pilatus</p>
+<table>
+<thead>
+<tr>
+<th>Motor</th>
+<th align="center">Commands</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PILATUS 2</td>
+<td align="center">PIL2</td>
+<td>Pilatus</td>
+</tr>
+<tr>
+<td>PILATUS 6</td>
+<td align="center">PIL6</td>
+<td>Pilatus 6M detector</td>
+</tr>
+<tr>
+<td>PILATUS 6</td>
+<td align="center">Pil6my</td>
+<td>Move pilatus 6M detector in Y direction</td>
+</tr>
+<tr>
+<td>PILATUS 6</td>
+<td align="center">Pil6mz</td>
+<td>Move pilatus 6M detector in Y direction</td>
+</tr>
+<tr>
+<td>PILATUS 6</td>
+<td align="center">Pilroi</td>
+<td>Pilatus 6M detector region of interest</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pilatus">Pilatus<a class="headerlink" href="#pilatus" title="Permanent link">&para;</a></h4>
+<p>"The  PILATUS  300K  detector  is  a  2D  detector  (developed  by  PSI  and  sold  by Dectris)  with  a  pixel  size  of  172x172m2,  487x619  pixel  active  area,  20-bit/pixel  dynamic  range  and  readout  time  of  7  ms.  The  quantum  efficiency  is 91% at 5.4 keV, 96% at 8 keV and 37% at 17.5 keV.To start operating the Pilatus one has to proceed as follows:1)From the experimental terminal inEH2p10user@haspp10e2:~$ ssh –l det haspp10pilatushaspp10pilatus:~$cd p2_dethaspp10pilatus/p2_det:~$runtvx2)Start Pilatus Tango server ‘Pilatus/P10E2’ from the Astor panel3)Make sure the detector is uncommented in the online.xmlfile4)restart Spocksession5)Setup new filename /directoryby[]: p10_newfile directoryname6)Use ‘p300take’ or ‘p300series’ commands to record images.To start the P10 image viewer one has to brows to the following directory"</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../SPEC_macros/" class="btn btn-neutral float-left" title="SPEC macro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cryocooler/" class="btn btn-neutral float-left" title="Cryocooler"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../publications/" class="btn btn-neutral float-right" title="Publication">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -162,7 +228,7 @@
         </span>
     
     
-      <span><a href="../SPEC_macros/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../cryocooler/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../publications/" style="color: #fcfcfc">Next &raquo;</a></span>
