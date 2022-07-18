@@ -1,21 +1,20 @@
 # Introduction
 <figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline_ID4.png?raw=true)
+  ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline%20schematic.png?raw=true)
 </figure>
 
-This documents is created for the ID4B users in QM2 beamline at CHESS. 
-Overview of the beamline
+The layout of CHESS ID4B beamline is shown in the figure above. For more details see the beamline paper (soon to be published). 
 
-This is collection of codes usefull for the beamline. It chatagorize in four sections
-    * User documentation 
-         - ID4B-SPEC command : beam alignments
-         - SPEC macros - alignment for the overall beamline
-         - 
+This documents is catagorize in three sections. 
 
-includes beamline setup, beam and sample alignment and data processing. 
+* [<b><u><i>User Guide :</i> </b> </u>](https://suchismitasarker.github.io/CHESS-ID4B-QM2/#) This is the most usefull section for the ID4B beamline users. Here, the users can gather informations about SPEC commands to run their own samples in the beamline. This includes sample alignment details and data analysis steps. In addtion, this section also includes informations of beamline equipments.
 
 
 
-Please read the document carefully and if you encounter with any bug or like to have additional functionality, please submit send an email to ss3428@cornell.edu.
+* [<b><u><i>Admin documents</i> </b> </u>](https://suchismitasarker.github.io/CHESS-ID4B-QM2/beamline_setup/) : This section is used for administrative purpose. However, you can find information about proposal details, computational configurations (nomachine and globus setup) in beamline setup section.
+
+
+* [<b><u><i>Frequesntly Ask Questions (FAQ) </i> </b> </u>](https://suchismitasarker.github.io/CHESS-ID4B-QM2/FAQ/) :   This is section includes FAQ in the beamline before, during and after the run. 
+  [<n><i>`Please read the questions and answers, you might find yours!!`](https://suchismitasarker.github.io/CHESS-ID4B-QM2/FAQ/) </i>   
 
 

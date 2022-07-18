@@ -14,7 +14,8 @@
 Few important commands are shown below. For more information visit to the above mentioned website.
 
 ---
-!!! danger " For more information visit [SPEC manual](https://certif.com/) and [SPEC macros](http://127.0.0.1:8000/SPEC_macros/)"
+!!! danger " SPEC Commands for ID4B" 
+    More detaiils can be found in [SPEC manual](https://certif.com/) and ID4B-SPEC Examples.
 
 ## Important SPEC commands 
 
@@ -157,3 +158,5 @@ Few important commands are shown below. For more information visit to the above 
 * `wslits`      - where is both slit 1 and slit 2
 
 ---
+
+<b><i> If you encounter any new commands during your sample run, please <a href = "mailto: ss3428@cornell.edu">send an email </a> and we will add that to the list <i><b>.

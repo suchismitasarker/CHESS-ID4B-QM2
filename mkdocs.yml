@@ -2,7 +2,6 @@
 #http://127.0.0.1:8000/
 
 
-
 site_name: CHESS ID4B QM2
 site_url: https://example.com/
 repo_url: https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md
@@ -20,14 +19,22 @@ nav:
             - ID4B-SPEC commands: 'SPEC_commands.md'
             - 'Sample Alignment':
                 - Sample alignment : sample_alignment.md
+                - Sample Change : sample_change.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
+                - 'Data visualization': 
+                    - NeXpy : nexpy.md 
+                    - pyMCA : pymca.md
+            - 'Beamline equipments' :
+                - Cameras : PTZ_camera.md
+                - Diffractometer : diffractometer.md
+                - Cryocooler : cryocooler.md
+                - Detector : detector_information.md
+                - Publication : publications.md
         - Admin Documentation :
             - Beamline setup : beamline_setup.md
             - Energy change : energy_change.md
-            - SPEC macro : SPEC_macros.md
-            - Detector information : detector_information.md
-            - Publication : publications.md
+            - SPEC macro : SPEC_macros.md  
         - Frequently Asked Questions (FAQ) : 'FAQ.md'
         
         - About:
