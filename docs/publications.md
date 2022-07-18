@@ -1,5 +1,5 @@
 
-#### QM2 list of publications
+#### &#60QM&#62<sup>2</sup> list of publications
 
 
 
