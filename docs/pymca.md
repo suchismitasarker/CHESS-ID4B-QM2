@@ -1,9 +1,4 @@
 
+# PyMca
 
-Authors:
-
-- Jacob Ruff
-
-* Suchismita Sarker
-
-date: 2022-07-15
+PyMca is developed by European Synchrotron Radiation Facility (ESRF). 
