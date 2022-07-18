@@ -1,5 +1,5 @@
 
-### PZT Cameras
+### Cameras
 
 Two Pan-tilt-zoom (PZT) cameras are installed in the ID4B beamline for the users to look the sample position and computers. The IP address of the cameras shown below 
 <br>

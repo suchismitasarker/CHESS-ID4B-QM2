@@ -11,7 +11,7 @@
 "spec is internationally recognized as the leading software for instrument control and data acquisition in X-ray diffraction experiments."
 
 ---
-Few important commands are shown below. For more information visit to the above mentioned website.
+Few important commands are shown below.
 
 ---
 !!! danger " SPEC Commands for ID4B" 
