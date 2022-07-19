@@ -36,6 +36,6 @@
 ##### Q. How to access the nomachine?
 
 
-##### Q. how to recover if the computer failes
+##### Q. How to recover if the computer fail?
 
 
