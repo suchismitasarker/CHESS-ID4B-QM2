@@ -3,11 +3,11 @@
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline%20schematic.png?raw=true)
 </figure>
 
-The layout of CHESS ID4B beamline is shown in the figure above. For more details see the beamline paper (soon to be published). 
+The layout of the CHESS ID4B beamline is shown in the figure above. For more details see the beamline paper (soon to be published). 
 
-This documents is catagorize in three sections. 
+This document is categorized into three sections. 
 
-* [<b><u><i>User Guide :</i> </b> </u>](https://suchismitasarker.github.io/CHESS-ID4B-QM2/#) This is the most usefull section for the ID4B beamline users. Here, the users can gather informations about SPEC commands to run their own samples in the beamline. This includes sample alignment details and data analysis steps. In addtion, this section also includes informations of beamline equipments.
+* [<b><u><i>User Guide :</i> </b> </u>](https://suchismitasarker.github.io/CHESS-ID4B-QM2/#) This is the most useful section for the ID4B beamline users. Here, the users can gather information about SPEC commands to run their samples in the beamline. This includes sample alignment details and data analysis steps. In addtion, this section also includes informations of beamline equipments.
 
 
 

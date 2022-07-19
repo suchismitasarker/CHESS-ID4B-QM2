@@ -6,7 +6,11 @@
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/detector.png?raw=true)
 </figure>
 
- The large Dectris Pilatus 6M photon counting detector shown above. The detectos are used to count the x-rays from desired bunches.
+The large (W 590 x H 603 x D 455 mm<sup>3</sup>) Dectris Pilatus 6-megapixel photon counting detector shown above. 
+<br>
+The 6M high-dynamic-range hybrid pixel array detector was designed by Paul Scherrer Institute and sold by Dectris. The 6M Pilatus3 X series single photon counting detector has unprecedented count rate, direct detection of x-ray in single-photon-sensitivity, higher dynamic range (no dark current and no readout noise), higher frame rate, higher maximum count rate, millions of pixels and room temperature operations to reveal the weak features associated with Bragg peaks in diffuse scattering.
+
+The Pilatus 6M detector have pixel  size  of  172x172 µm²,  2463x2527 pixel array, 423.6 x 434.6 mm² active area,  100 Hz frame rate,  20-bit/pixel  dynamic  range, count rate 10 <sup> ph/s/pixel </sup>  and  readout  time  of  0.95  ms [[1](https://www.dectris.com/)]. 
 
 
 Table 1 : Names of the Pilatus
@@ -20,8 +24,7 @@ Table 1 : Names of the Pilatus
 | PILATUS 6 | Pilroi | Pilatus 6M detector region of interest |
 
 
-#### Pilatus
+#### Pilatus 2M
 
-"The  PILATUS  300K  detector  is  a  2D  detector  (developed  by  PSI  and  sold  by Dectris)  with  a  pixel  size  of  172x172m2,  487x619  pixel  active  area,  20-bit/pixel  dynamic  range  and  readout  time  of  7  ms.  The  quantum  efficiency  is 91% at 5.4 keV, 96% at 8 keV and 37% at 17.5 keV.To start operating the Pilatus one has to proceed as follows:1)From the experimental terminal inEH2p10user@haspp10e2:~$ ssh –l det haspp10pilatushaspp10pilatus:~$cd p2_dethaspp10pilatus/p2_det:~$runtvx2)Start Pilatus Tango server ‘Pilatus/P10E2’ from the Astor panel3)Make sure the detector is uncommented in the online.xmlfile4)restart Spocksession5)Setup new filename /directoryby[]: p10_newfile directoryname6)Use ‘p300take’ or ‘p300series’ commands to record images.To start the P10 image viewer one has to brows to the following directory"
 
 

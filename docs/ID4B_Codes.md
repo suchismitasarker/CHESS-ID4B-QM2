@@ -80,7 +80,3 @@ Would consider anything above 95% of max counts as a Bragg peak
 ===========================================================================
 
 
----
-### NeXpy
----
-
