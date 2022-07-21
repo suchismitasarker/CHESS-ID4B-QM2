@@ -1,4 +1,10 @@
 
+# Sample environment
+
+| Attibutes | Specifications | 
+| -------------- | :---------: | 
+| Sample type | powder, thin-film | 
+| Sample environment | closed circle cryostat (12 -500K), thermal gradient, strain, and electrochemical cell. | 
 
 # Sample change 
 

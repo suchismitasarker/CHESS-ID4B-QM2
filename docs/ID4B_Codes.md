@@ -11,6 +11,13 @@ The purpose of this guide is to illustrate some of the main features that Jacob'
 The code provides various tools for stacking the raw data, finding Bragg peaks, solving orientation matrix and finally provide the HKL. The results are visible to [NeXpy GUI](https://nexpy.github.io/nexpy/). 
 
 
+| Attibutes | Specifications | 
+| -------------- | :---------: |
+| Software| pyFAI, Nexpy, pyMCA, in-house software | 
+| Data type| Diffraction patterns, images, temp etc.| 
+| File type| ascii, raw| 
+
+
 ---
 ### Single crystal data-processing steps
 ---

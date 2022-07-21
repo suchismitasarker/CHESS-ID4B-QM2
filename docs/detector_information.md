@@ -12,8 +12,24 @@ The 6M high-dynamic-range hybrid pixel array detector was designed by Paul Scher
 
 The Pilatus 6M detector have pixel  size  of  172x172 µm²,  2463x2527 pixel array, 423.6 x 434.6 mm² active area,  100 Hz frame rate,  20-bit/pixel  dynamic  range, count rate 10 <sup> ph/s/pixel </sup>  and  readout  time  of  0.95  ms [[1](https://www.dectris.com/)]. 
 
+Table 1 : Detector Paramters
 
-Table 1 : Names of the Pilatus
+| Attibutes | Specifications | 
+| -------------- | :---------: | 
+| Dectector | 6M Pilatus3 | 
+| pixel  size | 172x172 µm²| 
+| pixel array | 2463x2527 | 
+| active area | 423.6 x 434.6 mm² | 
+| Frame rate | 100 Hz | 
+| Dynamic  range | 20-bit/pixel | 
+| count rate  | 10 <sup> ph/s/pixel </sup> | 
+| readout  time  | 0.95  ms | 
+
+
+
+
+
+Table 2 :  Pilatus commands
 
 | Motor | Commands | Comments | 
 | -------------- | :---------: | ---------- | 
