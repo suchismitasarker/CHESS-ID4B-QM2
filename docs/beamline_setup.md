@@ -8,7 +8,7 @@
 | -------------- | :---------: | 
 | Available techniques | HDRM, REXS | 
 | Source | CHESS compact Undulator | 
-| Brilliance| ph/s/0.1%bw/mm2 | 
+| Brilliance| ?? ph/s/0.1%bw/mm^2 | 
 | Current| 100 mA | 
 | Energy range | 7-52 KeV | 
 | Energy resolution | | 
@@ -18,7 +18,7 @@
 | Focusing mirror | Silicon with Rh coated |
 | Detection mode | Transmission |  
 | Detector| Pilatus 6M | 
-| Beamsize at sample| | 
+| Spot size| 200 microns x 500 microns | 
 | Time to take the data| HRDM ~ 20 mins | 
 
 

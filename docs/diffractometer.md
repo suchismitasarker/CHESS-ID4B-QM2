@@ -18,7 +18,6 @@
 
 
 
-
 <b> Table 1 </b> : Names of the six-circle Huber Diffractometer's motor
 
 | Motor | Commands | Comments | 
