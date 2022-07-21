@@ -30,12 +30,9 @@
 <i> You should use globus to transfer your data.</i>
 
 
-###### Q: How to get the globus in the computer?
-
-
-##### Q. How to access the nomachine?
-
-
 ##### Q. How to recover if the computer fail?
+
+
+##### Q. 
 
 

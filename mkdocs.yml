@@ -5,7 +5,7 @@
 site_name: CHESS ID4B QM2
 site_url: https://example.com/
 repo_url: https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md
-copyright: © Copyright 2022, Suchismita Sarker
+copyright: © Copyright 2022, CHESS ID4B Beamline
 generator: false
 
 extra:
@@ -19,7 +19,7 @@ nav:
             - ID4B-SPEC commands: 'SPEC_commands.md'
             - 'Sample Alignment':
                 - Sample alignment : sample_alignment.md
-                - Sample Change : sample_change.md
+                - Sample : sample.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
                 - 'Data visualization': 

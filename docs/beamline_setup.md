@@ -32,3 +32,13 @@
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamset.png?raw=true)
 </figure>
 
+
+
+#### Instruction for nomachine
+
+Please [click the link](https://wiki.classe.cornell.edu/Computing/NoMachine) for nomachine connection in your system.
+
+
+#### Instruction for Globus
+
+Please [click the link](https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer) for data tranfer. 

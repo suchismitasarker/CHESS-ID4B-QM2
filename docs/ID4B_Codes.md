@@ -15,7 +15,8 @@ The code provides various tools for stacking the raw data, finding Bragg peaks, 
 | -------------- | :---------: |
 | Software| pyFAI, Nexpy, pyMCA, in-house software | 
 | Data type| Diffraction patterns, images, temp etc.| 
-| File type| ascii, raw| 
+| File type| ascii, .edf, .poni| 
+| Data Transfer| Globus | 
 
 
 ---
