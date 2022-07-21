@@ -17,11 +17,6 @@
 </br>
 
 
-| Motor | Range (deg) | Accuracy (arcsec) | Spheres of confusion  | Comments|
-| -------------- | :---------: | ---------- | ---------- | ---------- |  
-| Theta | -10/+90 | 0.18 |  30 | vertical theta
-
-
 
 
 <b> Table 1 </b> : Names of the six-circle Huber Diffractometer's motor
@@ -38,3 +33,14 @@
 | Y-direction | sampley | sample motor y-direction | 
 | Z-direction | samplez | sample motor z-direction |
 
+
+<b> Table 2 </b>  : Motor range and accuracy
+
+| Motor | Range (deg) | Accuracy (arcsec) | Spheres of confusion  | Comments|
+| -------------- | :---------: | ---------- | ---------- | ---------- |  
+| Theta | -10/+90? | 0.18? |  30? | vertical theta
+| Delta |  | 0.18? |  30? | vertical 2theta
+| mu | -- | 0.18? |  30? | horizontal theta
+| gamma | --  | 0.18? |  30? | horizontal two theta
+| Chi| -- | 0.18? |  30? | with and without cryostat
+| Phi| -- | 0.18? |  30? | 
