@@ -81,12 +81,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/sample_alignment/</loc>
+         <loc>https://example.com/sample/</loc>
          <lastmod>2022-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/sample_change/</loc>
+         <loc>https://example.com/sample_alignment/</loc>
          <lastmod>2022-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
