@@ -37,6 +37,6 @@ This document is a collection of codes and equipment details useful for the beam
 
 
 # Frequently Asked Questions (FAQ)
-* [Quentions](https://suchismitasarker.github.io/CHESS-ID4B-QM2/FAQ/) 
+* [Questions](https://suchismitasarker.github.io/CHESS-ID4B-QM2/FAQ/) 
 
 ---
