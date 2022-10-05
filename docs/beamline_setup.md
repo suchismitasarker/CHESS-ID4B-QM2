@@ -41,4 +41,4 @@ Please [click the link](https://wiki.classe.cornell.edu/Computing/NoMachine) for
 
 #### Instruction for Globus
 
-Please [click the link](https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer) for data tranfer. 
+Please [click the link](https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer) for data transfer. 

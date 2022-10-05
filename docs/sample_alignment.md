@@ -16,6 +16,16 @@ The High Dynamic Range Mapping (HDRM) is primarily a method for studying single 
 
 !!! danger "Resonant Elastic X-ray Scattering (REXS)"
 
+Number of elements in the periodic table (K and L edges)
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2b%20-%20REXS.png?raw=true){ width="500" }
+</figure>
+
+
+
+
+
 
 ##### Basic Theory - REXS
 

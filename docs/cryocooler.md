@@ -6,7 +6,7 @@
 
 The cryocooler is manufactured by [CYRO Industries of America, Inc.](http://www.cryoindustries.com/).
 
-<i> Close-circle cryostats are installed in &#60QM&#62<sup>2</sup> allowing samples to be comprehensively studied in a wide range of temperatures from 12K to 500K. The cryocooler can operate both helium (12K to 300K) and nitrogen gas (300K to 500K ) using a single stream flow. In-house nitrogen and helium gas are used for cryocoolers. Just switching the knob outside of the hutch, the gas supply can be altered. 
+<i> Close-circle cryostats are installed in &#60QM&#62<sup>2</sup> allowing samples to be comprehensively studied in a wide range of temperatures from 12K to 500K. The cryocooler can operate both helium (12K to 300K) and nitrogen gas (300K to 500K ) using a single stream flow. In-house nitrogen and helium gas are used for cryocoolers. Just by switching the knob outside of the hutch, the gas supply can be altered. 
 
 The external tip-heater prevents frost and maintains a dry tip that helps to create an ice-free sample environment at low temperatures. A platinum temperature sensor is installed to control the low alarm setting temperature that triggers back the temperature controller to energize and maintain the ice-free environment. 
 
@@ -49,4 +49,4 @@ Motors
 </i>
 ### Beamsplitting polarimeter
 
-Polarization analyzer isolate and measure a unique series of diffraction resonances at the different K-edge.
+The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.

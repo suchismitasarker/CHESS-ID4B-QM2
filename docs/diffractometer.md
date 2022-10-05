@@ -6,7 +6,7 @@
 </figure>
 
 
-<i> Huber “psi” diffractometer is installed at CHESS ID4B. Due to four sample-orientation axes and two detector-orientation axes, the psi-circle diffractometer is also known as “4S+2D". The independent motion sample and detector orientation provides nine degrees of freedom to define any vertical diffraction plane.The angle calculations for this diffractometer were shown in the reference [1] [2]. The motor names are shown below in the Table 1. 
+<i> Huber “psi” diffractometer is installed at CHESS ID4B. Due to four sample-orientation axes and two detector-orientation axes, the psi-circle diffractometer is also known as “4S+2D". The independent motion sample and detector orientation provide nine degrees of freedom to define any vertical diffraction plane.The angle calculations for this diffractometer were shown in the reference [1] [2]. The motor names are shown below in Table 1. 
 
 <b>Reference</b>
 <br>
