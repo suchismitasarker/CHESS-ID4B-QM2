@@ -2,7 +2,8 @@
 # Detectors
 1. Pilatus 6M 
 <br>
-2. Pilatus 2M
+2. Pilatus6 100K 
+3. Pilatus8 100K
 
 
 ## Technical Details
@@ -54,7 +55,20 @@ Table 2 :  Pilatus commands
 | PILATUS 6 | Pilroi | Pilatus 6M detector region of interest |
 
 
-#### Pilatus 2M
+#### Pilatus6 100K 
+
+The link for the technical details are [here](https://media.dectris.com/Technical_Specification_PILATUS_100K-S_V1_8.pdf) 
+
+
+
+
+#### Pilatus8 100K and Pilatus6 100K
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Piltatus%20100K.png?raw=true)
+</figure>
+
+
 
 
 
