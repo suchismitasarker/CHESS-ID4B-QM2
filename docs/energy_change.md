@@ -60,3 +60,23 @@
 '''
 
 
+### Detector setup
+
+REXS 
+
+Setup : 
+
+mv pil6mx 100
+mv pil6my 760
+
+* `mv pil6mx 100` 		- move pilatus 6M to 100 mm x direction 
+* `mv pil6my 760` 		- move pilatus 6M to 760 mm y direction
+
+
+To take the detecotor all the way end of the hutch 
+
+mv pil6mx 233
+mv pil6my 885
+
+* `mv pil6mx 233` 		- move pilatus 6M to 233 mm x direction 
+* `mv pil6my 885` 		- move pilatus 6M to 885 mm y direction
