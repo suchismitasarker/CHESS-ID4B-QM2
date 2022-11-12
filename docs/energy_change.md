@@ -1,4 +1,32 @@
 
+### Start the new users at the beamline
+* `newmac` (# <i> uploading all the macros </i>)
+* `userslist.mac`
+* `cd Scripts/`
+* `./newusers-4b.sh 2022-3 sarker-0000-a` ( <i>this will create file both in id4b and id4baux </i>)
+* copy HRDMscans.mac to the specific folder
+* FOURC > `qdo ./HRDMscans.mac`
+* FOURC > `newfile (name of newfile)`
+* Change the HDRMscans.mac file with `_samplename` and `_sampledirectory`
+
+
+
+#### Flux Calculator
+[CHESS Flux calculator](https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator) at the beamline
+
+
+#### flyscan 
+* `flyscan_setup`
+* selecct motor using space 
+* check flyscan
+* FOURC > `powderscan 300 1`
+
+
+### User HDRMScan details about the macros
+
+
+
+
 #### Energy change
 
 ##### Removing mirror for higher energy calibrations
@@ -80,3 +108,23 @@ mv pil6my 885
 
 * `mv pil6mx 233` 		- move pilatus 6M to 233 mm x direction 
 * `mv pil6my 885` 		- move pilatus 6M to 885 mm y direction
+
+
+### Change the config file 
+
+open the terminal
+
+```
+config 
+config configaration will open
+Go to the specific motor 
+change the required motor config
+press w 
+control c 
+reconfig
+```
+To go to the specific motor press c,c (twice)   
+shift+' to modify anything
+     
+
+
