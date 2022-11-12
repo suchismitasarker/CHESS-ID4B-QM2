@@ -1,7 +1,10 @@
 ## Cryocoolers
 
+
+
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/Crysocooler.png?raw=true)
+
 </figure>
 
 The cryocooler is manufactured by [CYRO Industries of America, Inc.](http://www.cryoindustries.com/).
@@ -46,7 +49,77 @@ Motors
 | Temperature controller | sampleT | Set the temperature |  
 
 
-</i>
-### Beamsplitting polarimeter
+### To open the lakeshore
 
-The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.
+* Open terminal
+*  > `css` 
+* The Lakeshore controller will open
+* Output (1(input A): stage 1 heater, 2(input C): Sample temperature, 3 (input B): Stage 2 heater ), you can control.
+* Change the  Range : Rang3/High  
+
+
+## StripTool
+* Open terminal
+*  > `StripTool` 
+
+!!! danger "Practical guide of the temperature switch between nitrogen and helium"
+
+</i>
+## N<sub>2</sub> and He switch at beamline (N<sub>2</sub> --> all temperature--> >77)
+
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true){ width="500" }
+</figure>
+
+
+<b><i> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 300K --> >77K </b> 
+
+* Step 1 : Open the N<sub>2</sub> valve and close He valve
+* Step 2 : <i> FOURC > `prepnitrogen` </i> (# it will setup the temperature in hte Lakeshore controller)
+* Step 3 : <i> FOURC > `te 170` </i>   (# lowering temperature to 170K)
+
+
+<b><i> Cooling temperature of cryocooler with He : 77K --> 13K (change to N<sub>2</sub> to He flow)</b> 
+
+* Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He
+* Step 2 : <i> FOURC > `te 180` </i> (# it will setup the temperature in the Lakeshore controller)
+* Step 3 : Turn on the He valve  and close N2 valve together
+* Step 4 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
+* Step 5 : Wait for base temperature to stabilize 
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20cooling.png?raw=true){ width="400" }
+</figure>
+* Step 6 : <i> FOURC > `te 13` </i>   (# lowering temperature to 13K or others)
+
+
+!!! danger "Please use Helium sensibly!"
+
+<b><i> Heating temperature of cryocooler : 13K --> 78K (change to He to N<sub>2</sub> flow)</b> 
+
+
+* Step 1 : <i> FOURC > `prepnitrogen` </i> (# it will setup the temperature in hte Lakeshore controller)
+* Step 2 : <i> FOURC > `te 180` </i> (# it will setup the temperature in hte Lakeshore controller)
+* Step 2 : Make sure all the temperature is above 77 K (channel A, B and C in PLD controller)
+* Step 3 : Open the N2 valve and close He valve together
+* Step 4 : <i> FOURC > `te 100` </i>   (# increase temperature to 100K or any other desired temperature)
+
+
+
+<b><i> Performing exoeriment above room temperature : 300K --> 500K </b> 
+
+* Step 1 : Make sure N2 valve is open and He is closed
+* Step 2: <i> FOURC > `prephighT`  (# increase temperature to 1st and 2nd controller to 143K and 220K)
+* Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature.
+* Step 4 : FOURC > `te 400` </i>   (# increase temperature to 400K)
+
+
+<b><i> Goging to room temperature </b> 
+
+* Step 1 : Heat the temperature 300K, 300K, 300K
+* Step 2 : close the compressor
+* Step 3 : Wait until go to the required temperature
+* Step 4 : Close the valve
+
+

@@ -51,6 +51,7 @@ camera window will pop-up
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/camera_with_cursur.png?raw=true){ width="200" }
 </figure>
 
+>> sample_view_controls
 
 
 

@@ -10,6 +10,38 @@
 
 The High Dynamic Range Mapping (HDRM) is primarily a method for studying single crystal samples, although it can also be effective for studying thin films. The aim of HDRM is to rapidly study wide regions of reciprocal space, collecting the intense Bragg peaks required to refine crystal structures along with weak features associated with superstructures, and the slowly modulated scattering associated with phonons and short-range order[[1](https://www.chess.cornell.edu/srn-article-cartography-7-dimensions-chess)].
 
+### Sample mount
+
+
+### Certering of the sample 
+
+
+
+### Creating newfile 
+
+
+### Change the sample ID
+
+### HDRMscans.mac
+
+
+### Height check 
+
+
+### Check data at nexpy
+
+
+### Stacking images 
+
+
+### 
+
+### Height scan 
+
+
+
+
+
 
 ##### Basic steps for sample alignment - HDRM
 
@@ -33,4 +65,7 @@ Number of elements in the periodic table (K and L edges)
 ##### Basic steps for sample alignments - REXS
 
 
+</i>
+### Beamsplitting polarimeter
 
+The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.
