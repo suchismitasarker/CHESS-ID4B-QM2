@@ -15,6 +15,9 @@ The code provides various tools for stacking the raw data, finding Bragg peaks, 
 * Terminal > nexpy &
 
 
+* Terminal > `ssh lnx306`
+
+
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true){width="300" }
   <figcaption>Image caption</figcaption>

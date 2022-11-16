@@ -35,6 +35,7 @@ nav:
             - Beamline setup : beamline_setup.md
             - Energy change : energy_change.md
             - SPEC macro : SPEC_macros.md  
+            - Beam dump : beam_dump.md
         - Frequently Asked Questions (FAQ) : 'FAQ.md'
         
         - About:

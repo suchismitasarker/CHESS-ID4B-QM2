@@ -29,7 +29,7 @@
 #### General steps
 
 <figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamset.png?raw=true)
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/users_to_pub.png?raw=true)
 </figure>
 
 
