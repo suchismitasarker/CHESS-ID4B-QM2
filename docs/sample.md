@@ -25,6 +25,28 @@ Users setup at the beamline
 
 The procedure of mounting/changing the sample depends on the type of experiment performed ID4B.
 
-##### Magnetic mount for the single crystal
 
-The powder samples on single-crystal mounts are straightforward. Using a drop of oil, the powder sample sticks to the magnetic base or standard mounts under the microscope. 
+### Sample mount (single crystal)
+
+The single-crystal mounts are straightforward. 
+
+Step 1: You need magnetic mount 
+
+
+
+Step 2 : Micromount 
+
+
+Step 3: GE Varnish
+
+
+Step 4: Use GE vernish to glue the micromount to magnetic mount 
+
+
+Step 5 : 
+Using GE vernish at the top of the Mincromount and attached the sample properly. 
+Make sure you do not tunch the metal part with the sample!!
+
+
+
+

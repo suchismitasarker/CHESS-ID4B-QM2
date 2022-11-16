@@ -53,7 +53,15 @@ pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/
 
  After doing the calibration, save the .poni and mask file
 
+
 ===========================================================================
+
+## Data process model
+
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/data_processing_image.png?raw=true)
+</figure>
 
 
 
@@ -89,6 +97,13 @@ The script take all the detector's raw .cbf files and performed calibration. You
     Step 3 : Check data 
         After stacking is done the processed data will be avilable in id4baux folder    
 
+You can create bash script to run the stacking 
+
+        #!  /bin/bash
+        python stack_em_all_cbf_2022.py CoTiO3 sample 11 50
+        python stack_em_all_cbf_2022.py CoTiO3 sample 12 50
+        python stack_em_all_cbf_2022.py CoTiO3 sample 13 50
+    
 ===========================================================================
 
 !!! tip "STEP III:  Find Bragg peaks"
@@ -97,7 +112,7 @@ The script take all the detector's raw .cbf files and performed calibration. You
     Step 1: After stacking is done, take the whole stack from the id4aux data folder and run simple_peakfinder.py code
     
         Usage: 
-        python simple_peakfinder.py */full/path/to/stack/ 0.95*
+        python simple_peakfinder.py /full/path/to/stack/ 0.95
 
         Example: 
         >>> python simple_peakfinder.py /nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/ 0.95
@@ -115,6 +130,9 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 
     Example: 
     >>>python auto_ormfinder.py /nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/ peaklist1.npy
+
+!!! danger "Please provide a space between pathname (/nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/) and peaklist1.npy"
+
 
 ===========================================================================
 

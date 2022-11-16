@@ -104,9 +104,9 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="./">Energy change</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#removing-mirror-for-higher-energy-calibrations">Removing mirror for higher energy calibrations</a>
+    <li class="toctree-l3"><a class="reference internal" href="#flux-calculator">Flux Calculator</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#energy-calibrations">Energy calibrations</a>
+    <li class="toctree-l3"><a class="reference internal" href="#flyscan">flyscan</a>
     </li>
     </ul>
                 </li>
@@ -154,7 +154,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h4 id="energy-change">Energy change<a class="headerlink" href="#energy-change" title="Permanent link">&para;</a></h4>
+                <h3 id="start-the-new-users-at-the-beamline">Start the new users at the beamline<a class="headerlink" href="#start-the-new-users-at-the-beamline" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>newmac</code> (# <i> uploading all the macros </i>)</li>
+<li><code>userslist.mac</code></li>
+<li><code>cd Scripts/</code></li>
+<li><code>./newusers-4b.sh 2022-3 sarker-0000-a</code> ( <i>this will create file both in id4b and id4baux </i>)</li>
+<li>copy HRDMscans.mac to the specific folder</li>
+<li>FOURC &gt; <code>qdo ./HRDMscans.mac</code></li>
+<li>FOURC &gt; <code>newfile (name of newfile)</code></li>
+<li>Change the HDRMscans.mac file with <code>_samplename</code> and <code>_sampledirectory</code></li>
+</ul>
+<h4 id="flux-calculator">Flux Calculator<a class="headerlink" href="#flux-calculator" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator">CHESS Flux calculator</a> at the beamline</p>
+<h4 id="flyscan">flyscan<a class="headerlink" href="#flyscan" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>flyscan_setup</code></li>
+<li>selecct motor using space </li>
+<li>check flyscan</li>
+<li>FOURC &gt; <code>powderscan 300 1</code></li>
+</ul>
+<h3 id="user-hdrmscan-details-about-the-macros">User HDRMScan details about the macros<a class="headerlink" href="#user-hdrmscan-details-about-the-macros" title="Permanent link">&para;</a></h3>
+<h4 id="energy-change">Energy change<a class="headerlink" href="#energy-change" title="Permanent link">&para;</a></h4>
 <h5 id="removing-mirror-for-higher-energy-calibrations">Removing mirror for higher energy calibrations<a class="headerlink" href="#removing-mirror-for-higher-energy-calibrations" title="Permanent link">&para;</a></h5>
 <p>'''</p>
 <pre class="codehilite"><code>    newfile 
@@ -222,6 +243,19 @@ mv pil6my 885</p>
 <li><code>mv pil6mx 233</code>       - move pilatus 6M to 233 mm x direction </li>
 <li><code>mv pil6my 885</code>       - move pilatus 6M to 885 mm y direction</li>
 </ul>
+<h3 id="change-the-config-file">Change the config file<a class="headerlink" href="#change-the-config-file" title="Permanent link">&para;</a></h3>
+<p>open the terminal</p>
+<pre class="codehilite"><code>config 
+config configaration will open
+Go to the specific motor 
+change the required motor config
+press w 
+control c 
+reconfig
+</code></pre>
+
+<p>To go to the specific motor press c,c (twice) <br />
+shift+' to modify anything</p>
               
             </div>
           </div><footer>
