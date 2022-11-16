@@ -66,25 +66,11 @@
     <ul class="current">
     <li class="toctree-l4"><a class="reference internal" href="#basic-theory-hdrm">Basic Theory - HDRM</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sample-mount">Sample mount</a>
+    <li class="toctree-l4"><a class="reference internal" href="#basic-steps-for-sample-alignment-hdrm">Basic steps for sample alignment - HDRM</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#certering-of-the-sample">Certering of the sample</a>
+    <li class="toctree-l4"><a class="reference internal" href="#basic-theory-rexs">Basic Theory - REXS</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#creating-newfile">Creating newfile</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#change-the-sample-id">Change the sample ID</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#hdrmscansmac">HDRMscans.mac</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#height-check">Height check</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#check-data-at-nexpy">Check data at nexpy</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#stacking-images">Stacking images</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_1"></a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#height-scan">Height scan</a>
+    <li class="toctree-l4"><a class="reference internal" href="#basic-steps-for-sample-alignments-rexs">Basic steps for sample alignments - REXS</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#beamsplitting-polarimeter">Beamsplitting polarimeter</a>
     </li>
@@ -131,6 +117,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -182,17 +170,34 @@
 </div>
 <h5 id="basic-theory-hdrm">Basic Theory - HDRM<a class="headerlink" href="#basic-theory-hdrm" title="Permanent link">&para;</a></h5>
 <p>The High Dynamic Range Mapping (HDRM) is primarily a method for studying single crystal samples, although it can also be effective for studying thin films. The aim of HDRM is to rapidly study wide regions of reciprocal space, collecting the intense Bragg peaks required to refine crystal structures along with weak features associated with superstructures, and the slowly modulated scattering associated with phonons and short-range order[<a href="https://www.chess.cornell.edu/srn-article-cartography-7-dimensions-chess">1</a>].</p>
-<h3 id="sample-mount">Sample mount<a class="headerlink" href="#sample-mount" title="Permanent link">&para;</a></h3>
-<h3 id="certering-of-the-sample">Certering of the sample<a class="headerlink" href="#certering-of-the-sample" title="Permanent link">&para;</a></h3>
-<h3 id="creating-newfile">Creating newfile<a class="headerlink" href="#creating-newfile" title="Permanent link">&para;</a></h3>
-<h3 id="change-the-sample-id">Change the sample ID<a class="headerlink" href="#change-the-sample-id" title="Permanent link">&para;</a></h3>
-<h3 id="hdrmscansmac">HDRMscans.mac<a class="headerlink" href="#hdrmscansmac" title="Permanent link">&para;</a></h3>
-<h3 id="height-check">Height check<a class="headerlink" href="#height-check" title="Permanent link">&para;</a></h3>
-<h3 id="check-data-at-nexpy">Check data at nexpy<a class="headerlink" href="#check-data-at-nexpy" title="Permanent link">&para;</a></h3>
-<h3 id="stacking-images">Stacking images<a class="headerlink" href="#stacking-images" title="Permanent link">&para;</a></h3>
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<h3 id="height-scan">Height scan<a class="headerlink" href="#height-scan" title="Permanent link">&para;</a></h3>
 <h5 id="basic-steps-for-sample-alignment-hdrm">Basic steps for sample alignment - HDRM<a class="headerlink" href="#basic-steps-for-sample-alignment-hdrm" title="Permanent link">&para;</a></h5>
+<p>Step 1:  Center the sample to the beam </p>
+<p>Step 2 :  Creating file structure</p>
+<pre class="codehilite"><code>  a) Creating newfile
+
+        FOURC&gt;newfile samplename
+
+
+  b) Open HDRMscans.mac script
+        Change the sample ID
+</code></pre>
+
+<p>Step 3: Run HDRMscans.mac script from terminal</p>
+<pre class="codehilite"><code>      FOURC&gt; qdo ./HDRMscans.mac
+</code></pre>
+
+<p>Step 3: Check the best height for the sample</p>
+<pre class="codehilite"><code>    FOURC&gt;powderscan 300 1
+
+    a) Check the quality of the data sets at nexpy
+    b) Go to the best position of the sample
+</code></pre>
+
+<p>Step 4: Run three rotation crystal scan </p>
+<pre class="codehilite"><code>    FOURC&gt; threxstalscan 300 1 
+    #Notes: Parameters: Temperature = 300, Sleep = 1
+</code></pre>
+
 <div class="admonition danger">
 <p class="admonition-title">Resonant Elastic X-ray Scattering (REXS)</p>
 </div>
