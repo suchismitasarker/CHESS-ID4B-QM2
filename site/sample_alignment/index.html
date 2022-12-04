@@ -62,21 +62,17 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
     <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="./">Sample alignment</a>
     <ul class="current">
     <li class="toctree-l4"><a class="reference internal" href="#basic-theory-hdrm">Basic Theory - HDRM</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#basic-steps-for-sample-alignment-hdrm">Basic steps for sample alignment - HDRM</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#basic-theory-rexs">Basic Theory - REXS</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#basic-steps-for-sample-alignments-rexs">Basic steps for sample alignments - REXS</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#beamsplitting-polarimeter">Beamsplitting polarimeter</a>
     </li>
     </ul>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
     </ul>
                 </li>
@@ -163,30 +159,116 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-chess-qm2-sample-alignment">Welcome to CHESS QM2 Sample Alignment<a class="headerlink" href="#welcome-to-chess-qm2-sample-alignment" title="Permanent link">&para;</a></h1>
+                <h1 id="welcome-to-chess-qm2-sample-alignment">Welcome to CHESS &#60;QM&#62;<sup>2</sup> Sample Alignment<a class="headerlink" href="#welcome-to-chess-qm2-sample-alignment" title="Permanent link">&para;</a></h1>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline.jpeg?raw=true" width="300" /></p>
 <div class="admonition danger">
 <p class="admonition-title">High Dynamic Range Reciprocal Space Mapping (HDRM)</p>
 </div>
-<h5 id="basic-theory-hdrm">Basic Theory - HDRM<a class="headerlink" href="#basic-theory-hdrm" title="Permanent link">&para;</a></h5>
-<p>The High Dynamic Range Mapping (HDRM) is primarily a method for studying single crystal samples, although it can also be effective for studying thin films. The aim of HDRM is to rapidly study wide regions of reciprocal space, collecting the intense Bragg peaks required to refine crystal structures along with weak features associated with superstructures, and the slowly modulated scattering associated with phonons and short-range order[<a href="https://www.chess.cornell.edu/srn-article-cartography-7-dimensions-chess">1</a>].</p>
-<h5 id="basic-steps-for-sample-alignment-hdrm">Basic steps for sample alignment - HDRM<a class="headerlink" href="#basic-steps-for-sample-alignment-hdrm" title="Permanent link">&para;</a></h5>
+<h4 id="basic-theory-hdrm">Basic Theory - HDRM<a class="headerlink" href="#basic-theory-hdrm" title="Permanent link">&para;</a></h4>
+<p>High Dynamic Range Mapping (HDRM) is primarily a method for studying single crystal samples, although it can also be effective for studying thin films. HDRM aims is to rapidly study wide regions of reciprocal space, collecting the intense Bragg peaks required to refine crystal structures along with weak features associated with superstructures, and the slowly modulated scattering associated with phonons and short-range order[<a href="https://www.chess.cornell.edu/srn-article-cartography-7-dimensions-chess">1</a>].</p>
+<div class="admonition hint">
+<p class="admonition-title">Single Crytal Alignment</p>
+<p>Basic steps for single crystal sample alignment - HDRM</p>
+</div>
+<h6 id="step-1-center-the-sample-to-the-beam"><i>Step 1:  Center the sample to the beam </i><a class="headerlink" href="#step-1-center-the-sample-to-the-beam" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>        FOURC&gt; umv phi 0
+        FOURC&gt; umv phi 180
+        Move x and y to make the sample to the cursor
+        FOURC&gt; umv phi 90
+        FOURC&gt; umv phi 270
+        Do it iteratively until the center of the axis match the sample position
+</code></pre>
+
+<h6 id="step-2-create-file-structure"><i>Step 2 :  Create file structure </i><a class="headerlink" href="#step-2-create-file-structure" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>  a) Create newfile
+
+        FOURC&gt;newfile &lt;samplename&gt; 
+        # samplename : chemical name of your sample sample
+
+
+  b) Open HDRMscans.mac script and sort your path (sortmypathout)
+        i) Change the &lt;_mysample&gt; 
+        # _mysample is the sample identifier
+</code></pre>
+
+<h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>    FOURC&gt; qdo ./HDRMscans.mac  
+    # Notes: HDRMscans.mac contains all the script
+</code></pre>
+
+<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample"><i>Step 4 : If you want to check the best height for the sample </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>    FOURC&gt;powderscan 300 1
+
+    a) Check the quality of the data sets at nexpy
+    b) Go to the best position of the sample
+</code></pre>
+
+<h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>  It will rotate the crystal three times at different chi and theta angle
+
+    FOURC&gt; threextalscan 300 1 
+    #Notes: In the threextalscan 1st parameter is temperature 300 and the second parameter is waiting time 1
+</code></pre>
+
+<h6 id="step-6-check-data-nexpy"><i>Step 6: Check data nexpy  </i><a class="headerlink" href="#step-6-check-data-nexpy" title="Permanent link">&para;</a></h6>
+<p>Please look at the <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/">Data visualization</a> - Nexpy section</p>
+<p>=============================================================================</p>
+<div class="admonition type">
+<p class="admonition-title">Temperature modify and collect data</p>
+</div>
+<h6 id="change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere">Change temperature from 300K and 90 K- (if you are at Nitrogen atomosphere)<a class="headerlink" href="#change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere" title="Permanent link">&para;</a></h6>
+<pre class="codehilite"><code>    FOURC&gt; te 100
+    # note: temperature here is 100 Kelvin
+</code></pre>
+
+<p>Make sure the temperature is stable before you run script</p>
+<pre class="codehilite"><code>    FOURC&gt; threextalscan 100 1
+</code></pre>
+
+<div class="admonition danger">
+<p class="admonition-title">Practical guide of the temperature switch between nitrogen and helium</p>
+<p>Click the link for details
+        <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/">Nitrogen --&gt; Helium and Helium --&gt; Nitrogen</a></p>
+</div>
+<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h6>
+<p>=============================================================================</p>
+<div class="admonition hint">
+<p class="admonition-title">Thin-film Alignment</p>
+<p>Basic steps for single crystal thin-film sample alignment - HDRM. Detector height needs to change because of grazing incidence</p>
+</div>
 <p>Step 1:  Center the sample to the beam </p>
-<p>Step 2 :  Creating file structure</p>
-<pre class="codehilite"><code>  a) Creating newfile
+<pre class="codehilite"><code>  a) Move chi, phi, and theta positions to their initial setup
+        FOURC&gt; umv chi 90   
+        FOURC&gt; umv phi 0  
+        FOURC&gt; umv th 0
+
+  b) Perform height adjustment
+        FOURC&gt; check the signal at the diode 
+        FOURC&gt; cut the beam in half (for example: if the beam size is 300 microns, move 150 microns from the surface when the signal goes down)
+
+  b) Move the sample to the opposite, so it will be visible to the camera
+        FOURC&gt; umv chi 270
+        Place cursor at sample middle 
+        FOURC&gt; umv phi 90
+        FOURC&gt; umv phi 180
+</code></pre>
+
+<p>Step 2 :  Creating the file structure</p>
+<pre class="codehilite"><code>  a) Create newfile
 
         FOURC&gt;newfile samplename
 
 
-  b) Open HDRMscans.mac script
+  b) Open HDRMscans.mac script for thin-film
         Change the sample ID
 </code></pre>
 
 <p>Step 3: Run HDRMscans.mac script from terminal</p>
-<pre class="codehilite"><code>      FOURC&gt; qdo ./HDRMscans.mac
+<pre class="codehilite"><code>      FOURC&gt; qdo ./HDRMscans.mac 
+      #Notes:HDRMscans.mac contains all the script
 </code></pre>
 
-<p>Step 3: Check the best height for the sample</p>
+<p>Step 3: Check the best height for the sample it will generate tiff file</p>
 <pre class="codehilite"><code>    FOURC&gt;powderscan 300 1
 
     a) Check the quality of the data sets at nexpy
@@ -198,6 +280,8 @@
     #Notes: Parameters: Temperature = 300, Sleep = 1
 </code></pre>
 
+<p>Step 5: Check data nexpy 
+(<i>please look at the Data visulization - Nexpy section </i>)</p>
 <div class="admonition danger">
 <p class="admonition-title">Resonant Elastic X-ray Scattering (REXS)</p>
 </div>
@@ -214,8 +298,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../SPEC_commands/" class="btn btn-neutral float-left" title="ID4B-SPEC commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../sample/" class="btn btn-neutral float-right" title="Sample">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sample/" class="btn btn-neutral float-left" title="Sample"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../temp/" class="btn btn-neutral float-right" title="Temperature switch">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -243,10 +327,10 @@
         </span>
     
     
-      <span><a href="../SPEC_commands/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sample/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../sample/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../temp/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
