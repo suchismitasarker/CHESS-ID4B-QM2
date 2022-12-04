@@ -62,9 +62,11 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
     </ul>
                 </li>
@@ -237,56 +239,7 @@
 <div class="admonition danger">
 <p class="admonition-title">Practical guide of the temperature switch between nitrogen and helium</p>
 </div>
-<p></i></p>
-<h2 id="n2-and-he-switch-at-beamline-n2-all-temperature-77">N<sub>2</sub> and He switch at beamline (N<sub>2</sub> --&gt; all temperature--&gt; &gt;77)<a class="headerlink" href="#n2-and-he-switch-at-beamline-n2-all-temperature-77" title="Permanent link">&para;</a></h2>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true" width="500" /></p>
-</figure>
-<p><b><i> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 300K --&gt; &gt;77K </b> </p>
-<ul>
-<li>Step 1 : Open the N<sub>2</sub> valve and close He valve</li>
-<li>Step 2 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in hte Lakeshore controller)</li>
-<li>Step 3 : <i> FOURC &gt; <code>te 170</code> </i>   (# lowering temperature to 170K)</li>
-</ul>
-<p><b><i> Cooling temperature of cryocooler with He : 77K --&gt; 13K (change to N<sub>2</sub> to He flow)</b> </p>
-<ul>
-<li>Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 3 : Turn on the He valve  and close N2 valve together</li>
-<li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 5 : Wait for base temperature to stabilize </li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20cooling.png?raw=true" width="400" /></p>
-</figure>
-<ul>
-<li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Please use Helium sensibly!</p>
-</div>
-<p><b><i> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b> </p>
-<ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in hte Lakeshore controller)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in hte Lakeshore controller)</li>
-<li>Step 2 : Make sure all the temperature is above 77 K (channel A, B and C in PLD controller)</li>
-<li>Step 3 : Open the N2 valve and close He valve together</li>
-<li>Step 4 : <i> FOURC &gt; <code>te 100</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
-</ul>
-<p><b><i> Performing exoeriment above room temperature : 300K --&gt; 500K </b> </p>
-<ul>
-<li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
-<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature.</li>
-<li>Step 4 : FOURC &gt; <code>te 400</code> </i>   (# increase temperature to 400K)</li>
-</ul>
-<p><b><i> Goging to room temperature </b> </p>
-<ul>
-<li>Step 1 : Heat the temperature 300K, 300K, 300K</li>
-<li>Step 2 : close the compressor</li>
-<li>Step 3 : Wait until go to the required temperature</li>
-<li>Step 4 : Close the valve</li>
-</ul>
+<p>(Temperature change guideline)[https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/]</p>
               
             </div>
           </div><footer>

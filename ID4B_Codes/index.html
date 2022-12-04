@@ -62,9 +62,11 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
     </ul>
                 </li>
@@ -191,11 +193,12 @@
 <p>Reference: 
 pyFAI reference :<a href="https://pyfai.readthedocs.io/en/master/">pyFAI</a>.
 pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/calib-gui/index.html#cookbook-calibration-gui">calibration_video</a> Calibration of a diffraction setup using the Graphical User Interface (GUI) </p>
-<pre class="codehilite"><code>#pyFAI-average -o &lt;new_averaged_filename&gt; &lt;location of the datapath&gt; &lt;all the filenames&gt; 
-#Example:
-&gt;&gt;&gt; pyFAI-average -o ceria37keV.cbf /nfs/chess/id4b/2022-3/sarker-0000-0/raw6M/ceria/standard/300/ceria_001/ceria_PIL10_001_*.cbf``            #   generates average of all the images 
-#Go to the file location where new_averaged_file (i.e. ceria37keV.cbf) saved
+<pre class="codehilite"><code># Create calibration folder to the desired file location where new_averaged_file (i.e. ceria37keV.cbf) will save 
 &gt;&gt;&gt; cd calibration
+
+#pyFAI-average -o &lt;new_averaged_filename&gt; &lt;location of the datapath&gt; &lt;all the filenames&gt; 
+#Example:
+&gt;&gt;&gt; pyFAI-average -o ceria37keV.cbf /nfs/chess/id4b/2022-3/sarker-0000-0/raw6M/ceria/standard/300/ceria_001/ceria_PIL10_001_*.cbf``            #   generates average of all the images
 &gt;&gt;&gt; pyFAI-calib2            #   generates .poni and mask.edf files
 </code></pre>
 
@@ -300,11 +303,17 @@ python Pil6M_HKLConv_3D_2022.py 50
 </code></pre>
 
 <p>===========================================================================</p>
+<p>To tunnel the jupyter notebook from a node to the browser on the station computer, try this:
+1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
+jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"
+2) from the station computer, open a new terminal and do
+ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
+3) on the station computer, browse to localhost:8888 and enter the token as before (edited) </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample/" class="btn btn-neutral float-left" title="Sample"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../temp/" class="btn btn-neutral float-left" title="Temperature switch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../nexpy/" class="btn btn-neutral float-right" title="NeXpy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -333,7 +342,7 @@ python Pil6M_HKLConv_3D_2022.py 50
         </span>
     
     
-      <span><a href="../sample/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../temp/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../nexpy/" style="color: #fcfcfc">Next &raquo;</a></span>

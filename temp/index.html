@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/PTZ_camera/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/temp/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Cameras - CHESS ID4B QM2</title>
+    <title>Temperature switch - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Cameras";
-        var mkdocs_page_input_path = "PTZ_camera.md";
-        var mkdocs_page_url = "/PTZ_camera/";
+        var mkdocs_page_name = "Temperature switch";
+        var mkdocs_page_input_path = "temp.md";
+        var mkdocs_page_url = "/temp/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -60,13 +60,15 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
-    <ul>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
+    <ul class="current">
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Temperature switch</a>
+    <ul class="current">
+    </ul>
                 </li>
     </ul>
                 </li>
@@ -84,11 +86,9 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Beamline equipments</a>
-    <ul class="current">
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">Cameras</a>
-    <ul class="current">
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Beamline equipments</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../PTZ_camera/">Cameras</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../diffractometer/">Diffractometer</a>
                 </li>
@@ -143,9 +143,9 @@
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
           <li>User Guide &raquo;</li>
-          <li>Beamline equipments &raquo;</li><li>Cameras</li>
+          <li>Sample Alignment &raquo;</li><li>Temperature switch</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/PTZ_camera.md"
+        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -155,57 +155,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="cameras">Cameras<a class="headerlink" href="#cameras" title="Permanent link">&para;</a></h3>
-<p>Two Pan-tilt-zoom (PZT) cameras are installed in the ID4B beamline for the users to look the sample position and computers. The IP address of the cameras shown below 
-<br></p>
-<ul>
-<li>Hutch PTZ camera : 192.168.182.82</li>
-</ul>
+                <h1 id="practical-guide-of-the-temperature-switch-between-nitrogen-and-helium">Practical guide of the temperature switch between nitrogen and helium<a class="headerlink" href="#practical-guide-of-the-temperature-switch-between-nitrogen-and-helium" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger<p></i>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> --&gt; all temperature--&gt;77K)</p>
+</p>
+</div>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Hutch%20camera.jpeg?raw=true" width="300" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true" width="500" /></p>
 </figure>
+<p><b><i> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 300K --&gt; 95K </b> </p>
 <ul>
-<li>Station PTZ camera : 192.168.182.42</li>
+<li>Step 1 : Open the N<sub>2</sub> valve and close He valve</li>
+<li>Step 2 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 3 : <i> FOURC &gt; <code>te 170</code> </i>   (# lowering temperature to 170K)</li>
+</ul>
+<p><b><i> Cooling temperature of cryocooler with He : 77K --&gt; 13K (change to N<sub>2</sub> to He flow)</b> </p>
+<ul>
+<li>Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 3 : Turn on the He valve  and close N2 valve together</li>
+<li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 5 : Wait for base temperature to stabilize </li>
+<li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Sample%20camera.jpeg?raw=true" width="300" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20cooling.png?raw=true" width="400" /></p>
 </figure>
 <div class="admonition danger">
-<p class="admonition-title">Opening the station camera with cursur (if it is crushed )</p>
-<p>Oen the terminal</p>
+<p class="admonition-title">Please use Helium sensibly!</p>
 </div>
-<pre class="codehilite"><code>&gt;&gt;&gt; ImageJ
-</code></pre>
-
-<p><i> 3 windows will open </i></p>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/3%20windows.png?raw=true" width="500" /></p>
-</figure>
-<pre class="codehilite"><code>Chane in the window
-Change PIL6--&gt; ID4B:image1:
-Press strat button
-</code></pre>
-
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/cameraid4b_fix1.png?raw=true" width="500" /></p>
-</figure>
-<pre class="codehilite"><code>camera window will pop-up
-</code></pre>
-
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/camera_with_cursur.png?raw=true" width="200" /></p>
-</figure>
-<blockquote>
-<blockquote>
-<p>sample_view_controls</p>
-</blockquote>
-</blockquote>
+<p><b><i> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b> </p>
+<ul>
+<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 2 : Make sure all the temperature is above 77 K (channel A, B and C in PLD controller)</li>
+<li>Step 3 : Open the N2 valve and close He valve together</li>
+<li>Step 4 : <i> FOURC &gt; <code>te 100</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
+</ul>
+<p><b><i> Performing exoeriment above room temperature : 300K --&gt; 500K </b> </p>
+<ul>
+<li>Step 1 : Make sure N2 valve is open and He is closed</li>
+<li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
+<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature.</li>
+<li>Step 4 : FOURC &gt; <code>te 400</code> </i>   (# increase temperature to 400K)</li>
+</ul>
+<p><b><i> Goging to room temperature </b> </p>
+<ul>
+<li>Step 1 : Heat the temperature 300K, 300K, 300K</li>
+<li>Step 2 : close the compressor</li>
+<li>Step 3 : Wait until go to the required temperature</li>
+<li>Step 4 : Close the valve</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../pymca/" class="btn btn-neutral float-left" title="pyMCA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../diffractometer/" class="btn btn-neutral float-right" title="Diffractometer">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sample_alignment/" class="btn btn-neutral float-left" title="Sample alignment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ID4B_Codes/" class="btn btn-neutral float-right" title="Data processing">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -233,10 +239,10 @@ Press strat button
         </span>
     
     
-      <span><a href="../pymca/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sample_alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../diffractometer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../ID4B_Codes/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
