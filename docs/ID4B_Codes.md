@@ -43,12 +43,12 @@ pyFAI reference :[pyFAI](https://pyfai.readthedocs.io/en/master/).
 pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/cookbook/calib-gui/index.html#cookbook-calibration-gui) Calibration of a diffraction setup using the Graphical User Interface (GUI) 
 
     
-    
+    # Create calibration folder to the desired file location where new_averaged_file (i.e. ceria37keV.cbf) will save 
+    >>> cd calibration
+
     #pyFAI-average -o <new_averaged_filename> <location of the datapath> <all the filenames> 
     #Example:
-    >>> pyFAI-average -o ceria37keV.cbf /nfs/chess/id4b/2022-3/sarker-0000-0/raw6M/ceria/standard/300/ceria_001/ceria_PIL10_001_*.cbf``            #   generates average of all the images 
-    #Go to the file location where new_averaged_file (i.e. ceria37keV.cbf) saved
-    >>> cd calibration
+    >>> pyFAI-average -o ceria37keV.cbf /nfs/chess/id4b/2022-3/sarker-0000-0/raw6M/ceria/standard/300/ceria_001/ceria_PIL10_001_*.cbf``            #   generates average of all the images
     >>> pyFAI-calib2            #   generates .poni and mask.edf files
 
  After doing the calibration, save the .poni and mask file
@@ -166,3 +166,9 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 ===========================================================================
 
 
+To tunnel the jupyter notebook from a node to the browser on the station computer, try this:
+1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
+jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"
+2) from the station computer, open a new terminal and do
+ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
+3) on the station computer, browse to localhost:8888 and enter the token as before (edited) 

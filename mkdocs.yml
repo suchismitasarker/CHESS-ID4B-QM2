@@ -18,8 +18,9 @@ nav:
             - Introduction: 'introduction.md'
             - ID4B-SPEC commands: 'SPEC_commands.md'
             - 'Sample Alignment':
-                - Sample alignment : sample_alignment.md
                 - Sample : sample.md
+                - Sample alignment : sample_alignment.md
+                - Temperature switch : temp.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
                 - 'Data visualization': 
