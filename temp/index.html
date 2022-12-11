@@ -175,7 +175,7 @@
 <li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 3 : Turn on the He valve  and close N2 valve together</li>
 <li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 5 : Wait for base temperature to stabilize </li>
+<li>Step 5 : Wait for base temperature (channel A ~5K channel B ~36K) to stabilize </li>
 <li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
 </ul>
 <figure>
@@ -186,9 +186,9 @@
 </div>
 <p><b><i> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b> </p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 2 : Make sure all the temperature is above 77 K (channel A, B and C in PLD controller)</li>
+<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 83K and 86K in the Lakeshore controller channel A and channel B)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
+<li>Step 2 : Make sure all the temperature is above 77 K (channel A 83 K, B (sample temperature) and C 86K in PLD controller)</li>
 <li>Step 3 : Open the N2 valve and close He valve together</li>
 <li>Step 4 : <i> FOURC &gt; <code>te 100</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
 </ul>
@@ -196,7 +196,7 @@
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
-<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature.</li>
+<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature 143K and 220K.</li>
 <li>Step 4 : FOURC &gt; <code>te 400</code> </i>   (# increase temperature to 400K)</li>
 </ul>
 <p><b><i> Goging to room temperature </b> </p>
