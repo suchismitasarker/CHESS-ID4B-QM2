@@ -64,8 +64,6 @@ pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/
 </figure>
 
 
-
-
 !!! danger "Recommendation : lnx306 to run the stacking code, HKL convertion code in lnx1034-f1"
 In the beamline, you will find the folder `codebase_for_users` where all codes are saved. 
 `lnx306` or `lnx1034-f1` can make ~3 stacks at a time before running out of the memory
@@ -75,7 +73,7 @@ In the beamline, you will find the folder `codebase_for_users` where all codes a
 
 !!! tip "STEP II :  Stack data"
 
-The script take all the detector's raw .cbf files and performed calibration. You can the get the [stack_em_all](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py). 
+The script take all the detector's raw .cbf files and performed calibration. You can the get the [stack_em_all_cbf_2022.py](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py). 
 
  
     Step 1 :  the `python stack_em_all_cbf_2022.py` python script
@@ -107,7 +105,7 @@ You can create bash script to run the stacking
 ===========================================================================
 
 !!! tip "STEP III:  Find Bragg peaks"
-[simple_peakfinder](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py) script
+[simple_peakfinder.py](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py) script
 
     Step 1: After stacking is done, take the whole stack from the id4aux data folder and run simple_peakfinder.py code
     
@@ -123,7 +121,7 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 ===========================================================================
 
 !!! tip "STEP IV:  Solve orientation matrix"
-[auto_ormfinder](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py) script 
+[auto_ormfinder.py](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py) script 
 
     Usage: 
     python auto_ormfinder.py */full/path/to/stack/ peakfilename.npy
@@ -138,7 +136,7 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 
 !!! tip "STEP V:  Convert stacks of data to HKL volume"
 
-[Pil6M_HKLConv](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py) python script (edit to point to project, ormatrix, and define HKL grid)
+[Pil6M_HKLConv_3D_2022.py](https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py) python script (edit to point to project, ormatrix, and define HKL grid)
 
     Step 1: Edit the script
         i) Change the project name
@@ -161,14 +159,34 @@ Check the number of peaks, you find after running the code. In between 200-3000 
     python Pil6M_HKLConv_3D_2022.py 50
 
 
+!!! tip "Runnning same sample at different temperature processing"
+
+* <i>Step A</i>: Do the stacking (follow `STEP I` above)
+* <i>Step B</i>: Copy the `orientation matrix` from processed data
+* <i>Step C</i>: Run `STEP V`
+
 
 
 ===========================================================================
-
+!!! tip "login to jupyter"
 
 To tunnel the jupyter notebook from a node to the browser on the station computer, try this:
-1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
+
+* 1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
 jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"
-2) from the station computer, open a new terminal and do
+* 2) from the station computer, open a new terminal and do
 ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
-3) on the station computer, browse to localhost:8888 and enter the token as before (edited) 
+* 3) on the station computer, browse to localhost:8888 and enter the token as before (edited) 
+
+
+===============================================================================
+
+!!! tip "Using general nodes"
+
+* Step 1 : login to `lnx201`
+* step 2: `qrsh -q interactive.q -l mem_free=350G`
+* Step 3: `source /nfs/chess/sw/anaconda3_jpcr/bin/activate`
+* Step 4: `qstat`
+* Step 5 : `ls`
+* Step 6: `cd CLASSE_shortcuts/chess_aux/id4b/codebase_for_users/`
+* Step 7: Follow `Step I` above 

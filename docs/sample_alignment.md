@@ -43,9 +43,10 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 ######  <i>Step 4 : If you want to check the best height for the sample </i>
 
-        FOURC>powderscan 300 1
+        FOURC>heightscan 
 
-        a) Check the quality of the data sets at nexpy
+        a) Data will save at tiff folder in id4b
+        b) Check the quality of the datasets at nexpy
         b) Go to the best position of the sample
 
 ######  <i>Step 5: Run three rotation crystal scan </i>
@@ -53,6 +54,8 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
         FOURC> threextalscan 300 1 
         #Notes: In the threextalscan 1st parameter is temperature 300 and the second parameter is waiting time 1
+
+        a) Data will save at raw6M in id4b folder
 
 ######  <i>Step 6: Check data nexpy  </i>
 Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/ ) - Nexpy section

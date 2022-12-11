@@ -48,4 +48,7 @@ Using GE vernish at the top of the Mincromount and attached the sample properly.
 Make sure you do not tunch the metal part with the sample!!
 
 
+# air sensitive samples
+
+If coating needed, one of the example could be [this](https://www.agc-chemicals.com/jp/en/fluorine/products/detail/index.html?pCode=JP-EN-F019#:~:text=CYTOP%C2%AE%20is%20a%20fluoropolymer,coat%2C%20and%20more%20are%20possible)
 
