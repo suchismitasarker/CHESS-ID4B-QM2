@@ -57,7 +57,15 @@
 * Step 4 : FOURC > `te 400` </i>   (# increase temperature to 400K)
 
 
-<b><i> Goging to room temperature </b> 
+<b><i> Performing exoeriment above room temperature : 500K --> 300K </b> 
+
+* Step 1 : Make sure N2 valve is open and He is closed
+* Step 2: <i> FOURC > `prepnitrogen`  (# increase temperature to 1st and 2nd controller to 143K and 220K)
+* Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature 143K and 220K.
+* Step 4 : FOURC > `te 300` </i>   (# increase temperature to 300K)
+
+
+<b><i> Goging to room temperature </b></i>
 
 * Step 1 : Heat the temperature 300K, 300K, 300K
 * Step 2 : close the compressor
@@ -66,3 +74,16 @@
 
 
 
+# Problem : Ice formation at low temperature
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/icing_issue.png?raw=true){ width="600" }
+</figure>
+ 
+* <i><b> a) Figure 1</b></i> : Check the distance between the cryo-stream and sample (it should be as close as possible)
+* <i><b> b) Figure 2</b></i> : Continuously rotate the phi `umv phi 360; umv phi 0` at low temperature
+* <i><b> c) Figure 3</b></i> : Check the gas flow and if needed talk to the staff scientist
+
+
+# Problem : High temperature issues
+* <i><b> a) Figure 3</b></i> : Check the gas flow and if needed talk to the staff scientist

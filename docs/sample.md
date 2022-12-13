@@ -26,29 +26,31 @@ Users setup at the beamline
 The procedure of mounting/changing the sample depends on the type of experiment performed ID4B.
 
 
-### Sample mount (single crystal)
+### Sample crystal mount 
 
 The single-crystal mounts are straightforward. 
 
-Step 1: You need magnetic mount 
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample_mount.png?raw=true){ width="600" }
+</figure>
+
+* <i><b> Step 1 </b></i>: You need base 
+
+* <i><b> Step 2 </b></i>: Micromount :
+     MiTeGen is used for micromount pin. It is composed of thin polymer tips attached to beveled non-magnetic 0.025″ (0.64 mm) diameter stainless steel rods (pins).
+
+    <b>Below is the link for the sample tip </b>  
+    [SKU: M2-L18SP-100](https://www.mitegen.com/product/dual-thickness-micromounts/) and the aperture Size is 100 μm.
+
+* <i><b> Step 3 </b></i>: Do not touch the tips with your hands. Always use tweezers along the pin shaft, not the tip.
 
 
+* <i><b> Step 4 </b></i>: Use GE vernish to glue the micromount to base 
 
-Step 2 : Micromount 
-
-
-Step 3: GE Varnish
+* <i><b> Step 5 </b></i>: Make sure you do not tunch the metal part with the sample!!
 
 
-Step 4: Use GE vernish to glue the micromount to magnetic mount 
-
-
-Step 5 : 
-Using GE vernish at the top of the Mincromount and attached the sample properly. 
-Make sure you do not tunch the metal part with the sample!!
-
-
-# air sensitive samples
+# Air sensitive samples
 
 If coating needed, one of the example could be [this](https://www.agc-chemicals.com/jp/en/fluorine/products/detail/index.html?pCode=JP-EN-F019#:~:text=CYTOP%C2%AE%20is%20a%20fluoropolymer,coat%2C%20and%20more%20are%20possible)
 

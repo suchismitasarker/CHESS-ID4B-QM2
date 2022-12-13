@@ -13,8 +13,13 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 !!! hint "Single Crytal Alignment"
       Basic steps for single crystal sample alignment - HDRM
 
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true){ width="150" }
+</figure>
+
+
 ######  <i>Step 1:  Center the sample to the beam </i>
-            
+         
             FOURC> umv phi 0
             FOURC> umv phi 180
             Move x and y to make the sample to the cursor

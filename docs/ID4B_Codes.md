@@ -181,12 +181,24 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
 
 ===============================================================================
 
-!!! tip "Using general nodes"
+!!! tip "Want to process the data after leaving beamline?"
+    Using general nodes
 
-* Step 1 : login to `lnx201`
+* Step 1 : login to `ssh <username>@lnx201.classe.cornell.edu`
 * step 2: `qrsh -q interactive.q -l mem_free=350G`
 * Step 3: `source /nfs/chess/sw/anaconda3_jpcr/bin/activate`
 * Step 4: `qstat`
 * Step 5 : `ls`
 * Step 6: `cd CLASSE_shortcuts/chess_aux/id4b/codebase_for_users/`
-* Step 7: Follow `Step I` above 
+* Step 7: Follow `Step II` above 
+
+### <b>Important links for more details </b>
+
+* [Remote access to Linux machines](https://wiki.classe.cornell.edu/Computing/RemoteLinux)
+* [Access to nomachine](https://wiki.classe.cornell.edu/Computing/NoMachine)
+* [Data transfer Globus](https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer)
+* [CHESS computing farm access](https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro)
+* [CHESS jupyterhub](https://wiki.classe.cornell.edu/Computing/JupyterHub)
+* [CLASSE-IT Service Requests ](service-classe@cornell.edu)
+
+

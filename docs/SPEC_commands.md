@@ -85,11 +85,11 @@ Few important commands are shown below.
 * `newfile` 		- data file management
 * `newmac` 		- re-read the standard macro definitions
 * `nu`          - `???????`
-* `or0`          - 
+* `or0`         - 
 * `or1`         - 
 * `or_swap`     - 
-* `os1`         - `optical slit 1??????`
-* `os2`         - `??????`
+* `os1`         - optical slit 1 position to 0
+* `os2`         - optical slit 1 position to 0
 * `pwd` 		- print spec's current working directory
 * `pa`          - 
 * `park6m`      - park the 6M PILATUS detector to 175m (x), 924.5m (y) and 200m (z) in  directions
@@ -99,7 +99,7 @@ Few important commands are shown below.
 * `pil_setup PIL6`  - PILATUS setup 
 * `pil_settrig "Internal"`  -
 * `pil_unsetup 0`   - PILATUS unset 
-* `pl_xMAX`     -
+* `pl_xMAX`     - show the maximum value of the plot in x-direction
 * `plotselect pilroi`   - plot select PILATUS ROI
 * `qdo` 		- execute a command file without echo
 * `quickfly`    -
@@ -127,7 +127,7 @@ Few important commands are shown below.
 * `spec` 		- spec, fourc, twoc, surf, etc. - X-ray diffractometer operation for specific configurations
 * `spec_menu` 		- spec_menu() - create interactive menu from specifications
 * `spec_par` 		- spec_par() - sets internal parameters
-* `splot`       - 
+* `splot`       - plot the plotselect of specific values
 * `syncE`       - synchronize E
 * `tw tabzd tabzui tabzuo` -    tewak table 
 * `te` 			- read or set the temperature
@@ -145,6 +145,8 @@ Few important commands are shown below.
 * `wait` 		- wait() - synchronization with moving, counting and other activity
 * `wfilter`     - where is filters
 * `wideopt`     - 
+* `diftabx`     - diffractometer movement in x directions
+* `diftabz`     - diffractometer movement in z directions
 * `wh` 			- where, principal axes and reciprocal space
 * `whats` 		- identify what an object is
 * `wm` 			- print information about one or more motors
@@ -153,7 +155,7 @@ Few important commands are shown below.
 * `wmonoall`    - where is mirror position
 * `wot`         - where is optical tables
 * `ws1`         - where is first slit
-* `ws1`         - where is second slit
+* `ws2`         - where is second slit
 * `w6m`         - where is 6M detector
 * `wslits`      - where is both slit 1 and slit 2
 

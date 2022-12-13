@@ -14,6 +14,10 @@
 #### Flux Calculator
 [CHESS Flux calculator](https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator) at the beamline
 
+#### X-ray absoption edge 
+
+[CHeck absroption edge](http://skuld.bmsc.washington.edu/scatter/AS_periodic.html)
+
 
 #### flyscan 
 * `flyscan_setup`

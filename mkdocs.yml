@@ -21,6 +21,7 @@ nav:
                 - Sample : sample.md
                 - Sample alignment : sample_alignment.md
                 - Temperature switch : temp.md
+                - Gas flow control : gas_flow.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
                 - 'Data visualization': 
