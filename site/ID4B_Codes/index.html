@@ -217,7 +217,7 @@ pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/ca
 <div class="admonition tip">
 <p class="admonition-title">STEP II :  Stack data</p>
 </div>
-<p>The script take all the detector's raw .cbf files and performed calibration. You can the get the <a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all</a>. </p>
+<p>The script take all the detector's raw .cbf files and performed calibration. You can the get the <a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all_cbf_2022.py</a>. </p>
 <pre class="codehilite"><code>Step 1 :  the `python stack_em_all_cbf_2022.py` python script
 Modify : 
         i) Project name : 
@@ -249,7 +249,7 @@ Step 3 : Check data
 <div class="admonition tip">
 <p class="admonition-title">STEP III:  Find Bragg peaks</p>
 </div>
-<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py">simple_peakfinder</a> script</p>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py">simple_peakfinder.py</a> script</p>
 <pre class="codehilite"><code>Step 1: After stacking is done, take the whole stack from the id4aux data folder and run simple_peakfinder.py code
 
     Usage: 
@@ -265,7 +265,7 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 <div class="admonition tip">
 <p class="admonition-title">STEP IV:  Solve orientation matrix</p>
 </div>
-<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py">auto_ormfinder</a> script </p>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py">auto_ormfinder.py</a> script </p>
 <pre class="codehilite"><code>Usage: 
 python auto_ormfinder.py */full/path/to/stack/ peakfilename.npy
 
@@ -280,7 +280,7 @@ Example:
 <div class="admonition tip">
 <p class="admonition-title">STEP V:  Convert stacks of data to HKL volume</p>
 </div>
-<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
+<p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv_3D_2022.py</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
 <pre class="codehilite"><code>Step 1: Edit the script
     i) Change the project name
                 projd = &quot;/nfs/chess/id4baux/2022-3/sarker-0000-a&quot;
@@ -302,13 +302,39 @@ Example:
 python Pil6M_HKLConv_3D_2022.py 50
 </code></pre>
 
+<div class="admonition tip">
+<p class="admonition-title">Runnning same sample at different temperature processing</p>
+</div>
+<ul>
+<li><i>Step A</i>: Do the stacking (follow <code>STEP I</code> above)</li>
+<li><i>Step B</i>: Copy the <code>orientation matrix</code> from processed data</li>
+<li><i>Step C</i>: Run <code>STEP V</code></li>
+</ul>
 <p>===========================================================================</p>
-<p>To tunnel the jupyter notebook from a node to the browser on the station computer, try this:
-1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
-jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"
-2) from the station computer, open a new terminal and do
-ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
-3) on the station computer, browse to localhost:8888 and enter the token as before (edited) </p>
+<div class="admonition tip">
+<p class="admonition-title">login to jupyter</p>
+</div>
+<p>To tunnel the jupyter notebook from a node to the browser on the station computer, try this:</p>
+<ul>
+<li>1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
+jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"</li>
+<li>2) from the station computer, open a new terminal and do
+ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888</li>
+<li>3) on the station computer, browse to localhost:8888 and enter the token as before (edited) </li>
+</ul>
+<p>===============================================================================</p>
+<div class="admonition tip">
+<p class="admonition-title">Using general nodes</p>
+</div>
+<ul>
+<li>Step 1 : login to <code>lnx201</code></li>
+<li>step 2: <code>qrsh -q interactive.q -l mem_free=350G</code></li>
+<li>Step 3: <code>source /nfs/chess/sw/anaconda3_jpcr/bin/activate</code></li>
+<li>Step 4: <code>qstat</code></li>
+<li>Step 5 : <code>ls</code></li>
+<li>Step 6: <code>cd CLASSE_shortcuts/chess_aux/id4b/codebase_for_users/</code></li>
+<li>Step 7: Follow <code>Step I</code> above </li>
+</ul>
               
             </div>
           </div><footer>
