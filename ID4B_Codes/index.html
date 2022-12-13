@@ -68,6 +68,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../gas_flow/">Gas flow control</a>
+                </li>
     </ul>
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Data Analysis</a>
@@ -324,22 +326,32 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888</li>
 </ul>
 <p>===============================================================================</p>
 <div class="admonition tip">
-<p class="admonition-title">Using general nodes</p>
+<p class="admonition-title">Want to process the data after leaving beamline?</p>
+<p>Using general nodes</p>
 </div>
 <ul>
-<li>Step 1 : login to <code>lnx201</code></li>
+<li>Step 1 : login to <code>ssh &lt;username&gt;@lnx201.classe.cornell.edu</code></li>
 <li>step 2: <code>qrsh -q interactive.q -l mem_free=350G</code></li>
 <li>Step 3: <code>source /nfs/chess/sw/anaconda3_jpcr/bin/activate</code></li>
 <li>Step 4: <code>qstat</code></li>
 <li>Step 5 : <code>ls</code></li>
 <li>Step 6: <code>cd CLASSE_shortcuts/chess_aux/id4b/codebase_for_users/</code></li>
-<li>Step 7: Follow <code>Step I</code> above </li>
+<li>Step 7: Follow <code>Step II</code> above </li>
+</ul>
+<h3 id="important-links-for-more-details"><b>Important links for more details </b><a class="headerlink" href="#important-links-for-more-details" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://wiki.classe.cornell.edu/Computing/RemoteLinux">Remote access to Linux machines</a></li>
+<li><a href="https://wiki.classe.cornell.edu/Computing/NoMachine">Access to nomachine</a></li>
+<li><a href="https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer">Data transfer Globus</a></li>
+<li><a href="https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro">CHESS computing farm access</a></li>
+<li><a href="https://wiki.classe.cornell.edu/Computing/JupyterHub">CHESS jupyterhub</a></li>
+<li><a href="service-classe@cornell.edu">CLASSE-IT Service Requests </a></li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../temp/" class="btn btn-neutral float-left" title="Temperature switch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gas_flow/" class="btn btn-neutral float-left" title="Gas flow control"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../nexpy/" class="btn btn-neutral float-right" title="NeXpy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -368,7 +380,7 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888</li>
         </span>
     
     
-      <span><a href="../temp/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../gas_flow/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../nexpy/" style="color: #fcfcfc">Next &raquo;</a></span>
