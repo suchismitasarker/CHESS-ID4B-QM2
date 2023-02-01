@@ -56,11 +56,11 @@ pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/
 
 ===========================================================================
 
-## Data process model
+## Computers : Data processing 
 
 
 <figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/data_processing_image.png?raw=true)
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Beamline%20computers.png?raw=true)
 </figure>
 
 
@@ -182,15 +182,24 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
 ===============================================================================
 
 !!! tip "Want to process the data after leaving beamline?"
-    Using general nodes
+    If you need more information [CHESS computing farm access](https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro)
+
+        Using general nodes follow the below steps
+    
 
 * Step 1 : login to `ssh <username>@lnx201.classe.cornell.edu`
-* step 2: `qrsh -q interactive.q -l mem_free=350G`
+* Step 2: `qrsh -q interactive.q -l mem_free=350G`
+    
+    Or if you need more core
+
+* Step 2: `qrsh -q interactive.q -l mem_free=350G -pe sge_pe 20`
 * Step 3: `source /nfs/chess/sw/anaconda3_jpcr/bin/activate`
 * Step 4: `qstat`
 * Step 5 : `ls`
-* Step 6: `cd CLASSE_shortcuts/chess_aux/id4b/codebase_for_users/`
+* Step 6: `cd /nfs/chess/id4baux/2022-3/codebase_for_users/`
 * Step 7: Follow `Step II` above 
+
+<i> If you are doing stacking from general node, you need to change the permission setup </i>
 
 ### <b>Important links for more details </b>
 

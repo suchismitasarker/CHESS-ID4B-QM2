@@ -47,11 +47,13 @@ camera window will pop-up
 
 ```
 
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/camera_with_cursur.png?raw=true){ width="200" }
-</figure>
 
 >> sample_view_controls
+
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample%20view%20camera%201.png?raw=true){ width="500" }
+</figure>
 
 
 

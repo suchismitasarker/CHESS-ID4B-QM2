@@ -62,7 +62,17 @@ Motors
 * Open terminal
 *  > `StripTool` 
 
+* Need to connect to epics PVs that you want to monitor
+
+  LAKESHORE2:KRDG0
+
+  LAKESHORE2:KRDG1
+
+  LAKESHORE2:KRDG2
+
+* y-axis click “Modify” button (same y axis for all the curves)
+
 
 !!! danger "Practical guide of the temperature switch between nitrogen and helium"
 
-(Temperature change guideline)[https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/]
+[Temperature change guideline](https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/)
