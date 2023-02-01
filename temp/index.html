@@ -68,6 +68,8 @@
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="./">Temperature switch</a>
     <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#consult-beamline-scientist-before-changing-any-temperatures">Consult beamline scientist before changing any temperatures</a>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../gas_flow/">Gas flow control</a>
@@ -158,57 +160,72 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="practical-guide-of-the-temperature-switch-between-nitrogen-and-helium">Practical guide of the temperature switch between nitrogen and helium<a class="headerlink" href="#practical-guide-of-the-temperature-switch-between-nitrogen-and-helium" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">Danger<p></i>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> --&gt; all temperature--&gt;77K)</p>
-</p>
-</div>
+<h4 id="consult-beamline-scientist-before-changing-any-temperatures">Consult beamline scientist before changing any temperatures<a class="headerlink" href="#consult-beamline-scientist-before-changing-any-temperatures" title="Permanent link">&para;</a></h4>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true" width="500" /></p>
 </figure>
-<p><b><i> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 300K --&gt; 95K </b> </p>
+<p><b><i><u> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 300K --&gt; 95K </b> </u></p>
 <ul>
 <li>Step 1 : Open the N<sub>2</sub> valve and close He valve</li>
 <li>Step 2 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 3 : <i> FOURC &gt; <code>te 170</code> </i>   (# lowering temperature to 170K)</li>
 </ul>
-<p><b><i> Cooling temperature of cryocooler with He : 77K --&gt; 13K (change to N<sub>2</sub> to He flow)</b> </p>
-<ul>
-<li>Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 3 : Turn on the He valve  and close N2 valve together</li>
-<li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 5 : Wait for base temperature (channel A ~5K channel B ~36K) to stabilize </li>
-<li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20cooling.png?raw=true" width="400" /></p>
-</figure>
 <div class="admonition danger">
 <p class="admonition-title">Please use Helium sensibly!</p>
 </div>
-<p><b><i> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b> </p>
+<p><b><i><u> Cooling temperature of cryocooler with He : 77K --&gt; 13K (change to N<sub>2</sub> to He flow)</b></u> </p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 83K and 86K in the Lakeshore controller channel A and channel B)</li>
+<li>Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 220</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 3 : Turn on the He valve  and close N2 valve together</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500" /></p>
+</figure>
+<ul>
+<li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 5 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)</li>
+<li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2036-4%201.png?raw=true" width="700" /></p>
+</figure>
+<p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b></u></p>
+<ul>
+<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 87K and 83K in the Lakeshore controller Input A and input C)</li>
 <li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
-<li>Step 2 : Make sure all the temperature is above 77 K (channel A 83 K, B (sample temperature) and C 86K in PLD controller)</li>
-<li>Step 3 : Open the N2 valve and close He valve together</li>
+<li>Step 2 : Make sure all the temperature is above 77 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
+</ul>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2086-83%201.png?raw=true" width="600" />
+</figure></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p></i>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;77K)</p>
+</div>
+<figure>
+<ul>
+<li>Step 3 : Once Input A, B and C are above 77K, then open the N2 valve and close He valve together
+  <img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600" /></li>
+</ul>
+</figure>
+<ul>
 <li>Step 4 : <i> FOURC &gt; <code>te 100</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
 </ul>
-<p><b><i> Performing exoeriment above room temperature : 300K --&gt; 500K </b> </p>
+<p><b><i><u> Performing experiment above room temperature : 300K --&gt; 500K </b></u></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
-<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature 143K and 220K.</li>
+<li>Step 3 : Make sure in the controller 1 (Input A) and B (input C), it will to reach the temperature 143K and 220K.</li>
 <li>Step 4 : FOURC &gt; <code>te 400</code> </i>   (# increase temperature to 400K)</li>
 </ul>
-<p><b><i> Performing exoeriment above room temperature : 500K --&gt; 300K </b> </p>
+<p><b><i><u> Performing experiment above room temperature : 500K --&gt; 300K </b></u></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
-<li>Step 3 : Make sure in the controller 1 (channel 1) and 2 (channel 3), it will to reach the temperature 143K and 220K.</li>
+<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 143K and 220K.</li>
 <li>Step 4 : FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 300K)</li>
 </ul>
-<p><b><i> Goging to room temperature </b></i></p>
+<p><b><i><u> Turn off the temperature controller </b></i></u></p>
 <ul>
 <li>Step 1 : Heat the temperature 300K, 300K, 300K</li>
 <li>Step 2 : close the compressor</li>
@@ -228,6 +245,11 @@
 <ul>
 <li><i><b> a) Figure 3</b></i> : Check the gas flow and if needed talk to the staff scientist</li>
 </ul>
+<h1 id="problem-accidentally-closed-the-temperature-controller">Problem : Accidentally closed the temperature controller<a class="headerlink" href="#problem-accidentally-closed-the-temperature-controller" title="Permanent link">&para;</a></h1>
+<ul>
+<li><i><b> Step 1 </b></i> : Open terminal and type <code>StripTool</code></li>
+<li><i><b> Step 2 </b></i> : Connect to epics PVs</li>
+</ul>
               
             </div>
           </div><footer>
@@ -240,7 +262,7 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2022, CHESS ID4B Beamline</p>
+      <p>© Copyright 2023, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

@@ -237,6 +237,83 @@
 </code></pre>
 
 <p>'''</p>
+<p>Step I: 
+* Cover the detector
+* Before energy change (&gt; 30 keV higher to lower &lt; 18 keV)
+         verify counts in ic1, ic2 and diode (<code>getE</code> : provide you the energy)
+         Put mostab to 5 V 
+         Optimize counts (<code>tweakup</code>)
+         <code>syncE</code>
+* Then try move energy and optimize mostab:
+        <code>moveE 11</code>
+        <code>matchUE 3</code>
+        <code>tweakup</code>
+        <code>lup montrav</code>
+* Open shuttur
+        <code>os1 4 4</code>
+* move the whole table up 
+        <code>tw tabzu tabx tabzui 1 1 1</code></p>
+<ul>
+<li>Get values in ic1 and ic2 </li>
+<li>put mirror 
+        <code>wmirror</code></li>
+</ul>
+<p>Cryo
+* take out the stage
+* Go to chi 90
+* put the new sample stage with pin (the pin should slide in the sample stage) 
+* Put the cryostate : it will go only from one side shown in the below
+* there are 4 scrwes to hold that(8'32)
+* Config X, Y, Z  (cryz, cryx, cryoy)
+* wm cryx cryy
+* check the phi and beamstop *
+* check cryoz wihth signal
+* up the resonance, so we should 
+* tw crx .2, the crystal beam is there
+* restrict the phi 
+* tw cry cetered
+* tw cryoy centered
+* ca 002
+* umv tth 20.2 th 0 chi 90
+* See signal 
+* freeze  phi -180
+* ubr 2 -2 2 
+* <code>cuts</code> (not contunuously moving )
+* phi is fixed, others are moving with ubr 2 -2 2 
+* FInd cryx cryy cryz (florescence)
+* Tw th
+* freeze phi -90
+* ca 0 0 2
+* calibration 
+* ca 0 02 
+* ubr  0 0 2 
+* th2th -1 1 40 1
+* opt2 (optimizing theta, phi and chi)
+* pa (got statistics)
+* ca 102 
+* ubr 1 0 2
+* wh 
+* ubr 1 0 2
+* pil_voff 
+* pil_on
+* check the fitter 
+* th2th -2 2 60 1 
+* manually optimize 
+* optimize theta, phi and chi
+* useful.mac "cryocool to simitomo "
+* config file : lakeshow1: kG1 
+* prdef measured temp
+* open temperature terminal : css (lakeshore controller)
+* File &gt; lakeshoreopi &gt; lakeshore1
+* Lakeshore1.Kr00 (change range in the plot)
+* we need to remove the filter to see the magnetic peaks</p>
+<p>Tommorw : 
+* Turn off the lakeshore 
+* Wait for temperature to selle in 
+* close the vaccum 
+* SLowly break the vaccum (remove o-ring)
+* Give some time to settle in 
+* Remove 4 scews remove the sample </p>
 <h3 id="detector-setup">Detector setup<a class="headerlink" href="#detector-setup" title="Permanent link">&para;</a></h3>
 <p>REXS </p>
 <p>Setup : </p>
@@ -278,7 +355,7 @@ shift+' to modify anything</p>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2022, CHESS ID4B Beamline</p>
+      <p>© Copyright 2023, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
