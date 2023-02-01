@@ -25,7 +25,7 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
             Move x and y to make the sample to the cursor
             FOURC> umv phi 90
             FOURC> umv phi 270
-            Do it iteratively until the center of the axis match the sample position                   
+            Do it iteratively until the center of the axis match the sample position     
 
 ######  <i>Step 2 :  Create file structure </i>
 
@@ -38,6 +38,12 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
       b) Open HDRMscans.mac script and sort your path (sortmypathout)
             i) Change the <_mysample> 
             # _mysample is the sample identifier
+
+
+!!! danger "check the signals"
+
+
+
 
 ######  <i>Step 3: Run HDRMscans.mac script from terminal </i>
  
@@ -88,7 +94,7 @@ Make sure the temperature is stable before you run script
 =============================================================================
 
 !!! hint "Thin-film Alignment"
-      Basic steps for single crystal thin-film sample alignment - HDRM. Detector height needs to change because of grazing incidence
+      Basic steps for single crystal thin-film sample alignment - HDRM. Detector height needs to change because of grazing incidence. Make sure you are able to see the samples (proper light arrangements)
 
 Step 1:  Center the sample to the beam 
 
@@ -98,14 +104,20 @@ Step 1:  Center the sample to the beam
             FOURC> umv th 0  
 
       b) Perform height adjustment
-            FOURC> check the signal at the diode 
-            FOURC> cut the beam in half (for example: if the beam size is 300 microns, move 150 microns from the surface when the signal goes down)            
+            Check the signal at the diode 
+            FOURC> tw samz 0.01
+            Move the sample in the Z-directions and cut the beam in half (for example: if the beam size is 300 microns, move 150 microns from the surface when the signal goes down)            
 
-      b) Move the sample to the opposite, so it will be visible to the camera
-            FOURC> umv chi 270
-            Place cursor at sample middle 
-            FOURC> umv phi 90
-            FOURC> umv phi 180
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true){ width="500" }
+</figure>
+
+
+      c) Move the sample to the opposite, so it will be visible to the camera
+                  FOURC> umv chi 270
+                  Place cursor at sample middle 
+                  FOURC> umv phi 90
+                  FOURC> umv phi 180
 
 Step 2 :  Creating the file structure
 
@@ -157,3 +169,5 @@ Number of elements in the periodic table (K and L edges)
 ### Beamsplitting polarimeter
 
 The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.
+
+

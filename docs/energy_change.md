@@ -91,6 +91,91 @@
 
 '''
 
+Step I: 
+* Cover the detector
+* Before energy change (> 30 keV higher to lower < 18 keV)
+         verify counts in ic1, ic2 and diode (`getE` : provide you the energy)
+         Put mostab to 5 V 
+         Optimize counts (`tweakup`)
+         `syncE`
+* Then try move energy and optimize mostab:
+        `moveE 11`
+        `matchUE 3`
+        `tweakup`
+        `lup montrav`
+* Open shuttur
+        `os1 4 4`
+* move the whole table up 
+        `tw tabzu tabx tabzui 1 1 1 `
+
+* Get values in ic1 and ic2 
+* put mirror 
+        `wmirror`
+
+
+
+Cryo
+* take out the stage
+* Go to chi 90
+* put the new sample stage with pin (the pin should slide in the sample stage) 
+* Put the cryostate : it will go only from one side shown in the below
+* there are 4 scrwes to hold that(8'32)
+* Config X, Y, Z  (cryz, cryx, cryoy)
+* wm cryx cryy
+* check the phi and beamstop *
+* check cryoz wihth signal
+* up the resonance, so we should 
+* tw crx .2, the crystal beam is there
+* restrict the phi 
+* tw cry cetered
+* tw cryoy centered
+* ca 002
+* umv tth 20.2 th 0 chi 90
+* See signal 
+* freeze  phi -180
+* ubr 2 -2 2 
+* `cuts` (not contunuously moving )
+* phi is fixed, others are moving with ubr 2 -2 2 
+* FInd cryx cryy cryz (florescence)
+* Tw th
+* freeze phi -90
+* ca 0 0 2
+* calibration 
+* ca 0 02 
+* ubr  0 0 2 
+* th2th -1 1 40 1
+* opt2 (optimizing theta, phi and chi)
+* pa (got statistics)
+* ca 102 
+* ubr 1 0 2
+* wh 
+* ubr 1 0 2
+* pil_voff 
+* pil_on
+* check the fitter 
+* th2th -2 2 60 1 
+* manually optimize 
+* optimize theta, phi and chi
+* useful.mac "cryocool to simitomo "
+* config file : lakeshow1: kG1 
+* prdef measured temp
+* open temperature terminal : css (lakeshore controller)
+* File > lakeshoreopi > lakeshore1
+* Lakeshore1.Kr00 (change range in the plot)
+* we need to remove the filter to see the magnetic peaks
+
+
+
+Tommorw : 
+* Turn off the lakeshore 
+* Wait for temperature to selle in 
+* close the vaccum 
+* SLowly break the vaccum (remove o-ring)
+* Give some time to settle in 
+* Remove 4 scews remove the sample 
+
+
+
 
 ### Detector setup
 
