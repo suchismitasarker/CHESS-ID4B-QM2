@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample_alignment/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample_alignment_HDRM/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sample alignment - CHESS ID4B QM2</title>
+    <title>HDRM - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sample alignment";
-        var mkdocs_page_input_path = "sample_alignment.md";
-        var mkdocs_page_url = "/sample_alignment/";
+        var mkdocs_page_name = "HDRM";
+        var mkdocs_page_input_path = "sample_alignment_HDRM.md";
+        var mkdocs_page_url = "/sample_alignment_HDRM/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -60,16 +60,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
     <ul class="current">
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">Sample alignment</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Sample alignment</a>
     <ul class="current">
-    <li class="toctree-l4"><a class="reference internal" href="#basic-theory-hdrm">Basic Theory - HDRM</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#beamsplitting-polarimeter">Beamsplitting polarimeter</a>
-    </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="./">HDRM</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
+                </li>
     </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
@@ -81,6 +83,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -108,6 +112,14 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
@@ -115,8 +127,6 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -149,9 +159,10 @@
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
           <li>User Guide &raquo;</li>
-          <li>Sample Alignment &raquo;</li><li>Sample alignment</li>
+          <li>Sample information &raquo;</li>
+          <li>Sample alignment &raquo;</li><li>HDRM</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment.md"
+        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_HDRM.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -176,7 +187,8 @@
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150" /></p>
 </figure>
 <h6 id="step-1-center-the-sample-to-the-beam"><i>Step 1:  Center the sample to the beam </i><a class="headerlink" href="#step-1-center-the-sample-to-the-beam" title="Permanent link">&para;</a></h6>
-<pre class="codehilite"><code>        FOURC&gt; umv phi 0
+<pre class="codehilite"><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
+        FOURC&gt; umv phi 0
         FOURC&gt; umv phi 180
         Move x and y to make the sample to the cursor
         FOURC&gt; umv phi 90
@@ -188,12 +200,13 @@
 <pre class="codehilite"><code>  a) Create newfile
 
         FOURC&gt;newfile &lt;samplename&gt; 
-        # samplename : chemical name of your sample sample
+        # samplename : chemical name of your sample, make sure you created folder in your directory
 
 
   b) Open HDRMscans.mac script and sort your path (sortmypathout)
-        i) Change the &lt;_mysample&gt; 
+        i) Change the _mysample = &lt;sample_identifier&gt; 
         # _mysample is the sample identifier
+        # save the file
 </code></pre>
 
 <div class="admonition danger">
@@ -204,10 +217,10 @@
     # Notes: HDRMscans.mac contains all the script
 </code></pre>
 
-<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample"><i>Step 4 : If you want to check the best height for the sample </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample" title="Permanent link">&para;</a></h6>
+<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">&para;</a></h6>
 <pre class="codehilite"><code>    FOURC&gt;heightscan
 
-    a) Data will save at tiff folder in id4b
+    a) Data will save at 'tiff' folder inside the user folder at id4b
     b) Check the quality of the datasets at nexpy
     b) Go to the best position of the sample
 </code></pre>
@@ -215,8 +228,12 @@
 <h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">&para;</a></h6>
 <pre class="codehilite"><code>  It will rotate the crystal three times at different chi and theta angle
 
-    FOURC&gt; threextalscan 300 1 
-    #Notes: In the threextalscan 1st parameter is temperature 300 and the second parameter is waiting time 1
+    FOURC&gt; threextalscan 300 1
+
+    #Notes: In the threextalscan 1st parameter is temperature 300K and the second parameter is waiting time 1 min
+        - It will vary chi, theta and phi angle
+        - Collect data phi 0-365 with 3650 images (1 degree/frame)
+        - You can the change the exposure time (if needed)
 
     a) Data will save at raw6M in id4b folder
 </code></pre>
@@ -262,11 +279,12 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true" width="500" /></p>
 </figure>
-<pre class="codehilite"><code>  c) Move the sample to the opposite, so it will be visible to the camera
-              FOURC&gt; umv chi 270
-              Place cursor at sample middle 
-              FOURC&gt; umv phi 90
+<pre class="codehilite"><code>  c) Place cursor at center of the sample
+
+              FOURC&gt; umv phi 0
               FOURC&gt; umv phi 180
+              FOURC&gt; umv phi 90
+              FOURC&gt; umv phi 270
 </code></pre>
 
 <p>Step 2 :  Creating the file structure</p>
@@ -298,24 +316,12 @@
 
 <p>Step 5: Check data nexpy 
 (<i>please look at the Data visulization - Nexpy section </i>)</p>
-<div class="admonition danger">
-<p class="admonition-title">Resonant Elastic X-ray Scattering (REXS)</p>
-</div>
-<p>Number of elements in the periodic table (K and L edges)</p>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2b%20-%20REXS.png?raw=true" width="500" /></p>
-</figure>
-<h5 id="basic-theory-rexs">Basic Theory - REXS<a class="headerlink" href="#basic-theory-rexs" title="Permanent link">&para;</a></h5>
-<h5 id="basic-steps-for-sample-alignments-rexs">Basic steps for sample alignments - REXS<a class="headerlink" href="#basic-steps-for-sample-alignments-rexs" title="Permanent link">&para;</a></h5>
-<p></i></p>
-<h3 id="beamsplitting-polarimeter">Beamsplitting polarimeter<a class="headerlink" href="#beamsplitting-polarimeter" title="Permanent link">&para;</a></h3>
-<p>The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample/" class="btn btn-neutral float-left" title="Sample"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../temp/" class="btn btn-neutral float-right" title="Temperature switch">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sample/" class="btn btn-neutral float-left" title="Sample mount"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sample_alignment_REXS/" class="btn btn-neutral float-right" title="REXS">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -346,7 +352,7 @@
       <span><a href="../sample/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../temp/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sample_alignment_REXS/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

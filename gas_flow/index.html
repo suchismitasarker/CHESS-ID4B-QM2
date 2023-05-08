@@ -60,11 +60,19 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
     <ul class="current">
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
@@ -77,6 +85,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -104,6 +114,14 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
@@ -111,8 +129,6 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -145,7 +161,7 @@
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
           <li>User Guide &raquo;</li>
-          <li>Sample Alignment &raquo;</li><li>Gas flow control</li>
+          <li>Sample information &raquo;</li><li>Gas flow control</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/gas_flow.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -162,6 +178,12 @@
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/gas_flow_1.png?raw=true" width="500" /></p>
 </figure>
 <p>It is important to control icing or heating by modifying nitrogen or helium gas flow. Follow the below steps to change the gas flow</p>
+<p>Automated gas flowrate change: talk to the staff scientist </p>
+<ul>
+<li><code>FOURC&gt; flow_set &lt;number&gt;</code></li>
+<li><code>FOURC&gt; flow_get</code></li>
+</ul>
+<p>Manually change the flowrate </p>
 <ul>
 <li><i><b>Step 1 </b></i>: Press ENT in the gas flow meter</li>
 <li><i><b>Step 2 </b></i>: Press up or down arraow to change the number (right now it is showing 9.04 liter/min in the above gas flow meter)</li>

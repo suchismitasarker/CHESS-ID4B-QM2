@@ -60,11 +60,19 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
     <ul class="current">
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="./">Temperature switch</a>
     <ul class="current">
@@ -79,6 +87,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -106,6 +116,14 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
@@ -113,8 +131,6 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -147,7 +163,7 @@
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
           <li>User Guide &raquo;</li>
-          <li>Sample Alignment &raquo;</li><li>Temperature switch</li>
+          <li>Sample information &raquo;</li><li>Temperature switch</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -173,7 +189,7 @@
 <div class="admonition danger">
 <p class="admonition-title">Please use Helium sensibly!</p>
 </div>
-<p><b><i><u> Cooling temperature of cryocooler with He : 77K --&gt; 13K (change to N<sub>2</sub> to He flow)</b></u> </p>
+<p><b><i><u> Cooling temperature of cryocooler with He : 85K --&gt; 13K (also if you want only room temperature 300K and 15K) (change to N<sub>2</sub> to He flow)</b></u> </p>
 <ul>
 <li>Step 1 : Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He</li>
 <li>Step 2 : <i> FOURC &gt; <code>te 220</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
@@ -185,12 +201,12 @@
 <ul>
 <li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 5 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)</li>
-<li>Step 6 : <i> FOURC &gt; <code>te 13</code> </i>   (# lowering temperature to 13K or others)</li>
+<li>Step 6 : <i> FOURC &gt; <code>te 15</code> </i>   (# lowering temperature to 13K or others)</li>
 </ul>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2036-4%201.png?raw=true" width="700" /></p>
 </figure>
-<p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 78K (change to He to N<sub>2</sub> flow)</b></u></p>
+<p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 85K (change to He to N<sub>2</sub> flow)</b></u></p>
 <ul>
 <li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 87K and 83K in the Lakeshore controller Input A and input C)</li>
 <li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
@@ -218,11 +234,11 @@
 <li>Step 3 : Make sure in the controller 1 (Input A) and B (input C), it will to reach the temperature 143K and 220K.</li>
 <li>Step 4 : FOURC &gt; <code>te 400</code> </i>   (# increase temperature to 400K)</li>
 </ul>
-<p><b><i><u> Performing experiment above room temperature : 500K --&gt; 300K </b></u></p>
+<p><b><i><u> Performing experiment from high temperature to room temperature : 500K --&gt; 300K </b></u></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 143K and 220K)</li>
-<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 143K and 220K.</li>
+<li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 87K and 82K)</li>
+<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 87K and 82K.</li>
 <li>Step 4 : FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 300K)</li>
 </ul>
 <p><b><i><u> Turn off the temperature controller </b></i></u></p>
@@ -239,7 +255,13 @@
 <ul>
 <li><i><b> a) Figure 1</b></i> : Check the distance between the cryo-stream and sample (it should be as close as possible)</li>
 <li><i><b> b) Figure 2</b></i> : Continuously rotate the phi <code>umv phi 360; umv phi 0</code> at low temperature</li>
-<li><i><b> c) Figure 3</b></i> : Check the gas flow and if needed talk to the staff scientist</li>
+<li>
+<p><i><b> c) Figure 3</b></i> : Check the gas flow and if needed talk to the staff scientist </p>
+<ul>
+<li><code>FOURC&gt; flow_set &lt;number&gt;</code></li>
+<li><code>FOURC&gt; flow_get</code></li>
+</ul>
+</li>
 </ul>
 <h1 id="problem-high-temperature-issues">Problem : High temperature issues<a class="headerlink" href="#problem-high-temperature-issues" title="Permanent link">&para;</a></h1>
 <ul>
@@ -248,13 +270,26 @@
 <h1 id="problem-accidentally-closed-the-temperature-controller">Problem : Accidentally closed the temperature controller<a class="headerlink" href="#problem-accidentally-closed-the-temperature-controller" title="Permanent link">&para;</a></h1>
 <ul>
 <li><i><b> Step 1 </b></i> : Open terminal and type <code>StripTool</code></li>
-<li><i><b> Step 2 </b></i> : Connect to epics PVs</li>
+<li>
+<p><i><b> Step 2 </b></i> : Connect to epics PVs</p>
+</li>
+<li>
+<p>Need to connect to epics PVs that you want to monitor</p>
+<ul>
+<li>LAKESHORE2:KRDG0</li>
+<li>LAKESHORE2:KRDG1</li>
+<li>LAKESHORE2:KRDG2</li>
+</ul>
+</li>
+<li>
+<p>y-axis click “Modify” button (same y axis for all the curves)</p>
+</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample_alignment/" class="btn btn-neutral float-left" title="Sample alignment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sample_alignment_REXS/" class="btn btn-neutral float-left" title="REXS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../gas_flow/" class="btn btn-neutral float-right" title="Gas flow control">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -283,7 +318,7 @@
         </span>
     
     
-      <span><a href="../sample_alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sample_alignment_REXS/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../gas_flow/" style="color: #fcfcfc">Next &raquo;</a></span>

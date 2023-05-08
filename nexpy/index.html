@@ -60,11 +60,19 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Sample Alignment</a>
+                <li class="toctree-l2"><a class="reference internal" href="#">Sample information</a>
     <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
@@ -75,6 +83,8 @@
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Data Analysis</a>
     <ul class="current">
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Data visualization</a>
     <ul class="current">
@@ -102,6 +112,14 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
@@ -109,8 +127,6 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -163,7 +179,7 @@
 </div>
 <p><a href="https://nexpy.github.io/nexpy/pythongui.html">Nexpy visulization Documentation</a></p>
 <h3 id="steps-to-use-the-nexpy-at-beamline">Steps to use the NexPy at beamline<a class="headerlink" href="#steps-to-use-the-nexpy-at-beamline" title="Permanent link">&para;</a></h3>
-<p><i> Step 1 </i>: Open the Nexpy</p>
+<h4 id="step-1-open-the-nexpy"><i> Step 1 </i>: Open the Nexpy<a class="headerlink" href="#step-1-open-the-nexpy" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Terminal &gt; <code>ssh -Y lnx1034-f1</code></li>
 <li>
@@ -174,17 +190,40 @@
 </li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true" width="300" />
-  </p>
-<figcaption>Image caption</figcaption>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true" width="300" /></p>
 </figure>
-<p><i> Step 2 </i> : 
-Take a look at the priliminary data after data collection </p>
+<h4 id="step-2-take-a-look-at-the-priliminary-data-after-data-collection"><i> Step 2 </i> : Take a look at the priliminary data after data collection<a class="headerlink" href="#step-2-take-a-look-at-the-priliminary-data-after-data-collection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Step1 : Go to 'File' tab</li>
+<li>Step 2 : Go to 'Import' tab </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/import_image_stack.png?raw=true" width="200" /></p>
+</figure>
+<ul>
+<li>Step 3: Go to 'Import image stack'</li>
+<li>Step 4: Go to desired file location</li>
+<li>Step 5: Select the folder (it will not show any images)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/taking%20images.png?raw=true" width="400" /></p>
+</figure>
+<ul>
+<li>Step 6: Select the images (mostly 50/100 images)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/max%20and%20min.png?raw=true" width="400" /></p>
+</figure>
+<ul>
+<li>Double clicked the stack images</li>
+<li>Go to the signal and click log scale</li>
+<li>Go to z tab and press forward (it will go through the images)</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../ID4B_Codes/" class="btn btn-neutral float-left" title="Data processing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ID4B_Codes_general_nodes/" class="btn btn-neutral float-left" title="General node"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../pymca/" class="btn btn-neutral float-right" title="pyMCA">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -213,7 +252,7 @@ Take a look at the priliminary data after data collection </p>
         </span>
     
     
-      <span><a href="../ID4B_Codes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../ID4B_Codes_general_nodes/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../pymca/" style="color: #fcfcfc">Next &raquo;</a></span>

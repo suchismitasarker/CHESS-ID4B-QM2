@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sample - CHESS ID4B QM2</title>
+    <title>Sample mount - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sample";
+        var mkdocs_page_name = "Sample mount";
         var mkdocs_page_input_path = "sample.md";
         var mkdocs_page_url = "/sample/";
       </script>
@@ -60,13 +60,21 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample Alignment</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
     <ul class="current">
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">Sample</a>
+                <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Sample mount</a>
     <ul class="current">
     </ul>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../sample_alignment/">Sample alignment</a>
+                <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
                 </li>
@@ -77,6 +85,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -104,6 +114,14 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
@@ -111,8 +129,6 @@
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_macros/">SPEC macro</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
@@ -145,7 +161,7 @@
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
           <li>User Guide &raquo;</li>
-          <li>Sample Alignment &raquo;</li><li>Sample</li>
+          <li>Sample information &raquo;</li><li>Sample mount</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample.md"
           class="icon icon-github"> Edit on GitHub</a>
@@ -157,32 +173,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="sample-environment">Sample environment<a class="headerlink" href="#sample-environment" title="Permanent link">&para;</a></h1>
-<p><i><b> If you want to use different sample environment or special equipments, please contact beamline scientist.</i></b></p>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Sample%20eve%20-%20beamline.png?raw=true" /></p>
-</figure>
-<p>Users setup at the beamline</p>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Sample%20eve%20-%20user.png?raw=true" /></p>
-</figure>
-<p><i> If you want to run your sample in different environment, please contact us. </i></p>
-<table>
-<thead>
-<tr>
-<th>Attibutes</th>
-<th align="left">Specifications</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b> Sample type </b></td>
-<td align="left">Powder, Thin-film</td>
-</tr>
-</tbody>
-</table>
-<h1 id="sample-change">Sample change<a class="headerlink" href="#sample-change" title="Permanent link">&para;</a></h1>
-<p>The procedure of mounting/changing the sample depends on the type of experiment performed ID4B.</p>
+                <p>The procedure of mounting/changing the sample depends on the type of experiment performed ID4B.</p>
 <h3 id="single-crystal-mounts">Single-crystal mounts<a class="headerlink" href="#single-crystal-mounts" title="Permanent link">&para;</a></h3>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample_mount.png?raw=true" width="600" /></p>
@@ -221,7 +212,7 @@
 </li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Thin-film%20sample.png?raw=true" width="150" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/thin-film%20samples1.png?raw=true" width="500" /></p>
 </figure>
 <h1 id="sample-shipment-details">Sample shipment details<a class="headerlink" href="#sample-shipment-details" title="Permanent link">&para;</a></h1>
 <p>If you want to send the samples to CHESS, please follow the <a href="https://www.chess.cornell.edu/users/shipping">instructions here</a></p>
@@ -231,8 +222,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../SPEC_commands/" class="btn btn-neutral float-left" title="ID4B-SPEC commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../sample_alignment/" class="btn btn-neutral float-right" title="Sample alignment">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sample_env/" class="btn btn-neutral float-left" title="Sample environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sample_alignment_HDRM/" class="btn btn-neutral float-right" title="HDRM">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -260,10 +251,10 @@
         </span>
     
     
-      <span><a href="../SPEC_commands/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sample_env/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../sample_alignment/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sample_alignment_HDRM/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
