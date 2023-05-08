@@ -19,7 +19,8 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 
 ######  <i>Step 1:  Center the sample to the beam </i>
-         
+
+            FOURC> umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
             FOURC> umv phi 0
             FOURC> umv phi 180
             Move x and y to make the sample to the cursor
@@ -32,12 +33,13 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
       a) Create newfile 
 
             FOURC>newfile <samplename> 
-            # samplename : chemical name of your sample sample
+            # samplename : chemical name of your sample, make sure you created folder in your directory
 
 
       b) Open HDRMscans.mac script and sort your path (sortmypathout)
-            i) Change the <_mysample> 
+            i) Change the _mysample = <sample_identifier> 
             # _mysample is the sample identifier
+            # save the file
 
 
 !!! danger "check the signals"
@@ -52,11 +54,11 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 
 
-######  <i>Step 4 : If you want to check the best height for the sample </i>
+######  <i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i>
 
         FOURC>heightscan 
 
-        a) Data will save at tiff folder in id4b
+        a) Data will save at 'tiff' folder inside the user folder at id4b
         b) Check the quality of the datasets at nexpy
         b) Go to the best position of the sample
 
@@ -64,7 +66,11 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
       It will rotate the crystal three times at different chi and theta angle
 
         FOURC> threextalscan 300 1 
-        #Notes: In the threextalscan 1st parameter is temperature 300 and the second parameter is waiting time 1
+
+        #Notes: In the threextalscan 1st parameter is temperature 300K and the second parameter is waiting time 1 min
+            - It will vary chi, theta and phi angle
+            - Collect data phi 0-365 with 3650 images (1 degree/frame)
+            - You can the change the exposure time (if needed)
 
         a) Data will save at raw6M in id4b folder
 
@@ -113,11 +119,12 @@ Step 1:  Center the sample to the beam
 </figure>
 
 
-      c) Move the sample to the opposite, so it will be visible to the camera
-                  FOURC> umv chi 270
-                  Place cursor at sample middle 
-                  FOURC> umv phi 90
+      c) Place cursor at center of the sample 
+                  
+                  FOURC> umv phi 0
                   FOURC> umv phi 180
+                  FOURC> umv phi 90
+                  FOURC> umv phi 270
 
 Step 2 :  Creating the file structure
 
@@ -149,25 +156,3 @@ Step 4: Run three rotation crystal scan
 
 Step 5: Check data nexpy 
 (<i>please look at the Data visulization - Nexpy section </i>)
-
-!!! danger "Resonant Elastic X-ray Scattering (REXS)"
-
-Number of elements in the periodic table (K and L edges)
-
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2b%20-%20REXS.png?raw=true){ width="500" }
-</figure>
-
-
-##### Basic Theory - REXS
-
-
-##### Basic steps for sample alignments - REXS
-
-
-</i>
-### Beamsplitting polarimeter
-
-The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.
-
-

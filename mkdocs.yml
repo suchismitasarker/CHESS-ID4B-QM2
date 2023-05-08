@@ -17,13 +17,17 @@ nav:
         - 'User Guide':
             - Introduction: 'introduction.md'
             - ID4B-SPEC commands: 'SPEC_commands.md'
-            - 'Sample Alignment':
-                - Sample : sample.md
-                - Sample alignment : sample_alignment.md
+            - 'Sample information':
+                - Sample environment : sample_env.md
+                - Sample mount : sample.md
+                - 'Sample alignment':
+                    - HDRM : sample_alignment_HDRM.md
+                    - REXS : sample_alignment_REXS.md
                 - Temperature switch : temp.md
                 - Gas flow control : gas_flow.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
+                - General node : ID4B_Codes_general_nodes.md
                 - 'Data visualization': 
                     - NeXpy : nexpy.md 
                     - pyMCA : pymca.md
@@ -33,11 +37,13 @@ nav:
                 - Cryocooler : cryocooler.md
                 - Detector : detector_information.md
                 - Publication : publications.md
+        - Troubleshooting :
+            - IC1 signal issues : IC1_signal.md
+            - Beam dump : beam_dump.md
         - Admin Documentation :
             - Beamline setup : beamline_setup.md
             - Energy change : energy_change.md
             - SPEC macro : SPEC_macros.md  
-            - Beam dump : beam_dump.md
         - Frequently Asked Questions (FAQ) : 'FAQ.md'
         
         - About:
