@@ -55,6 +55,10 @@ camera window will pop-up
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample%20view%20camera%201.png?raw=true){ width="500" }
 </figure>
 
+#### To access the top camera
+
+Type : "ImageJ ID4B_T"  in ImageJ  
+"sample_view_top_controls"
 
 
 

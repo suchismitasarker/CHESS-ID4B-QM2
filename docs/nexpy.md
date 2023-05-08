@@ -9,7 +9,7 @@ The code provides various tools for stacking the raw data, finding Bragg peaks, 
 
 ### Steps to use the NexPy at beamline
 
-<i> Step 1 </i>: Open the Nexpy
+#### <i> Step 1 </i>: Open the Nexpy
 
 * Terminal > `ssh -Y lnx1034-f1`
 * Terminal > nexpy &
@@ -20,11 +20,37 @@ The code provides various tools for stacking the raw data, finding Bragg peaks, 
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true){width="300" }
-  <figcaption>Image caption</figcaption>
 </figure>
 
-<i> Step 2 </i> : 
-Take a look at the priliminary data after data collection 
+#### <i> Step 2 </i> : Take a look at the priliminary data after data collection 
+
+* Step1 : Go to 'File' tab
+* Step 2 : Go to 'Import' tab 
+
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/import_image_stack.png?raw=true){width="200" }
+</figure>
+
+
+* Step 3: Go to 'Import image stack'
+* Step 4: Go to desired file location
+* Step 5: Select the folder (it will not show any images)
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/taking%20images.png?raw=true){width="400" }
+</figure>
 
 
 
+* Step 6: Select the images (mostly 50/100 images)
+
+
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/max%20and%20min.png?raw=true){width="400" }
+</figure>
+
+* Double clicked the stack images
+* Go to the signal and click log scale
+* Go to z tab and press forward (it will go through the images)

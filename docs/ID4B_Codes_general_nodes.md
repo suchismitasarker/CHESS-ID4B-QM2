@@ -1,62 +1,5 @@
-# Welcome to Data Processing 
 
-!!! type "NOTE"
-    Single crystal data-processing codes are written by  [Dr. Jacob Ruff](https://www.chess.cornell.edu/about/staff-directory/jacob-ruff) based on reference
-
-    * [1] [H. You, J. Appl. Cryst.(1999).32, 614-623](https://onlinelibrary.wiley.com/doi/epdf/10.1107/S0021889899001223) and 
-    * [2] [W. R. & Levy, H. A. (1967). Acta Cryst. 22, 457–464](https://scripts.iucr.org/cgi-bin/paper?s0365110x67000970)
-
-The purpose of this guide is to illustrate some of the main features that Jacob's code provides. It assumes a very basic working knowledge with python pakages. To download the package please go to the github link. 
-
-The code provides various tools for stacking the raw data, finding Bragg peaks, solving orientation matrix and finally provide the HKL. The results are visible to [NeXpy GUI](https://nexpy.github.io/nexpy/). 
-
-
-## Software
-
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/software.png?raw=true)
-</figure>
-
----
-### Single crystal data-processing steps
----
-
-* `STEP I`:  Calibrate Detector & Beamline
-* `STEP II`:  Stack data
-* `STEP III`:  Find Bragg peaks
-* `STEP IV`:  Solve orientation matrix
-* `STEP V`:  Convert stacks of data to HKL volume 
-
-
-!!! danger "Usage"
-
-# Examples
-
-
-!!! tip " Step I :  Calibrate Detector & Beamline" 
-
-
-After collecting data from CeO2, LaB6, we calibrate the date by using pyFAI-calib2. Referemce shown below
-
-Reference: 
-pyFAI reference :[pyFAI](https://pyfai.readthedocs.io/en/master/).
-pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/cookbook/calib-gui/index.html#cookbook-calibration-gui) Calibration of a diffraction setup using the Graphical User Interface (GUI) 
-
-    
-    # Create calibration folder to the desired file location where new_averaged_file (i.e. ceria37keV.cbf) will save 
-    >>> cd calibration
-
-    #pyFAI-average -o <new_averaged_filename> <location of the datapath> <all the filenames> 
-    #Example:
-    >>> pyFAI-average -o ceria37keV.cbf /nfs/chess/id4b/2022-3/sarker-0000-0/raw6M/ceria/standard/300/ceria_001/ceria_PIL10_001_*.cbf``            #   generates average of all the images
-    >>> pyFAI-calib2            #   generates .poni and mask.edf files
-
- After doing the calibration, save the .poni and mask file
-
-
-===========================================================================
-
-## Computers : Data processing 
+## Computers : Data processing General nodes
 
 
 <figure markdown>
@@ -64,11 +7,36 @@ pyFAI-calib2 : [calibration_video](https://pyfai.readthedocs.io/en/master/usage/
 </figure>
 
 
-!!! danger "Recommendation : lnx306 to run the stacking code, HKL convertion code in lnx1034-f1"
-In the beamline, you will find the folder `codebase_for_users` where all codes are saved. 
-`lnx306` or `lnx1034-f1` can make ~3 stacks at a time before running out of the memory
-`auto_ormfinder` and `Pil6M_HKLConv` both take all the CPUs. 
+===============================================================================
 
+!!! tip "Want to process the data after leaving beamline?"
+    If you need more information [CHESS computing farm access](https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro)
+
+        Using general nodes follow the below steps
+    
+
+* Step 1 : login to `ssh <username>@lnx201.classe.cornell.edu`
+* Step 2: `qrsh -q interactive.q -l mem_free=350G`
+    
+    Or if you need more core
+
+* Step 2: `qrsh -q interactive.q -l mem_free=350G -pe sge_pe 20`
+* Step 3: `source /nfs/chess/sw/anaconda3_jpcr/bin/activate`
+* Step 4: `qstat`
+* Step 5 : `ls`
+* Step 6: `cd /nfs/chess/id4baux/2023-2/codebase_for_users/`
+* Step 7: Follow `Step II` above 
+
+
+<i> If you are doing stacking from general node, you need to change the permission setup </i>
+
+
+### <b>Giving permission from your own account to chess_id4b to do rest of the processing follow the below steps </b>
+
+* Step 1: If you are using general cluster, then follow the steps from your account 
+
+    a) Go to the desired path
+    b)  `chmod -R 777 (foldername)`
 
 
 !!! tip "STEP II :  Stack data"
@@ -168,6 +136,17 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 
 
 ===========================================================================
+!!! tip "login to jupyter"
+
+To tunnel the jupyter notebook from a node to the browser on the station computer, try this:
+
+* 1) setup your environment and start jupyter on the node (ie lnx306 or whatever) with
+jupyter notebook --no-browser --port=8888 --ip="172.16.3.6"
+* 2) from the station computer, open a new terminal and do
+ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888
+* 3) on the station computer, browse to localhost:8888 and enter the token as before (edited) 
+
+
 
 ### <b>Important links for more details </b>
 
