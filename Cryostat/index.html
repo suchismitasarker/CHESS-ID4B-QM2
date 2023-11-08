@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/IC1_signal/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Cryostat/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>IC1 signal issues - CHESS ID4B QM2</title>
+    <title>Cryostat - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IC1 signal issues";
-        var mkdocs_page_input_path = "IC1_signal.md";
-        var mkdocs_page_url = "/IC1_signal/";
+        var mkdocs_page_name = "Cryostat";
+        var mkdocs_page_input_path = "Cryostat.md";
+        var mkdocs_page_url = "/Cryostat/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -112,23 +112,21 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshooting</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">IC1 signal issues</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#inform-beamline-scientist">Inform beamline scientist</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Troubleshooting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
-    <ul>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Admin Documentation</a>
+    <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../Cryostat/">Cryostat</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Cryostat</a>
+    <ul class="current">
+    </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
@@ -170,9 +168,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
-          <li>Troubleshooting &raquo;</li><li>IC1 signal issues</li>
+          <li>Admin Documentation &raquo;</li><li>Cryostat</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/IC1_signal.md"
+        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/Cryostat.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -182,27 +180,75 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="ic1-varies-signal-continuously-20200-maximum-counts">IC1 varies signal continuously 20/200 - maximum counts<a class="headerlink" href="#ic1-varies-signal-continuously-20200-maximum-counts" title="Permanent link">&para;</a></h3>
-<h5 id="inform-beamline-scientist">Inform beamline scientist<a class="headerlink" href="#inform-beamline-scientist" title="Permanent link">&para;</a></h5>
+                <h4 id="cryostat-installation">Cryostat Installation<a class="headerlink" href="#cryostat-installation" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Step 1: check the current (CESR) : Is it okay? If yes, then follow the step 2</li>
-<li>Step 2: Check the manual shutter : is it open? If yes, then follow the step 3</li>
-<li>Step 3: Go to stkechy_mostab terminal and peak a number</li>
+<li>Step : 1. Stop the the 'phi' motor connection, disengage it from the difractometer and then remove the goniometer sample stage </li>
 </ul>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sketchy_mostab.jpeg?raw=true" width="500" /></p>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/remove%20sample%20stage%201.png?raw=true" width="600" /></p>
+</figure>
 <ul>
-<li>Step 4: peak a number <b><i> 3 </i></b> Turn feeback off</li>
-<li>Step 5: wait until it maximize signal at IC1</li>
-<li>Step 6: peak a number <b><i> 1 </b></i> Autotune</li>
-<li>Step 7: wait untill it maximize IC1</li>
+<li>Step : 2. Turn off the cryocooler : Increase the temperature to 300K for both heaters and samples. </li>
 </ul>
-<h1 id="imagej-not-working">ImageJ not working<a class="headerlink" href="#imagej-not-working" title="Permanent link">&para;</a></h1>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/lakeshore_temp_300_1.png?raw=true" width="500" /></p>
+</figure>
+<ul>
+<li>Step 3:  Move the 6M pilatus detector at the end and place the 100K pilatus two theta to 0 degree. </li>
+<li>Step 4: Move the difractometer 'chi' position 90 to 270. Place the sumitomoto stage from the top. Tighten that by key showed in the figure.</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_insert.png
+?raw=true" width="500" /></p>
+</figure>
+<ul>
+<li>Step 5: Loosen the 'phi' and 'chi' screw. </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/loosen%20the%20screw.png?raw=true" width="400" /></p>
+</figure>
+<ul>
+<li>Step 6: Place the sumitomoto sample stage from the top shown in (a) and (b). Tighten the screw shown in Figure (c)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample_stage_1.png
+?raw=true" width="500" /></p>
+</figure>
+<ul>
+<li>Step 7: Rotate the whole stage 'phi' and 'chi' to take it dowm from chi 270 to 90. Make sure don't knock anything. </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/chi%20down.png
+?raw=true" width="300" /></p>
+</figure>
+<ul>
+<li>Step 8: Place to 0-ring to the sample stage.</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_O_ring.png
+?raw=true" width="300" /></p>
+</figure>
+<ul>
+<li>Step 8: Place the second part of the sample.</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_O_ring1.png?raw=true" width="300" /></p>
+</figure>
+<ul>
+<li>Step 8: Place the top part of the sample stage.</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/top%20part.png?raw=true" width="300" /></p>
+</figure>
+<ul>
+<li>Step 8: Place the top part of the sample stage.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../publications/" class="btn btn-neutral float-left" title="Publication"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../beam_dump/" class="btn btn-neutral float-right" title="Beam dump">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../beamline_setup/" class="btn btn-neutral float-left" title="Beamline setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../energy_change/" class="btn btn-neutral float-right" title="Energy change">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -230,10 +276,10 @@
         </span>
     
     
-      <span><a href="../publications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../beamline_setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../beam_dump/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../energy_change/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
