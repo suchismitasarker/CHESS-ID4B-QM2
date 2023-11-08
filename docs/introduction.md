@@ -18,3 +18,8 @@ This document is categorized into three sections.
   [<n><i>`Please read the questions and answers, you might find yours!!`](https://suchismitasarker.github.io/CHESS-ID4B-QM2/FAQ/) </i>   
 
 
+
+### Do you want to see inside the hutch?
+
+[CHESS ID4B hutch](https://my.matterport.com/show/?m=Sfd6R3am1wR)
+Password: CHEXSQM2

@@ -42,9 +42,12 @@ nav:
             - Beam dump : beam_dump.md
         - Admin Documentation :
             - Beamline setup : beamline_setup.md
+            - Cryostat : Cryostat.md
             - Energy change : energy_change.md
             - SPEC macro : SPEC_macros.md  
-        - Frequently Asked Questions (FAQ) : 'FAQ.md'
+        - Frequently Asked Questions (FAQ) : 
+            - Before coming to the beamline : 'information.md'
+            - Beamline Frequently Asked Questions: 'FAQ.md'
         
         - About:
             - About: about.md
