@@ -16,3 +16,6 @@
 * Step 6: peak a number <b><i> 1 </b></i> Autotune
 * Step 7: wait untill it maximize IC1
 
+
+# ImageJ not working 
+

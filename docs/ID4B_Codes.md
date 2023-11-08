@@ -169,6 +169,19 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 
 ===========================================================================
 
+
+## Software NxRefine
+
+For document, please visit the the [website documentation](https://nexpy.github.io/nxrefine/) written by Dr. Ray Osborn 
+
+* <i>Setting up experiment
+
+
+
+
+
+
+
 ### <b>Important links for more details </b>
 
 * [Remote access to Linux machines](https://wiki.classe.cornell.edu/Computing/RemoteLinux)

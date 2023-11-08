@@ -10,13 +10,37 @@
 * Change the HDRMscans.mac file with `_samplename` and `_sampledirectory`
 
 
+### Open the camera inside the front hutch
+* Open an terminal
+*  type `vimba`
+* Vimba viewer will open with two cameras ( IP addresses: 1st crystal:  `192.168.180.102`, 2nd crystal : `192.168.180.101`)
+
+### Open ion chambers
+
+* Open an terminal 
+* type `show_apms 0`
+* type `show_apms 1`
+* type `show_apms 2`
+
+### for FOURC opening
+
+* Open an terminal 
+* type `fourc`
+* press `yes` if fourc ask questions to change motor values
+
+### If SPEC window is lost
+
+* Open an terminal 
+* type `findspec`
+* If it is hidding, then type `fg <PID number>`
+
 
 #### Flux Calculator
 [CHESS Flux calculator](https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator) at the beamline
 
 #### X-ray absoption edge 
 
-[CHeck absroption edge](http://skuld.bmsc.washington.edu/scatter/AS_periodic.html)
+[Check absroption edge](http://skuld.bmsc.washington.edu/scatter/AS_periodic.html)
 
 
 #### flyscan 

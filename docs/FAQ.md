@@ -1,4 +1,5 @@
 
+
 ## Frequesnly ask questions (FAQ)
 !!! hint "Frequesnly ask questions (FAQ)"
     Answers are given by [Dr. Jacob Ruff](https://www.chess.cornell.edu/about/staff-directory/jacob-ruff) and Suchismita Sarker
@@ -16,7 +17,7 @@
 
 ###### Q. What is the temperature range available for 3D-dPDF? We are requesting cryostream-like temperature region (100~500 K), but it would be intesting to know if any lower or higher tempearture setup accessible.
 
-<i> Our gas cryocooler system gives the best quality data, since there are no windows. Our system operates using either helium or nitrogen, and can switch on the fly. With helium, it operates from ~13K to 180K, and with nitrogen from ~95K to 480K. When using this system, we recommend users mount samples using crystallography loops, as noted above </i>.
+<i> Our gas cryocooler system gives the best quality data, since there are no windows. Our system operates using either helium or nitrogen, and can switch on the fly. With helium, it operates from ~13K to 180K, and with nitrogen from ~95K to 500K. When using this system, we recommend users mount samples using crystallography loops, as noted above </i>.
 
 
 ##### Q. 2. What is the suitable single crystal size in volume and dimension lengths so that it can be covered by the beam when rotating (not too large or too small)?
@@ -33,6 +34,10 @@
 ##### Q. How to recover if the computer fail?
 
 
-##### Q. 
+
+
+
+
+
 
 

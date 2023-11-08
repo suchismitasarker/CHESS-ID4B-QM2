@@ -76,7 +76,17 @@ Moving the energy to the off-resonance
 * `wh` - where is every position
 * `getE` - it gies current energy information
 
-ROI information 
+
+We have two detectors: Pilatus 6 (PIL6) and Pilatus 8 (PIL8). PIL6 is in the beam direction. PIL8 is our sigma-pi channel. The alignment will be based on PIL6. 
+
+## ROI information 
+
+To set the ROI's for PIL6
+
+* `getroi6` -  provide information about the roi chosen in the area detector based on the direction beam position, i.e., xmin, ymin, xsize, ysize.
+* `setroi6 278 67 1 3` - Changing the vertical and horizontal sizes. Examples: 278 and 67 are minimum pixel dimension along x (vertical) and y (horizontal) axis whereas 1 is vertical pixel size (it is minimum) and 3 is horizontal pixel size.
+
+To set the ROI's for PIL8
 
 * `getroi` -  provide information about the roi chosen in the area detector based on the direction beam position, i.e., xmin, ymin, xsize, ysize.
 * `setroi 278 67 1 3` - Changing the vertical and horizontal sizes. Examples: 278 and 67 are minimum pixel dimension along x (vertical) and y (horizontal) axis whereas 1 is vertical pixel size (it is minimum) and 3 is horizontal pixel size.
