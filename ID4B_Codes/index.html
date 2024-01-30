@@ -42,11 +42,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> CHESS ID4B QM2
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -89,6 +85,8 @@
     </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -183,7 +181,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-data-processing">Welcome to Data Processing<a class="headerlink" href="#welcome-to-data-processing" title="Permanent link">&para;</a></h1>
+                <div><h1 id="welcome-to-data-processing">Welcome to Data Processing<a class="headerlink" href="#welcome-to-data-processing" title="Permanent link">¶</a></h1>
 <div class="admonition type">
 <p class="admonition-title">NOTE</p>
 <p>Single crystal data-processing codes are written by  <a href="https://www.chess.cornell.edu/about/staff-directory/jacob-ruff">Dr. Jacob Ruff</a> based on reference</p>
@@ -194,13 +192,13 @@
 </div>
 <p>The purpose of this guide is to illustrate some of the main features that Jacob's code provides. It assumes a very basic working knowledge with python pakages. To download the package please go to the github link. </p>
 <p>The code provides various tools for stacking the raw data, finding Bragg peaks, solving orientation matrix and finally provide the HKL. The results are visible to <a href="https://nexpy.github.io/nexpy/">NeXpy GUI</a>. </p>
-<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">¶</a></h2>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/software.png?raw=true" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/software.png?raw=true"></p>
 </figure>
-<hr />
-<h3 id="single-crystal-data-processing-steps">Single crystal data-processing steps<a class="headerlink" href="#single-crystal-data-processing-steps" title="Permanent link">&para;</a></h3>
-<hr />
+<hr>
+<h3 id="single-crystal-data-processing-steps">Single crystal data-processing steps<a class="headerlink" href="#single-crystal-data-processing-steps" title="Permanent link">¶</a></h3>
+<hr>
 <ul>
 <li><code>STEP I</code>:  Calibrate Detector &amp; Beamline</li>
 <li><code>STEP II</code>:  Stack data</li>
@@ -211,7 +209,7 @@
 <div class="admonition danger">
 <p class="admonition-title">Usage</p>
 </div>
-<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h1>
 <div class="admonition tip">
 <p class="admonition-title"> Step I :  Calibrate Detector &amp; Beamline</p>
 </div>
@@ -230,9 +228,9 @@ pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/ca
 
 <p>After doing the calibration, save the .poni and mask file</p>
 <p>===========================================================================</p>
-<h2 id="computers-data-processing">Computers : Data processing<a class="headerlink" href="#computers-data-processing" title="Permanent link">&para;</a></h2>
+<h2 id="computers-data-processing">Computers : Data processing<a class="headerlink" href="#computers-data-processing" title="Permanent link">¶</a></h2>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Beamline%20computers.png?raw=true" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Beamline%20computers.png?raw=true"></p>
 </figure>
 <div class="admonition danger">
 <p class="admonition-title">Recommendation : lnx306 to run the stacking code, HKL convertion code in lnx1034-f1</p>
@@ -247,11 +245,11 @@ pyFAI-calib2 : <a href="https://pyfai.readthedocs.io/en/master/usage/cookbook/ca
 <pre class="codehilite"><code>Step 1 :  the `python stack_em_all_cbf_2022.py` python script
 Modify : 
         i) Project name : 
-                        proj_name = &quot;sarker-000-a/&quot; (#project name)
+                        proj_name = "sarker-000-a/" (#project name)
         ii) Provide the .poni filename
-                        calibfile = &quot;/nfs/chess/id4baux/&quot;+run_cycle+&quot;+proj_name+&quot;/calibration/ceria37keV.poni&quot; 
+                        calibfile = "/nfs/chess/id4baux/"+run_cycle+"+proj_name+"/calibration/ceria37keV.poni" 
         iii)Provide .edf filename
-                        maskfile = &quot;/nfs/chess/id4baux/&quot;+run_cycle+&quot;+proj_name+&quot;/calibration/mask.edf&quot;
+                        maskfile = "/nfs/chess/id4baux/"+run_cycle+"+proj_name+"/calibration/mask.edf"
 
 Step 2 : Run python code
     Usage:
@@ -309,12 +307,12 @@ Example:
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv_3D_2022.py</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
 <pre class="codehilite"><code>Step 1: Edit the script
     i) Change the project name
-                projd = &quot;/nfs/chess/id4baux/2022-3/sarker-0000-a&quot;
-                sampldi = &quot;/CoTiO3/sample/&quot; 
+                projd = "/nfs/chess/id4baux/2022-3/sarker-0000-a"
+                sampldi = "/CoTiO3/sample/" 
     ii) Change the sample name:
-                sampldi = &quot;/CoTiO3/sample/&quot; 
+                sampldi = "/CoTiO3/sample/" 
     iii) Change the ormatix 
-                ormat = nxload(stackhklpath+&quot;ormatrix_v1.nxs&quot;)
+                ormat = nxload(stackhklpath+"ormatrix_v1.nxs")
     iv) Define the hkl space to histogram
                 H= np.arrange (-5.1, 5.1, 0.01)
                 K= np.arrange (-5.1, 5.1, 0.01)
@@ -337,12 +335,12 @@ python Pil6M_HKLConv_3D_2022.py 50
 <li><i>Step C</i>: Run <code>STEP V</code></li>
 </ul>
 <p>===========================================================================</p>
-<h2 id="software-nxrefine">Software NxRefine<a class="headerlink" href="#software-nxrefine" title="Permanent link">&para;</a></h2>
+<h2 id="software-nxrefine">Software NxRefine<a class="headerlink" href="#software-nxrefine" title="Permanent link">¶</a></h2>
 <p>For document, please visit the the <a href="https://nexpy.github.io/nxrefine/">website documentation</a> written by Dr. Ray Osborn </p>
 <ul>
-<li><i>Setting up experiment</li>
+<li><i>Setting up experiment</i></li>
 </ul>
-<h3 id="important-links-for-more-details"><b>Important links for more details </b><a class="headerlink" href="#important-links-for-more-details" title="Permanent link">&para;</a></h3>
+<h3 id="important-links-for-more-details"><b>Important links for more details </b><a class="headerlink" href="#important-links-for-more-details" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://wiki.classe.cornell.edu/Computing/RemoteLinux">Remote access to Linux machines</a></li>
 <li><a href="https://wiki.classe.cornell.edu/Computing/NoMachine">Access to nomachine</a></li>
@@ -350,7 +348,7 @@ python Pil6M_HKLConv_3D_2022.py 50
 <li><a href="https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro">CHESS computing farm access</a></li>
 <li><a href="https://wiki.classe.cornell.edu/Computing/JupyterHub">CHESS jupyterhub</a></li>
 <li><a href="service-classe@cornell.edu">CLASSE-IT Service Requests </a></li>
-</ul>
+</ul></div>
               
             </div>
           </div><footer>
@@ -394,7 +392,6 @@ python Pil6M_HKLConv_3D_2022.py 50
     <script>var base_url = '..';</script>
     <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);

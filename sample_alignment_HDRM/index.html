@@ -42,11 +42,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> CHESS ID4B QM2
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -85,6 +81,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -180,21 +178,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-chess-qm2-sample-alignment">Welcome to CHESS &#60;QM&#62;<sup>2</sup> Sample Alignment<a class="headerlink" href="#welcome-to-chess-qm2-sample-alignment" title="Permanent link">&para;</a></h1>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline.jpeg?raw=true" width="300" /></p>
+                <div><h1 id="welcome-to-chess-qm2-sample-alignment">Welcome to CHESS &lt;QM&gt;<sup>2</sup> Sample Alignment<a class="headerlink" href="#welcome-to-chess-qm2-sample-alignment" title="Permanent link">¶</a></h1>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline.jpeg?raw=true" width="300"></p>
 <div class="admonition danger">
 <p class="admonition-title">High Dynamic Range Reciprocal Space Mapping (HDRM)</p>
 </div>
-<h4 id="basic-theory-hdrm">Basic Theory - HDRM<a class="headerlink" href="#basic-theory-hdrm" title="Permanent link">&para;</a></h4>
+<h4 id="basic-theory-hdrm">Basic Theory - HDRM<a class="headerlink" href="#basic-theory-hdrm" title="Permanent link">¶</a></h4>
 <p>High Dynamic Range Mapping (HDRM) is primarily a method for studying single crystal samples, although it can also be effective for studying thin films. HDRM aims is to rapidly study wide regions of reciprocal space, collecting the intense Bragg peaks required to refine crystal structures along with weak features associated with superstructures, and the slowly modulated scattering associated with phonons and short-range order[<a href="https://www.chess.cornell.edu/srn-article-cartography-7-dimensions-chess">1</a>].</p>
 <div class="admonition hint">
 <p class="admonition-title">Single Crytal Alignment</p>
 <p>Basic steps for single crystal sample alignment - HDRM</p>
 </div>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150"></p>
 </figure>
-<h6 id="step-1-center-the-sample-to-the-beam"><i>Step 1:  Center the sample to the beam </i><a class="headerlink" href="#step-1-center-the-sample-to-the-beam" title="Permanent link">&para;</a></h6>
+<h6 id="step-1-center-the-sample-to-the-beam"><i>Step 1:  Center the sample to the beam </i><a class="headerlink" href="#step-1-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
         FOURC&gt; umv phi 0
         FOURC&gt; umv phi 180
@@ -204,7 +202,7 @@
         Do it iteratively until the center of the axis match the sample position
 </code></pre>
 
-<h6 id="step-2-create-file-structure"><i>Step 2 :  Create file structure </i><a class="headerlink" href="#step-2-create-file-structure" title="Permanent link">&para;</a></h6>
+<h6 id="step-2-create-file-structure"><i>Step 2 :  Create file structure </i><a class="headerlink" href="#step-2-create-file-structure" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>  a) Create newfile
 
         FOURC&gt;newfile &lt;samplename&gt; 
@@ -220,12 +218,12 @@
 <div class="admonition danger">
 <p class="admonition-title">check the signals</p>
 </div>
-<h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">&para;</a></h6>
+<h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>    FOURC&gt; qdo ./HDRMscans.mac  
     # Notes: HDRMscans.mac contains all the script
 </code></pre>
 
-<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">&para;</a></h6>
+<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>    FOURC&gt;heightscan
 
     a) Data will save at 'tiff' folder inside the user folder at id4b
@@ -233,7 +231,7 @@
     b) Go to the best position of the sample
 </code></pre>
 
-<h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">&para;</a></h6>
+<h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>  It will rotate the crystal three times at different chi and theta angle
 
     FOURC&gt; threextalscan 300 1
@@ -246,13 +244,13 @@
     a) Data will save at raw6M in id4b folder
 </code></pre>
 
-<h6 id="step-6-check-data-nexpy"><i>Step 6: Check data nexpy  </i><a class="headerlink" href="#step-6-check-data-nexpy" title="Permanent link">&para;</a></h6>
+<h6 id="step-6-check-data-nexpy"><i>Step 6: Check data nexpy  </i><a class="headerlink" href="#step-6-check-data-nexpy" title="Permanent link">¶</a></h6>
 <p>Please look at the <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/">Data visualization</a> - Nexpy section</p>
 <p>=============================================================================</p>
 <div class="admonition type">
 <p class="admonition-title">Temperature modify and collect data</p>
 </div>
-<h6 id="change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere">Change temperature from 300K and 90 K- (if you are at Nitrogen atomosphere)<a class="headerlink" href="#change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere" title="Permanent link">&para;</a></h6>
+<h6 id="change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere">Change temperature from 300K and 90 K- (if you are at Nitrogen atomosphere)<a class="headerlink" href="#change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere" title="Permanent link">¶</a></h6>
 <pre class="codehilite"><code>    FOURC&gt; te 100
     # note: temperature here is 100 Kelvin
 </code></pre>
@@ -266,7 +264,7 @@
 <p>Click the link for details
         <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/">Nitrogen --&gt; Helium and Helium --&gt; Nitrogen</a></p>
 </div>
-<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h6>
+<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h6>
 <p>=============================================================================</p>
 <div class="admonition hint">
 <p class="admonition-title">Thin-film Alignment</p>
@@ -285,7 +283,7 @@
 </code></pre>
 
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true" width="500" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true" width="500"></p>
 </figure>
 <pre class="codehilite"><code>  c) Place cursor at center of the sample
 
@@ -323,7 +321,7 @@
 </code></pre>
 
 <p>Step 5: Check data nexpy 
-(<i>please look at the Data visulization - Nexpy section </i>)</p>
+(<i>please look at the Data visulization - Nexpy section </i>)</p></div>
               
             </div>
           </div><footer>
@@ -367,7 +365,6 @@
     <script>var base_url = '..';</script>
     <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);

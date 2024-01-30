@@ -42,11 +42,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> CHESS ID4B QM2
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -85,6 +81,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -180,19 +178,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div class="admonition danger">
+                <div><div class="admonition danger">
 <p class="admonition-title">Resonant Elastic X-ray Scattering (REXS)</p>
 </div>
 <p>Number of elements in the periodic table (K and L edges)</p>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2b%20-%20REXS.png?raw=true" width="500" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2b%20-%20REXS.png?raw=true" width="500"></p>
 </figure>
-<h5 id="basic-theory-rexs">Basic Theory - REXS<a class="headerlink" href="#basic-theory-rexs" title="Permanent link">&para;</a></h5>
-<h5 id="basic-steps-for-sample-alignments-rexs">Basic steps for sample alignments - REXS<a class="headerlink" href="#basic-steps-for-sample-alignments-rexs" title="Permanent link">&para;</a></h5>
-<p></i></p>
-<h3 id="beamsplitting-polarimeter">Beamsplitting polarimeter<a class="headerlink" href="#beamsplitting-polarimeter" title="Permanent link">&para;</a></h3>
+<h5 id="basic-theory-rexs">Basic Theory - REXS<a class="headerlink" href="#basic-theory-rexs" title="Permanent link">¶</a></h5>
+<h5 id="basic-steps-for-sample-alignments-rexs">Basic steps for sample alignments - REXS<a class="headerlink" href="#basic-steps-for-sample-alignments-rexs" title="Permanent link">¶</a></h5>
+<p></p>
+<h3 id="beamsplitting-polarimeter">Beamsplitting polarimeter<a class="headerlink" href="#beamsplitting-polarimeter" title="Permanent link">¶</a></h3>
 <p>The polarization analyzer isolates and measures a unique series of diffraction resonances at the different K-edge.</p>
-<h4 id="important-spec-commands-for-rexs">Important SPEC commands for REXS<a class="headerlink" href="#important-spec-commands-for-rexs" title="Permanent link">&para;</a></h4>
+<h4 id="important-spec-commands-for-rexs">Important SPEC commands for REXS<a class="headerlink" href="#important-spec-commands-for-rexs" title="Permanent link">¶</a></h4>
 <p>Opening and closing the shutter</p>
 <ul>
 <li><code>opens</code> - Opening the shutter</li>
@@ -248,7 +246,7 @@
 <li><code>getE</code> - it gies current energy information</li>
 </ul>
 <p>We have two detectors: Pilatus 6 (PIL6) and Pilatus 8 (PIL8). PIL6 is in the beam direction. PIL8 is our sigma-pi channel. The alignment will be based on PIL6. </p>
-<h2 id="roi-information">ROI information<a class="headerlink" href="#roi-information" title="Permanent link">&para;</a></h2>
+<h2 id="roi-information">ROI information<a class="headerlink" href="#roi-information" title="Permanent link">¶</a></h2>
 <p>To set the ROI's for PIL6</p>
 <ul>
 <li><code>getroi6</code> -  provide information about the roi chosen in the area detector based on the direction beam position, i.e., xmin, ymin, xsize, ysize.</li>
@@ -308,7 +306,7 @@
         th2th -0.04 0.04 80 1
         closes
   ‘
-</code></pre>
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -352,7 +350,6 @@
     <script>var base_url = '..';</script>
     <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
