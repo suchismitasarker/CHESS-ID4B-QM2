@@ -28,7 +28,27 @@
 * type `fourc`
 * press `yes` if fourc ask questions to change motor values
 
-### If SPEC window is lost
+#### STEP 1: If you lost fourc/SPEC terminal 
+* Open terminal 
+* type `findspec` (it will provide all the spec information)
+* Check the getPid number
+* type `fg <getPid number>` (example # fg 21192) 
+
+##### STEP 2: Talk to beamline scientist 
+
+If you doesn't find anythng after STEP 1 fourc/SPEC terminal 
+* If you not find the SPEC terminal, then type below command
+* `kill -9 <getPid number>` (example# kill -9 21192)
+* Open a new terminal 
+* Type ‘fourc’
+
+###### If you fourc/SPEC doesn't work 
+* Open terminal 
+* type `quit`
+* type `fourc`
+
+
+##### If SPEC window is lost
 
 * Open an terminal 
 * type `findspec`
