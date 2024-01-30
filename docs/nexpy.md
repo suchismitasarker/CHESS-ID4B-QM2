@@ -54,3 +54,11 @@ The code provides various tools for stacking the raw data, finding Bragg peaks, 
 * Double clicked the stack images
 * Go to the signal and click log scale
 * Go to z tab and press forward (it will go through the images)
+
+
+
+
+
+
+
+

@@ -28,6 +28,7 @@ nav:
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
                 - General node : ID4B_Codes_general_nodes.md
+                - NxRefine : nxrefine.md
                 - 'Data visualization': 
                     - NeXpy : nexpy.md 
                     - pyMCA : pymca.md
@@ -85,3 +86,9 @@ markdown_extensions:
 
 extra:
   generator: false
+
+plugins:
+    - mkdocs-video
+
+
+
