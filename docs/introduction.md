@@ -23,3 +23,13 @@ This document is categorized into three sections.
 
 [CHESS ID4B hutch](https://my.matterport.com/show/?m=Sfd6R3am1wR)
 Password: CHEXSQM2
+
+
+### What does the beamline do?
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/data%20analysis.png?raw=true){ width="700" }
+</figure>
+
+
+

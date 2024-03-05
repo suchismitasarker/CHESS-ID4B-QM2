@@ -42,11 +42,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> CHESS ID4B QM2
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -85,6 +81,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Data visualization</a>
     <ul class="current">
@@ -180,14 +178,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="nexpy">Nexpy<a class="headerlink" href="#nexpy" title="Permanent link">&para;</a></h1>
+                <div><h1 id="nexpy">Nexpy<a class="headerlink" href="#nexpy" title="Permanent link">¶</a></h1>
 <p>The code provides various tools for stacking the raw data, finding Bragg peaks, solving orientation matrix, and finally providing the HKL. The results are visible to <a href="https://nexpy.github.io/nexpy/">NeXpy GUI</a>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Recommendation to take a look at data visulization package</p>
 </div>
 <p><a href="https://nexpy.github.io/nexpy/pythongui.html">Nexpy visulization Documentation</a></p>
-<h3 id="steps-to-use-the-nexpy-at-beamline">Steps to use the NexPy at beamline<a class="headerlink" href="#steps-to-use-the-nexpy-at-beamline" title="Permanent link">&para;</a></h3>
-<h4 id="step-1-open-the-nexpy"><i> Step 1 </i>: Open the Nexpy<a class="headerlink" href="#step-1-open-the-nexpy" title="Permanent link">&para;</a></h4>
+<h3 id="steps-to-use-the-nexpy-at-beamline">Steps to use the NexPy at beamline<a class="headerlink" href="#steps-to-use-the-nexpy-at-beamline" title="Permanent link">¶</a></h3>
+<h4 id="step-1-open-the-nexpy"><i> Step 1 </i>: Open the Nexpy<a class="headerlink" href="#step-1-open-the-nexpy" title="Permanent link">¶</a></h4>
 <ul>
 <li>Terminal &gt; <code>ssh -Y lnx1034-f1</code></li>
 <li>
@@ -198,15 +196,15 @@
 </li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true" width="300" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/nexpy.png?raw=true" width="300"></p>
 </figure>
-<h4 id="step-2-take-a-look-at-the-priliminary-data-after-data-collection"><i> Step 2 </i> : Take a look at the priliminary data after data collection<a class="headerlink" href="#step-2-take-a-look-at-the-priliminary-data-after-data-collection" title="Permanent link">&para;</a></h4>
+<h4 id="step-2-take-a-look-at-the-priliminary-data-after-data-collection"><i> Step 2 </i> : Take a look at the priliminary data after data collection<a class="headerlink" href="#step-2-take-a-look-at-the-priliminary-data-after-data-collection" title="Permanent link">¶</a></h4>
 <ul>
 <li>Step1 : Go to 'File' tab</li>
 <li>Step 2 : Go to 'Import' tab </li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/import_image_stack.png?raw=true" width="200" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/import_image_stack.png?raw=true" width="200"></p>
 </figure>
 <ul>
 <li>Step 3: Go to 'Import image stack'</li>
@@ -214,24 +212,24 @@
 <li>Step 5: Select the folder (it will not show any images)</li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/taking%20images.png?raw=true" width="400" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/taking%20images.png?raw=true" width="400"></p>
 </figure>
 <ul>
 <li>Step 6: Select the images (mostly 50/100 images)</li>
 </ul>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/max%20and%20min.png?raw=true" width="400" /></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/max%20and%20min.png?raw=true" width="400"></p>
 </figure>
 <ul>
 <li>Double clicked the stack images</li>
 <li>Go to the signal and click log scale</li>
 <li>Go to z tab and press forward (it will go through the images)</li>
-</ul>
+</ul></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../ID4B_Codes_general_nodes/" class="btn btn-neutral float-left" title="General node"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nxrefine/" class="btn btn-neutral float-left" title="NxRefine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../pymca/" class="btn btn-neutral float-right" title="pyMCA">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -260,7 +258,7 @@
         </span>
     
     
-      <span><a href="../ID4B_Codes_general_nodes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../nxrefine/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../pymca/" style="color: #fcfcfc">Next &raquo;</a></span>
@@ -270,7 +268,6 @@
     <script>var base_url = '..';</script>
     <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
