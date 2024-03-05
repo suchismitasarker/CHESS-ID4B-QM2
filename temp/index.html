@@ -54,6 +54,8 @@
     <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../introduction/">Introduction</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline information</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
@@ -85,6 +87,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine_General_Node/">NxRefine General Node</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
@@ -266,7 +270,7 @@ If the ice did not melt </li>
 <p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 300K (change to He to N<sub>2</sub> flow)</u></i></b></p>
 <ul>
 <li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 85K and 83K in the Lakeshore controller Input A and input C)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 220</code> </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 230</code> </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)</li>
 <li>Step 3 : Make sure all the temperature is above 77 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
 </ul>
 <div class="admonition danger">
@@ -338,6 +342,25 @@ If the ice did not melt </li>
 </li>
 <li>
 <p>y-axis click “Modify” button (same y axis for all the curves)</p>
+</li>
+</ul>
+<h4 id="emergency-proceduce-if-the-temperature-controller-fails-or-sudden-power-failure-at-beamline">Emergency proceduce if the temperature controller fails or Sudden power failure at beamline<a class="headerlink" href="#emergency-proceduce-if-the-temperature-controller-fails-or-sudden-power-failure-at-beamline" title="Permanent link">¶</a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Talk to Beamline Scientist or operators --- DONOT TRY THIS WITHOUT ASKING</p>
+</div>
+<ul>
+<li>If the your setup is in nitrogen condition (300K - 80K) and suddenly temperature is dropiing drastically and you don't have controls </li>
+<li>Switch the valve Nitrogen to Helium </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500"></p>
+</figure>
+<ul>
+<li>
+<p>Closed the compressor</p>
+</li>
+<li>
+<p>Change the EPIC PVs range</p>
 </li>
 </ul></div>
               

@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Cryostat/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/nxrefine_General_Node/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Cryostat - CHESS ID4B QM2</title>
+    <title>NxRefine General Node - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Cryostat";
-        var mkdocs_page_input_path = "Cryostat.md";
-        var mkdocs_page_url = "/Cryostat/";
+        var mkdocs_page_name = "NxRefine General Node";
+        var mkdocs_page_input_path = "nxrefine_General_Node.md";
+        var mkdocs_page_url = "/nxrefine_General_Node/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -50,8 +50,8 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">User Guide</a>
-    <ul>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
+    <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../introduction/">Introduction</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline information</a>
@@ -78,13 +78,15 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
-    <ul>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Data Analysis</a>
+    <ul class="current">
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../nxrefine_General_Node/">NxRefine General Node</a>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">NxRefine General Node</a>
+    <ul class="current">
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
@@ -122,13 +124,11 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Admin Documentation</a>
-    <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Admin Documentation</a>
+    <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_setup/">Beamline setup</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Cryostat</a>
-    <ul class="current">
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Cryostat/">Cryostat</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../energy_change/">Energy change</a>
                 </li>
@@ -170,9 +170,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Home &raquo;</li>
-          <li>Admin Documentation &raquo;</li><li>Cryostat</li>
+          <li>User Guide &raquo;</li>
+          <li>Data Analysis &raquo;</li><li>NxRefine General Node</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/Cryostat.md"
+        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/nxrefine_General_Node.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -182,84 +183,105 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div><h4 id="cryostat-installation">Cryostat Installation<a class="headerlink" href="#cryostat-installation" title="Permanent link">¶</a></h4>
-<ul>
-<li>Step 1: Relocate the cryostream position</li>
-<li>Step 2: Stop the the 'phi' motor connection from MDCP, disengage it from the difractometer, unscrew the phi motor </li>
-</ul>
+                <div><h1 id="nxrefine">NXRefine<a class="headerlink" href="#nxrefine" title="Permanent link">¶</a></h1>
+<p>The code is written by Dr. Ray Osborn. More details will be available <a href="https://nexpy.github.io/nxrefine/">NXRefine</a>.The code provides various tools for stacking the raw data, finding Bragg peaks, solving the orientation matrix, and finally providing the HKL. </p>
+<h1 id="nxrefine-general-nodes">NXRefine General Nodes<a class="headerlink" href="#nxrefine-general-nodes" title="Permanent link">¶</a></h1>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/phi%20motor%20removal.jpeg?raw=true" width="250"></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Beamline%20computers.png?raw=true"></p>
 </figure>
+<p>===============================================================================</p>
 <ul>
-<li>Step 3 : Remove the goniometer sample stage </li>
+<li>(i) <b> Step 1 :
+Make sure you have permission for the desired folders,  before running the job in the queue, ask your beamline scientist to change the permission of the folder (it is always need to be updated). Also, make sure you have the <i> parent file </i> for each folders, otherwise the code will not work. </b></li>
 </ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/remove%20sample%20stage%201.png?raw=true" width="600"></p>
-</figure>
+<div class="admonition danger">
+<p class="admonition-title">Change the &lt; classe_id &gt; to your own CLASSE ID</p>
+</div>
 <ul>
-<li>Step 4 : Turn off the compressor by pressing 'off' button</li>
+<li>
+<p>(ii) <b> Step 2 :</b> Login to lnx201</p>
+<pre class="codehilite"><code>ssh &lt;classe_id&gt;@lnx201.classe.cornell.edu
+</code></pre>
+
+</li>
+<li>
+<p>(iii) <b> Step 3 :</b> Make sure you are at home directory</p>
+<pre class="codehilite"><code>cd 
+pwd
+/home/&lt;classe_id&gt;/
+</code></pre>
+
+</li>
+<li>
+<p>(iv) <b> Step 4 :</b> create nxserver settings</p>
+<pre class="codehilite"><code>mkdir -p  /home/&lt;classe_id&gt;/.nxserver/
+</code></pre>
+
+</li>
+<li>
+<p>(v) <b> Step 5 :</b>: Copy the nxserver setting</p>
+<pre class="codehilite"><code>cp /home/ss3428/.nxserver/settings.ini /home/&lt;classe_id&gt;/.nxserver/
+</code></pre>
+
+</li>
+<li>
+<p>(vi) <b> Step 6 :</b>: Go to the desired data analayis forder (it will your folder in aux)</p>
+<pre class="codehilite"><code>cd /nfs/chess/id4baux/2024-1/&lt;BTR-3946-a&gt;/
+</code></pre>
+
+</li>
+<li>
+<p>(vi) <b> Step 7 :</b>: Changed the desired steps for nxrefine from the folder or if you know how to use vim, then do to change the qsub file and do that necessasy steps </p>
+</li>
+<li>
+<p>If you are nomachine, you can change the qsub_jobs_****.sh file directly based on the steps you want to perform in the data processing  </p>
+<pre class="codehilite"><code>vim qsub_jobs_&lt;name of the user&gt;.sh
+</code></pre>
+
+</li>
+<li>
+<p>(vii) <b> Step 8 : </b> Run the job in lnx201 (make sure path is correct)</p>
+<pre class="codehilite"><code>qsub -q all.q -l mem_free=350G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
+</code></pre>
+
+</li>
 </ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/compressor.jpeg?raw=true" width="300"></p>
-</figure>
+<div class="admonition danger">
+<p class="admonition-title">If it did not work, try to use less memory and submit the job again</p>
+</div>
 <ul>
-<li>Step 5: Wait until everything is 300K before turing off the cryostream </li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/lakeshore_temp_300_1.png?raw=true" width="200"></p>
-</figure>
-<ul>
-<li>Step 6 : Disconnect the waterline and connect it to the lakeshore1</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/water%20connection.jpeg?raw=true" width="200"></p>
-</figure>
-<ul>
-<li>Step 7:  Move the 6M pilatus detector at the end and place the 100K pilatus two theta to 0 degree. </li>
-<li>Step 8: Move the difractometer 'chi' position 90 to 270. Place the sumitomoto stage from the top. Tighten that by key showed in the figure.</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_insert.png?raw=true" width="500"></p>
-</figure>
-<ul>
-<li>Step 9: Place the sumitomoto sample stage from the top shown in (a) and (b). Tighten the screw shown in Figure (c)</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample_stage_1.png?raw=true" width="500"></p>
-</figure>
-<ul>
-<li>Step 10: Rotate the whole stage 'phi' and 'chi' to take it dowm from chi 270 to 90. Make sure don't knock anything. </li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/chi%20down.png?raw=true" width="300"></p>
-</figure>
-<ul>
-<li>Step 11: Place to 0-ring to the sample stage.</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_O_ring.png?raw=true" width="300"></p>
-</figure>
-<ul>
-<li>Step 12: Place the second part of the sample.</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Stage_O_ring1.png?raw=true" width="300"></p>
-</figure>
-<ul>
-<li>Step 13: Place the top part of the sample stage.</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/top%20part.png?raw=true" width="300"></p>
-</figure>
-<ul>
-<li>Step 14: Make sure the all the motor limits : theta, two theta, phi, chi </li>
+<li>
+<p>You can change mem_free = 200, below is the example</p>
+<pre class="codehilite"><code>qsub -q all.q -l mem_free=200G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
+</code></pre>
+
+</li>
+<li>
+<p>(viii) <b> Step 9 :</b> Check the status</p>
+<pre class="codehilite"><code>qstat
+</code></pre>
+
+</li>
+<li>
+<p>(ix) <b> Step 10 :</b> See the status ebaborately</p>
+<pre class="codehilite"><code>cat qsub_jobs_&lt;classe_id&gt;.sh.e7231424
+</code></pre>
+
+</li>
+<li>
+<p>(x) <b> Step 11 :</b> Finally after you the data procesing</p>
+<pre class="codehilite"><code>cd /nfs/chess/id4baux/2024-1/
+chmod -R 777 &lt;project_name&gt;
+</code></pre>
+
+</li>
 </ul></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../beamline_setup/" class="btn btn-neutral float-left" title="Beamline setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../energy_change/" class="btn btn-neutral float-right" title="Energy change">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ID4B_Codes_general_nodes/" class="btn btn-neutral float-left" title="General node"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nxrefine/" class="btn btn-neutral float-right" title="NxRefine">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -287,10 +309,10 @@
         </span>
     
     
-      <span><a href="../beamline_setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../ID4B_Codes_general_nodes/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../energy_change/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../nxrefine/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
