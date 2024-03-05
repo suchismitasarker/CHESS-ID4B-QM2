@@ -42,11 +42,7 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> CHESS ID4B QM2
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -85,6 +81,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -180,7 +178,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="start-the-new-users-at-the-beamline">Start the new users at the beamline<a class="headerlink" href="#start-the-new-users-at-the-beamline" title="Permanent link">&para;</a></h3>
+                <div><h3 id="start-the-new-users-at-the-beamline">Start the new users at the beamline<a class="headerlink" href="#start-the-new-users-at-the-beamline" title="Permanent link">¶</a></h3>
 <ul>
 <li><code>newmac</code> (# <i> uploading all the macros </i>)</li>
 <li><code>userslist.mac</code></li>
@@ -191,45 +189,64 @@
 <li>FOURC &gt; <code>newfile (name of newfile)</code></li>
 <li>Change the HDRMscans.mac file with <code>_samplename</code> and <code>_sampledirectory</code></li>
 </ul>
-<h3 id="open-the-camera-inside-the-front-hutch">Open the camera inside the front hutch<a class="headerlink" href="#open-the-camera-inside-the-front-hutch" title="Permanent link">&para;</a></h3>
+<h3 id="open-the-camera-inside-the-front-hutch">Open the camera inside the front hutch<a class="headerlink" href="#open-the-camera-inside-the-front-hutch" title="Permanent link">¶</a></h3>
 <ul>
 <li>Open an terminal</li>
 <li>type <code>vimba</code></li>
 <li>Vimba viewer will open with two cameras ( IP addresses: 1st crystal:  <code>192.168.180.102</code>, 2nd crystal : <code>192.168.180.101</code>)</li>
 </ul>
-<h3 id="open-ion-chambers">Open ion chambers<a class="headerlink" href="#open-ion-chambers" title="Permanent link">&para;</a></h3>
+<h3 id="open-ion-chambers">Open ion chambers<a class="headerlink" href="#open-ion-chambers" title="Permanent link">¶</a></h3>
 <ul>
 <li>Open an terminal </li>
 <li>type <code>show_apms 0</code></li>
 <li>type <code>show_apms 1</code></li>
 <li>type <code>show_apms 2</code></li>
 </ul>
-<h3 id="for-fourc-opening">for FOURC opening<a class="headerlink" href="#for-fourc-opening" title="Permanent link">&para;</a></h3>
+<h3 id="for-fourc-opening">for FOURC opening<a class="headerlink" href="#for-fourc-opening" title="Permanent link">¶</a></h3>
 <ul>
 <li>Open an terminal </li>
 <li>type <code>fourc</code></li>
 <li>press <code>yes</code> if fourc ask questions to change motor values</li>
 </ul>
-<h3 id="if-spec-window-is-lost">If SPEC window is lost<a class="headerlink" href="#if-spec-window-is-lost" title="Permanent link">&para;</a></h3>
+<h4 id="step-1-if-you-lost-fourcspec-terminal">STEP 1: If you lost fourc/SPEC terminal<a class="headerlink" href="#step-1-if-you-lost-fourcspec-terminal" title="Permanent link">¶</a></h4>
+<ul>
+<li>Open terminal </li>
+<li>type <code>findspec</code> (it will provide all the spec information)</li>
+<li>Check the getPid number</li>
+<li>type <code>fg &lt;getPid number&gt;</code> (example # fg 21192) </li>
+</ul>
+<h5 id="step-2-talk-to-beamline-scientist">STEP 2: Talk to beamline scientist<a class="headerlink" href="#step-2-talk-to-beamline-scientist" title="Permanent link">¶</a></h5>
+<p>If you doesn't find anythng after STEP 1 fourc/SPEC terminal 
+* If you not find the SPEC terminal, then type below command
+* <code>kill -9 &lt;getPid number&gt;</code> (example# kill -9 21192)
+* Open a new terminal 
+* Type ‘fourc’</p>
+<h6 id="if-you-fourcspec-doesnt-work">If you fourc/SPEC doesn't work<a class="headerlink" href="#if-you-fourcspec-doesnt-work" title="Permanent link">¶</a></h6>
+<ul>
+<li>Open terminal </li>
+<li>type <code>quit</code></li>
+<li>type <code>fourc</code></li>
+</ul>
+<h5 id="if-spec-window-is-lost">If SPEC window is lost<a class="headerlink" href="#if-spec-window-is-lost" title="Permanent link">¶</a></h5>
 <ul>
 <li>Open an terminal </li>
 <li>type <code>findspec</code></li>
 <li>If it is hidding, then type <code>fg &lt;PID number&gt;</code></li>
 </ul>
-<h4 id="flux-calculator">Flux Calculator<a class="headerlink" href="#flux-calculator" title="Permanent link">&para;</a></h4>
+<h4 id="flux-calculator">Flux Calculator<a class="headerlink" href="#flux-calculator" title="Permanent link">¶</a></h4>
 <p><a href="https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator">CHESS Flux calculator</a> at the beamline</p>
-<h4 id="x-ray-absoption-edge">X-ray absoption edge<a class="headerlink" href="#x-ray-absoption-edge" title="Permanent link">&para;</a></h4>
+<h4 id="x-ray-absoption-edge">X-ray absoption edge<a class="headerlink" href="#x-ray-absoption-edge" title="Permanent link">¶</a></h4>
 <p><a href="http://skuld.bmsc.washington.edu/scatter/AS_periodic.html">Check absroption edge</a></p>
-<h4 id="flyscan">flyscan<a class="headerlink" href="#flyscan" title="Permanent link">&para;</a></h4>
+<h4 id="flyscan">flyscan<a class="headerlink" href="#flyscan" title="Permanent link">¶</a></h4>
 <ul>
 <li><code>flyscan_setup</code></li>
 <li>selecct motor using space </li>
 <li>check flyscan</li>
 <li>FOURC &gt; <code>powderscan 300 1</code></li>
 </ul>
-<h3 id="user-hdrmscan-details-about-the-macros">User HDRMScan details about the macros<a class="headerlink" href="#user-hdrmscan-details-about-the-macros" title="Permanent link">&para;</a></h3>
-<h4 id="energy-change">Energy change<a class="headerlink" href="#energy-change" title="Permanent link">&para;</a></h4>
-<h5 id="removing-mirror-for-higher-energy-calibrations">Removing mirror for higher energy calibrations<a class="headerlink" href="#removing-mirror-for-higher-energy-calibrations" title="Permanent link">&para;</a></h5>
+<h3 id="user-hdrmscan-details-about-the-macros">User HDRMScan details about the macros<a class="headerlink" href="#user-hdrmscan-details-about-the-macros" title="Permanent link">¶</a></h3>
+<h4 id="energy-change">Energy change<a class="headerlink" href="#energy-change" title="Permanent link">¶</a></h4>
+<h5 id="removing-mirror-for-higher-energy-calibrations">Removing mirror for higher energy calibrations<a class="headerlink" href="#removing-mirror-for-higher-energy-calibrations" title="Permanent link">¶</a></h5>
 <p>'''</p>
 <pre class="codehilite"><code>    newfile 
     wmirror
@@ -247,7 +264,7 @@
 </code></pre>
 
 <p>'''</p>
-<h5 id="energy-calibrations">Energy calibrations<a class="headerlink" href="#energy-calibrations" title="Permanent link">&para;</a></h5>
+<h5 id="energy-calibrations">Energy calibrations<a class="headerlink" href="#energy-calibrations" title="Permanent link">¶</a></h5>
 <p>'''</p>
 <pre class="codehilite"><code>        moveE 25
         umvr mond
@@ -357,7 +374,7 @@
 * SLowly break the vaccum (remove o-ring)
 * Give some time to settle in 
 * Remove 4 scews remove the sample </p>
-<h3 id="detector-setup">Detector setup<a class="headerlink" href="#detector-setup" title="Permanent link">&para;</a></h3>
+<h3 id="detector-setup">Detector setup<a class="headerlink" href="#detector-setup" title="Permanent link">¶</a></h3>
 <p>REXS </p>
 <p>Setup : </p>
 <p>mv pil6mx 100
@@ -373,7 +390,7 @@ mv pil6my 885</p>
 <li><code>mv pil6mx 233</code>       - move pilatus 6M to 233 mm x direction </li>
 <li><code>mv pil6my 885</code>       - move pilatus 6M to 885 mm y direction</li>
 </ul>
-<h3 id="change-the-config-file">Change the config file<a class="headerlink" href="#change-the-config-file" title="Permanent link">&para;</a></h3>
+<h3 id="change-the-config-file">Change the config file<a class="headerlink" href="#change-the-config-file" title="Permanent link">¶</a></h3>
 <p>open the terminal</p>
 <pre class="codehilite"><code>config 
 config configaration will open
@@ -384,8 +401,8 @@ control c
 reconfig
 </code></pre>
 
-<p>To go to the specific motor press c,c (twice) <br />
-shift+' to modify anything</p>
+<p>To go to the specific motor press c,c (twice) <br>
+shift+' to modify anything</p></div>
               
             </div>
           </div><footer>
@@ -429,7 +446,6 @@ shift+' to modify anything</p>
     <script>var base_url = '..';</script>
     <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);

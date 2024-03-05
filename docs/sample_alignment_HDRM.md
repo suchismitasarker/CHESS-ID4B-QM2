@@ -74,6 +74,16 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
         a) Data will save at raw6M in id4b folder
 
+
+
+#### Quick video on data collection (make sure you read the above instructions before watching the video)
+
+
+<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
 ######  <i>Step 6: Check data nexpy  </i>
 Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/ ) - Nexpy section
 

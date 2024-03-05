@@ -94,7 +94,7 @@ If the ice did not melt
 
 
 * Step 1 : <i> FOURC > `prepnitrogen` </i> (# it will setup the temperature setpoints 85K and 83K in the Lakeshore controller Input A and input C)
-* Step 2 : <i> FOURC > `te 220` </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)
+* Step 2 : <i> FOURC > `te 230` </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)
 * Step 3 : Make sure all the temperature is above 77 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)
 !!! danger
     </i>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> (channel A, B, C) --> all temperature-->77K)
@@ -164,3 +164,21 @@ If the ice did not melt
       * LAKESHORE2:KRDG2
 
 * y-axis click “Modify” button (same y axis for all the curves)
+
+
+#### Emergency proceduce if the temperature controller fails or Sudden power failure at beamline
+
+!!! danger "Talk to Beamline Scientist or operators --- DONOT TRY THIS WITHOUT ASKING" 
+
+* If the your setup is in nitrogen condition (300K - 80K) and suddenly temperature is dropiing drastically and you don't have controls 
+  * Switch the valve Nitrogen to Helium 
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true){ width="500" }
+</figure>
+
+  * Closed the compressor
+
+  * Change the EPIC PVs range
+
+

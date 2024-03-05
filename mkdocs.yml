@@ -16,6 +16,7 @@ nav:
         - Welcome : 'index.md'
         - 'User Guide':
             - Introduction: 'introduction.md'
+            - Beamline information : 'beamline_parameters.md'
             - ID4B-SPEC commands: 'SPEC_commands.md'
             - 'Sample information':
                 - Sample environment : sample_env.md
@@ -28,6 +29,7 @@ nav:
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
                 - General node : ID4B_Codes_general_nodes.md
+                - NxRefine General Node : nxrefine_General_Node.md
                 - NxRefine : nxrefine.md
                 - 'Data visualization': 
                     - NeXpy : nexpy.md 
