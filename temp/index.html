@@ -194,7 +194,7 @@
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>roomT</code>  (# set temperature to 1st and 2nd controller to 130K and 110K)</i></li>
-<li>Step 3 : Make sure in the controller 1 (Input A) and B (input C), it will to reach the temperature 97K and 110K.</li>
+<li>Step 3 : Make sure in the controller 1 (Input A) and B (input C), it will to reach the temperature <b>96K </b> and <b>110K </b>.</li>
 <li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
 <li>Step 5 : FOURC &gt; <code>te 300</code>    (# set the temperature to 300K)</li>
 </ul>
@@ -223,7 +223,7 @@ If the ice did not melt </li>
 <li>Step 5 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 6 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)</li>
 <li>Step 7 : <i> FOURC &gt; <code>te 14</code> </i>   (# lowering temperature to 14K or others)</li>
-<li>Step 8: <i> FOURC &gt; <code>spin_xtal_scan</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
+<li>Step 8: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
 </ul>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2036-4%201.png?raw=true" width="700"></p>
@@ -232,17 +232,17 @@ If the ice did not melt </li>
 <ul>
 <li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 87K and 83K in the Lakeshore controller Input A and input C)</li>
 <li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
-<li>Step 4 : Make sure all the temperature is above 77 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
+<li>Step 4 : Make sure all the temperature is above 80 K (Input A 86 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
 </ul>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2086-83%201.png?raw=true" width="600">
 </p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;77K)</p>
+<p>N<sub>2</sub> in all conditions should be above 80K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;80K)</p>
 </div>
 <figure>
 <ul>
-<li>Step 3 : Once Input A, B and C are above 77K, then open the N2 valve and close He valve together
+<li>Step 3 : Once Input A, B and C are above 80K, then open the N2 valve and close He valve together
   <img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></li>
 </ul>
 </figure>
@@ -265,39 +265,41 @@ If the ice did not melt </li>
 <li>Step 6 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 7 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot below)</li>
 <li>Step 8 : <i> FOURC &gt; <code>te 15</code> </i>   (# lowering temperature to 15K or others)</li>
-<li>Step 9: <i> FOURC &gt; <code>spin_xtal_scan</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
+<li>Step 9: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
 </ul>
 <p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 300K (change to He to N<sub>2</sub> flow)</u></i></b></p>
 <ul>
 <li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 85K and 83K in the Lakeshore controller Input A and input C)</li>
 <li>Step 2 : <i> FOURC &gt; <code>te 230</code> </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)</li>
-<li>Step 3 : Make sure all the temperature is above 77 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
+<li>Step 3 : Make sure all the temperature is above 80 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>N<sub>2</sub> in all conditions should be above 77K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;77K)</p>
+<p>N<sub>2</sub> in all conditions should be above 80K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;80K)</p>
 </div>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></p>
 </figure>
 <ul>
-<li>Step 4 : <i> FOURC &gt; <code>roomT</code> </i>   (# it will setup the temperature setpoints 130K and 110K in the Lakeshore controller Input A and input C and it will to reach the temperature 97K and 110K.)</li>
-<li>Step 5 : <i> FOURC &gt; <code>flow_set 6</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
-<li>Step 6 : <i> FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
+<li>Step 4 : Turn on the N2 valve  and close He valve together</li>
+<li>Step 5 : <i> FOURC &gt; <code>roomT</code> </i>   (# it will setup the temperature setpoints 130K and 110K in the Lakeshore controller Input A and input C and it will to reach the temperature 97K and 110K.)</li>
+<li>Step 6 : <i> FOURC &gt; <code>flow_set 6</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
+<li>Step 7 : <i> FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
 </ul>
 <p><b><i><u> Performing experiment above room temperature : 300K --&gt; 500K </u></i></b></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 235K and 220K)</i></li>
 <li>Step 3 : <i> FOURC &gt; <code>flow_set 6</code></i></li>
-<li>Step 4 : Make sure in the controller 1 (Input A) and B (input C), it will to reach certain temperature and stabilize.</li>
-<li>Step 5 : FOURC &gt; <code>te 400</code>    (# increase temperature to 400K)</li>
+<li>Step 4 : Make sure in the controller 1 (Input A: 103K and B input C: 150K), it will to reach that temperature and stabilize.</li>
+<li>Step 5 : FOURC &gt; <code>te 480</code>    (# increase temperature to 400K)</li>
 </ul>
+<p><i> Note: Above 480K, it took long time to go 498K </i> </p>
 <p><b><i><u> Performing experiment from high temperature to room temperature : 500K --&gt; 300K </u></i></b></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 87K and 82K)</i></li>
-<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 87K and 82K.</li>
+<li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 85K and 83K)</i></li>
+<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 85K and 83K.</li>
 <li>Step 4 : FOURC &gt; <code>te 300</code>    (# increase temperature to 300K)</li>
 </ul>
 <p><b><i><u> Turn off the temperature controller </u></i></b></p>

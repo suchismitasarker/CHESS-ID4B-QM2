@@ -232,7 +232,8 @@
 
     a) Data will save at 'tiff' folder inside the user folder at id4b
     b) Check the quality of the datasets at nexpy
-    b) Go to the best position of the sample
+    b) Go to the best position of the sample 
+        FOURC&gt; umv samz &lt;position of the sample&gt;
 </code></pre>
 
 <h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
@@ -328,7 +329,20 @@
 </code></pre>
 
 <p>Step 5: Check data nexpy 
-(<i>please look at the Data visulization - Nexpy section </i>)</p></div>
+(<i>please look at the Data visulization - Nexpy section </i>)</p>
+<h2 id="temperature-dependent-scans">Temperature dependent scans<a class="headerlink" href="#temperature-dependent-scans" title="Permanent link">¶</a></h2>
+<h4 id="300k-475k-at-25k-temperature-interval">300K- 475K at 25K temperature interval<a class="headerlink" href="#300k-475k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
+<p>Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize</p>
+<pre class="codehilite"><code>  def TScans_warmN2 '
+  te = 325
+  for (loopT=325; loopT&lt;476; loopT=loopT+25){
+  eval(sprintf("threextalscan %s 180",loopT))
+  }
+
+  '
+</code></pre>
+
+<h1 id="_2"><a class="headerlink" href="#_2" title="Permanent link">¶</a></h1></div>
               
             </div>
           </div><footer>
