@@ -17,7 +17,7 @@ Password: CHEXSQM2
 
 
 !!! hint "Data policy"
-      We only stored the data for a year. Please process the data and copy it to your server. If you need more time, then consult your beamline scientist.
+      We only stored the processed data for a year. Please process the data and copy it to your server. If you need more time, then consult your beamline scientist.
 
 #### <b> Link for the Data transfers </b>
 
