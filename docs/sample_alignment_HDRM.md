@@ -60,7 +60,8 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
         a) Data will save at 'tiff' folder inside the user folder at id4b
         b) Check the quality of the datasets at nexpy
-        b) Go to the best position of the sample
+        b) Go to the best position of the sample 
+            FOURC> umv samz <position of the sample>  
 
 ######  <i>Step 5: Run three rotation crystal scan </i>
       It will rotate the crystal three times at different chi and theta angle
@@ -166,3 +167,20 @@ Step 4: Run three rotation crystal scan
 
 Step 5: Check data nexpy 
 (<i>please look at the Data visulization - Nexpy section </i>)
+
+
+## Temperature dependent scans 
+
+#### 300K- 475K at 25K temperature interval
+
+Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize
+
+      def TScans_warmN2 '
+      te = 325
+      for (loopT=325; loopT<476; loopT=loopT+25){
+      eval(sprintf("threextalscan %s 180",loopT))
+      }
+
+      '
+
+#
