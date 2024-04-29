@@ -1,6 +1,11 @@
 
 ## Computers : Data processing General nodes
 
+# Data Policy 
+!!! hint "Data policy"
+      We only stored the raw data for six months and processed data for a year. Please process the data and copy it to your server. If you need more time, then consult your beamline scientist.
+
+
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Beamline%20computers.png?raw=true)

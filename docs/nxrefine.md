@@ -2,6 +2,12 @@
 # NXRefine
 The code is written by Dr. Ray Osborn. More details will be available [NXRefine](https://nexpy.github.io/nxrefine/).The code provides various tools for stacking the raw data, finding Bragg peaks, solving the orientation matrix, and finally providing the HKL. 
 
+# Data Policy 
+!!! hint "Data policy"
+      We only stored the raw data for six months and processed data for a year. Please process the data and copy it to your server. If you need more time, then consult your beamline scientist.
+
+
+
 
 !!! danger "CHESS data processing steps" 
 

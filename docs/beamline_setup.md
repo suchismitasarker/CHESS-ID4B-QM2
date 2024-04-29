@@ -48,3 +48,7 @@ Please [click the link](https://wiki.classe.cornell.edu/Computing/GlobusDataTran
 show_apms 1
 show_apms 2
 show_apms 3
+
+
+# Group permission
+https://wiki.classe.cornell.edu/Computing/CLASSEGroupManagement

@@ -1,4 +1,5 @@
 # Introduction
+
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline%20schematic.png?raw=true)
 </figure>
@@ -25,11 +26,6 @@ This document is categorized into three sections.
 Password: CHEXSQM2
 
 
-### What does the beamline do?
-
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/data%20analysis.png?raw=true){ width="700" }
-</figure>
 
 
 

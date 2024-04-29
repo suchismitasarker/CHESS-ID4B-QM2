@@ -169,13 +169,13 @@ Step 5: Check data nexpy
 (<i>please look at the Data visulization - Nexpy section </i>)
 
 
-## Temperature dependent scans 
+## Examples of Temperature Dependent Scans 
 
 #### 300K- 475K at 25K temperature interval
 
 Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize
 
-      def TScans_warmN2 '
+      def TScans_high_N2 '
       te = 325
       for (loopT=325; loopT<476; loopT=loopT+25){
       eval(sprintf("threextalscan %s 180",loopT))
@@ -183,4 +183,36 @@ Step 1: Follow the instruction of temprature switch 300K-500K and the temperatur
 
       '
 
-#
+#### 90K- 300K at 25K temperature interval
+
+      def Tscans_low_to_high_N2 '
+      for (loopT=90; loopT < 301; loopT=loopT+15){
+      eval(sprintf("threextalscan %s 180", loopT))
+      }
+      '
+
+#### 90K- 100K at 2K temperature interval, 100K-126K at 5K interval and 125K-200K at 25K interval
+      def HighTScans_different_range '
+      for (loopT=90; loopT < 101; loopT=loopT+2){
+      eval(sprintf("threextalscan_longexposure %s 180", loopT))
+      }
+
+      for (loopT=100; loopT < 126; loopT=loopT+5){
+      eval(sprintf("threextalscan_longexposure %s 180", loopT))
+      }
+
+      for (loopT=125; loopT < 200; loopT=loopT+25){
+      eval(sprintf("threextalscan_longexposure %s 180", loopT))
+      }
+
+      '
+
+#### 15K- 90K at 15K temperature interval
+
+      def scans_low_to_high_He '
+      for (loopT=15; loopT < 91; loopT=loopT+15){
+      eval(sprintf("threextalscan %s 180", loopT))
+      }
+      '
+
+
