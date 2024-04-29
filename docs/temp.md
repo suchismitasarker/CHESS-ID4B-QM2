@@ -31,20 +31,19 @@
 !!! danger "Please use Helium sensibly!"
 <b><i><u> Cooling temperature of cryocooler with He : 85K --> 13K (also if you want only room temperature 300K and 15K) (change to N<sub>2</sub> to He flow)</b></u> 
 
-* Step 1 : <b> Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He </b>
-* Step 2 : <i> FOURC > `te 230` </i> (# it will setup the temperature in the Lakeshore controller)
+* Step 1 : <i> FOURC > `te 230` </i> (# it will setup the temperature in the Lakeshore controller)
 If the ice did not melt 
-* Step 3 : <i> FOURC > `flow_set 9` </i>
-* Step 4 : Turn on the He valve  and close N2 valve together
+* Step 2 : <i> FOURC > `flow_set 9` </i>
+* Step 3 : Turn on the He valve  and close N2 valve together
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true){ width="500" }
 </figure>
 
-* Step 5 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
-* Step 6 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)
-* Step 7 : <i> FOURC > `te 14` </i>   (# lowering temperature to 14K or others)
-* Step 8: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )
+* Step 4 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
+* Step 5 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)
+* Step 6 : <i> FOURC > `te 14` </i>   (# lowering temperature to 14K or others)
+* Step 7: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2036-4%201.png?raw=true){ width="700" }
@@ -73,21 +72,21 @@ If the ice did not melt
 
 <b><i><u> Room Temperature to base : 300K --> 15K (change N<sub>2</sub> to He flow)</b></u>
 
-* Step 1 : <b> Please let CHESS operator know about changing the gas flow from N<sub>2</sub> to He </b>
-* Step 2 : <i> FOURC > `prepnitrogen` </i> (# it will setup the temperature in the Lakeshore controller channel A = 85K and channel B = 83K)
+* Step 1 : <i> FOURC > `prepnitrogen` </i> (# it will setup the temperature in the Lakeshore controller channel A = 85K and channel B = 83K)
 * Step 2 : <i> FOURC > Wait until the temperature of the channel A and C is stabilize to 85K and 83K
 * Step 3 : <i> FOURC > `te 230` </i> (# it will setup the temperature in the Lakeshore controller)
 * Step 4 : <i> FOURC > `flow_set 9` </i>
-* Step 5 : Turn on the He valve  and close N2 valve together
+* Step 5: <i> you need to wait until the temperature of the sample is 230K (it might be lower)
+* Step 6 : Turn on the He valve  and close N2 valve together
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true){ width="500" }
 </figure>
 
-* Step 6 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
-* Step 7 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot below)
-* Step 8 : <i> FOURC > `te 15` </i>   (# lowering temperature to 15K or others)
-* Step 9: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )
+* Step 7 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
+* Step 8 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot below)
+* Step 9 : <i> FOURC > `te 15` </i>   (# lowering temperature to 15K or others)
+* Step 10: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )
 
 
 <b><i><u> Heating temperature of cryocooler : 13K --> 300K (change to He to N<sub>2</sub> flow)</b></u>

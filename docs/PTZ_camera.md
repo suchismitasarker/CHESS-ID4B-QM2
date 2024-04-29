@@ -61,6 +61,13 @@ Type : "ImageJ ID4B_T"  in ImageJ  
 "sample_view_top_controls"
 
 
+Song PZT 
+
+192.168.181.97
+192.168.182.42
+
+
+
 
 
 

@@ -10,6 +10,13 @@ The &#60QM&#62<sup>2</sup> beamline is optimized to uncover intertwined quantum 
 This document is a collection of codes and equipment details useful for the beamline ID4B at CHESS. If you encounter with any bug or like to have additional functionality, please <a href = "mailto: ss3428@cornell.edu">send an email to ID4B beamline</a>.
 
 
+### What does the beamline do?
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/data%20analysis.png?raw=true){ width="700" }
+</figure>
+
+
 ---
 
 ---

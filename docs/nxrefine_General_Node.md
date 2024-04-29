@@ -4,6 +4,13 @@
 # NXRefine
 The code is written by Dr. Ray Osborn. More details will be available [NXRefine](https://nexpy.github.io/nxrefine/).The code provides various tools for stacking the raw data, finding Bragg peaks, solving the orientation matrix, and finally providing the HKL. 
 
+
+# Data Policy 
+!!! hint "Data policy"
+      We only stored the raw data for six months and processed data for a year. Please process the data and copy it to your server. If you need more time, then consult your beamline scientist.
+
+
+
 # NXRefine General Nodes
 
 <figure markdown>
@@ -44,6 +51,8 @@ Make sure you have permission for the desired folders,  before running the job i
 
 
 * (vi) <b> Step 7 :</b>: Changed the desired steps for nxrefine from the folder or if you know how to use vim, then do to change the qsub file and do that necessasy steps 
+
+* Make sure you have change the file path and the threshold of the nxfind of the sample
 
 * If you are nomachine, you can change the qsub_jobs_****.sh file directly based on the steps you want to perform in the data processing  
 
