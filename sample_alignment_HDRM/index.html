@@ -330,10 +330,10 @@
 
 <p>Step 5: Check data nexpy 
 (<i>please look at the Data visulization - Nexpy section </i>)</p>
-<h2 id="temperature-dependent-scans">Temperature dependent scans<a class="headerlink" href="#temperature-dependent-scans" title="Permanent link">¶</a></h2>
+<h2 id="examples-of-temperature-dependent-scans">Examples of Temperature Dependent Scans<a class="headerlink" href="#examples-of-temperature-dependent-scans" title="Permanent link">¶</a></h2>
 <h4 id="300k-475k-at-25k-temperature-interval">300K- 475K at 25K temperature interval<a class="headerlink" href="#300k-475k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
 <p>Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize</p>
-<pre class="codehilite"><code>  def TScans_warmN2 '
+<pre class="codehilite"><code>  def TScans_high_N2 '
   te = 325
   for (loopT=325; loopT&lt;476; loopT=loopT+25){
   eval(sprintf("threextalscan %s 180",loopT))
@@ -342,7 +342,38 @@
   '
 </code></pre>
 
-<h1 id="_2"><a class="headerlink" href="#_2" title="Permanent link">¶</a></h1></div>
+<h4 id="90k-300k-at-25k-temperature-interval">90K- 300K at 25K temperature interval<a class="headerlink" href="#90k-300k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
+<pre class="codehilite"><code>  def Tscans_low_to_high_N2 '
+  for (loopT=90; loopT &lt; 301; loopT=loopT+15){
+  eval(sprintf("threextalscan %s 180", loopT))
+  }
+  '
+</code></pre>
+
+<h4 id="90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval">90K- 100K at 2K temperature interval, 100K-126K at 5K interval and 125K-200K at 25K interval<a class="headerlink" href="#90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval" title="Permanent link">¶</a></h4>
+<pre class="codehilite"><code>  def HighTScans_different_range '
+  for (loopT=90; loopT &lt; 101; loopT=loopT+2){
+  eval(sprintf("threextalscan_longexposure %s 180", loopT))
+  }
+
+  for (loopT=100; loopT &lt; 126; loopT=loopT+5){
+  eval(sprintf("threextalscan_longexposure %s 180", loopT))
+  }
+
+  for (loopT=125; loopT &lt; 200; loopT=loopT+25){
+  eval(sprintf("threextalscan_longexposure %s 180", loopT))
+  }
+
+  '
+</code></pre>
+
+<h4 id="15k-90k-at-15k-temperature-interval">15K- 90K at 15K temperature interval<a class="headerlink" href="#15k-90k-at-15k-temperature-interval" title="Permanent link">¶</a></h4>
+<pre class="codehilite"><code>  def scans_low_to_high_He '
+  for (loopT=15; loopT &lt; 91; loopT=loopT+15){
+  eval(sprintf("threextalscan %s 180", loopT))
+  }
+  '
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -355,7 +386,7 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2023, CHESS ID4B Beamline</p>
+      <p>© Copyright 2024, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
