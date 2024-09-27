@@ -8,7 +8,7 @@
     <title>Cameras - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/PTZ_camera/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
     <ul>
@@ -122,7 +123,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -170,18 +185,17 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Beamline equipments &raquo;</li><li>Cameras</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Beamline equipments</li>
+      <li class="breadcrumb-item active">Cameras</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/PTZ_camera.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/PTZ_camera.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -204,23 +218,23 @@
 <p class="admonition-title">Opening the station camera with cursur (if it is crushed )</p>
 <p>Oen the terminal</p>
 </div>
-<pre class="codehilite"><code>&gt;&gt;&gt; ImageJ
-</code></pre>
+<div class="codehilite"><pre><span></span><code>&gt;&gt;&gt; ImageJ
+</code></pre></div>
 
 <p><i> 3 windows will open </i></p>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/3%20windows.png?raw=true" width="500"></p>
 </figure>
-<pre class="codehilite"><code>Chane in the window
+<div class="codehilite"><pre><span></span><code>Chane in the window
 Change PIL6--&gt; ID4B:image1:
 Press strat button
-</code></pre>
+</code></pre></div>
 
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/cameraid4b_fix1.png?raw=true" width="500"></p>
 </figure>
-<pre class="codehilite"><code>camera window will pop-up
-</code></pre>
+<div class="codehilite"><pre><span></span><code>camera window will pop-up
+</code></pre></div>
 
 <blockquote>
 <blockquote>
@@ -232,7 +246,11 @@ Press strat button
 </figure>
 <h4 id="to-access-the-top-camera">To access the top camera<a class="headerlink" href="#to-access-the-top-camera" title="Permanent link">¶</a></h4>
 <p>Type : "ImageJ ID4B_T"  in ImageJ  
-"sample_view_top_controls"</p></div>
+"sample_view_top_controls"</p>
+<p>Song PZT </p>
+<p>192.168.181.97
+192.168.182.42</p></div></html>
+
               
             </div>
           </div><footer>
@@ -245,7 +263,7 @@ Press strat button
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2023, CHESS ID4B Beamline</p>
+      <p>© Copyright 2024, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -273,13 +291,14 @@ Press strat button
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
