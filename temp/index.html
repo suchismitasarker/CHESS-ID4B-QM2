@@ -8,7 +8,7 @@
     <title>Temperature switch - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/temp/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
     <ul>
@@ -122,7 +123,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -170,18 +185,17 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Sample information &raquo;</li><li>Temperature switch</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Sample information</li>
+      <li class="breadcrumb-item active">Temperature switch</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -190,48 +204,72 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true" width="500"></p>
 </figure>
-<p><b><i><u> Performing experiment at room temperature : 240K --&gt; 300K </u></i></b></p>
+<h6 id="the-cryocooler-is-highly-sensitive-to-obtain-an-accurate-temperature-reading-please-adhere-to-the-following-instructions-note-that-the-temperature-change-occurs-gradually-so-be-patient-it-requires-time-to-reach-the-desired-temperature">The cryocooler is highly sensitive. To obtain an accurate temperature reading, please adhere to the following instructions. Note that the temperature change occurs gradually, so be patient! It requires time to reach the desired temperature.<a class="headerlink" href="#the-cryocooler-is-highly-sensitive-to-obtain-an-accurate-temperature-reading-please-adhere-to-the-following-instructions-note-that-the-temperature-change-occurs-gradually-so-be-patient-it-requires-time-to-reach-the-desired-temperature" title="Permanent link">¶</a></h6>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/temp_range.png?raw=true" width="800"></p>
+</figure>
+<p><b><i><u> 280K ---&gt; 300K : temperature range </u></i></b></p>
 <ul>
-<li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>roomT</code>  (# set temperature to 1st and 2nd controller to 130K and 110K)</i></li>
-<li>Step 3 : Make sure in the controller 1 (Input A) and B (input C), it will to reach the temperature <b>96K </b> and <b>110K </b>.</li>
+<li>Step 1 : Make sure N2 valve is open and helium (He) valve is closed</li>
+<li>Step 2: <i> FOURC &gt; <code>roomT</code>  (# set temperature to 1st and 2nd controller to 230K and 220K)</i></li>
+<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>181K </b> and <b>220K </b>.</li>
 <li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
 <li>Step 5 : FOURC &gt; <code>te 300</code>    (# set the temperature to 300K)</li>
 </ul>
-<p><b><i><u> Cooling temperature of cryocooler with N<sub>2</sub> : room temperature 240K --&gt; 95K </u></i></b> </p>
+<p><b><i><u> 200K ---&gt; 270 K : Temperature range </u></i></b></p>
 <ul>
-<li>Step 1 : Open the N<sub>2</sub> valve and close He valve</li>
-<li>Step 2 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 3 : <i> FOURC &gt; <code>te 170</code> </i>   (# lowering temperature to 170K)</li>
+<li>Step 1 : Make sure N2 valve is open and helium (He) valve is closed</li>
+<li>Step 2: <i> FOURC &gt; <code>prepN2_high</code>  (# set temperature to 1st and 2nd controller to 165K and 160K)</i></li>
+<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>120K </b> and <b>160K </b>.</li>
 <li>Step 4: <i> FOURC &gt; <code>flow_set 9</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
+<li>Step 5 : FOURC &gt; <code>te 200</code>    (# set the temperature to 300K)</li>
+</ul>
+<p><b><i><u> 160K ---&gt; 200K : Temperature range </u></i></b></p>
+<ul>
+<li>Step 1 : Make sure N2 valve is open and helium (He) valve is closed</li>
+<li>Step 2: <i> FOURC &gt; <code>prepN2_medium</code>  (# set temperature to 1st and 2nd controller to 130K and 110K)</i></li>
+<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>101K </b> and <b>110K </b>.</li>
+<li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
+<li>Step 5 : FOURC &gt; <code>te 160</code>    (# set the temperature to 300K)</li>
+</ul>
+<p><b><i><u> 100K --&gt; 150K : Temperature range </u></i></b></p>
+<ul>
+<li>Step 1 : Make sure N2 valve is open and helium (He) valve is closed</li>
+<li>Step 2: <i> FOURC &gt; <code>prepN2_low</code>  (# set temperature to 1st and 2nd controller to 87K and 85K)</i></li>
+<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>101K </b> and <b>110K </b>.</li>
+<li>Step 4: <i> FOURC &gt; <code>flow_set 10</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
+<li>Step 5 : FOURC &gt; <code>te 100</code>    (# set the temperature to 100K)</li>
 </ul>
 <div class="admonition danger">
-<p class="admonition-title">Please use Helium sensibly!</p>
+<p class="admonition-title">Nitrogen to helium switch : Please use Helium sensibly!</p>
 </div>
-<p><b><i><u> Cooling temperature of cryocooler with He : 85K --&gt; 13K (also if you want only room temperature 300K and 15K) (change to N<sub>2</sub> to He flow)</u></i></b> </p>
+<p><b><i><u> 110K --&gt; 13K : Cooling temperature of cryocooler with helium (He) </u></i></b> </p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>te 230</code> </i> (# it will setup the temperature in the Lakeshore controller)
+<li>Step 1: <i> FOURC &gt; <code>prepN2_low</code>  (# set temperature to 1st and 2nd controller to 87K and 85K)</i></li>
+<li>Step 2 : <i> FOURC &gt; <code>te 260</code> </i> (# it will setup the temperature in the Lakeshore controller)
 If the ice did not melt </li>
-<li>Step 2 : <i> FOURC &gt; <code>flow_set 9</code> </i></li>
-<li>Step 3 : Turn on the He valve  and close N2 valve together</li>
+<li>Step 3 : <i> FOURC &gt; <code>flow_set 6</code> </i></li>
+<li>Step 4: <i> you need to wait until the temperature of the sample is 260K (it might be lower)</i></li>
+<li>Step 5 : Turn on the He valve  and close N2 valve together</li>
 </ul>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500"></p>
 </figure>
 <ul>
-<li>Step 4 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 5 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)</li>
-<li>Step 6 : <i> FOURC &gt; <code>te 14</code> </i>   (# lowering temperature to 14K or others)</li>
-<li>Step 7: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
+<li>Step 6 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 7 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)</li>
+<li>Step 8 : <i> FOURC &gt; <code>flow_set 13</code> </i></li>
+<li>Step 9 : <i> FOURC &gt; <code>te 14</code> </i>   (# lowering temperature to 14K or others)</li>
+<li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
 </ul>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2036-4%201.png?raw=true" width="700"></p>
 </figure>
-<p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 85K (change to He to N<sub>2</sub> flow)</u></i></b></p>
+<p><b><i><u>  13K --&gt; 100K: Heating temperature of cryocooler (change to He to N<sub>2</sub> flow)</u></i></b></p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 87K and 83K in the Lakeshore controller Input A and input C)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 180</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
-<li>Step 4 : Make sure all the temperature is above 80 K (Input A 86 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
+<li>Step 1 : <i> FOURC &gt; <code>prepN2_low</code> </i> (# it will setup the temperature setpoints 87K and 85K in the Lakeshore controller Input A and input C)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 240</code> </i> (# it will setup the desired sample temperature; here sample temperature is 180 K)</li>
+<li>Step 3 : <b> Make sure all the temperature is above 80 K (Input A 87 K, Input B (sample temperature) and Input C 85K in PLD controller) </b></li>
 </ul>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Temp%2086-83%201.png?raw=true" width="600">
 </p>
@@ -241,36 +279,38 @@ If the ice did not melt </li>
 </div>
 <figure>
 <ul>
-<li>Step 3 : Once Input A, B and C are above 80K, then open the N2 valve and close He valve together
-  <img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></li>
+<li>Step 4 : <b> Once Input A, B and C are above 80K, then open the N2 valve and close He valve together </b></li>
 </ul>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></p>
 </figure>
 <ul>
-<li>Step 4 : <i> FOURC &gt; <code>te 100</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
+<li>Step 5 : <i> FOURC &gt; <code>te 110</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
 </ul>
-<p><b><i><u> Room Temperature to base : 300K --&gt; 15K (change N<sub>2</sub> to He flow)</u></i></b></p>
+<p><b><i><u>  300K --&gt; 15K : Room Temperature to base (change N<sub>2</sub> to He flow)</u></i></b></p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature in the Lakeshore controller channel A = 85K and channel B = 83K)</li>
-<li>Step 2 : <i> FOURC &gt; Wait until the temperature of the channel A and C is stabilize to 85K and 83K</i></li>
-<li>Step 3 : <i> FOURC &gt; <code>te 230</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 4 : <i> FOURC &gt; <code>flow_set 9</code> </i></li>
-<li>Step 5: <i> you need to wait until the temperature of the sample is 230K (it might be lower)</i></li>
-<li>Step 6 : Turn on the He valve  and close N2 valve together</li>
+<li>Step 1 : <i> FOURC &gt; <code>prepN2_low</code> </i> (# it will setup the temperature in the Lakeshore controller channel A = 87K and channel B = 85K)</li>
+<li>Step 2 : <i> FOURC &gt; Wait until the temperature of the channel A and C is stabilize to 87K and 85K</i></li>
+<li>Step 3 : <i> FOURC &gt; <code>te 260</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
+<li>Step 4 : <i> FOURC &gt; <code>flow_set 6</code> </i></li>
+<li>Step 5: <i> You need to wait until the temperature of the sample is 260K (Make sure you do not have ice)</i></li>
+<li>Step 6 : Turn on the Helium (He) valve  and close nitrogen (N2) valve together</li>
 </ul>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500"></p>
 </figure>
 <ul>
 <li>Step 7 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 8 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot below)</li>
+<li>Step 8 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot above)</li>
+<li>Step 8 : <i> FOURC &gt; <code>flow_set 11</code> </i></li>
 <li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>   (# lowering temperature to 15K or others)</li>
 <li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
 </ul>
-<p><b><i><u> Heating temperature of cryocooler : 13K --&gt; 300K (change to He to N<sub>2</sub> flow)</u></i></b></p>
+<p><b><i><u> 13K --&gt; 300K : Heating temperature of cryocooler  (change to He to N<sub>2</sub> flow)</u></i></b></p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepnitrogen</code> </i> (# it will setup the temperature setpoints 85K and 83K in the Lakeshore controller Input A and input C)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 230</code> </i> (# it will setup the desired sample temperature; here sample temperature is 220 K)</li>
-<li>Step 3 : Make sure all the temperature is above 80 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller)</li>
+<li>Step 1 : <i> FOURC &gt; <code>roomT</code> </i> (# it will setup the temperature setpoints 230K and 200K in the Lakeshore controller Input A and input C)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 240</code> </i> (# it will setup the desired sample temperature; here sample temperature is 240 K)</li>
+<li>Step 3: <i> FOURC &gt; <code>flow_set 6</code> </i> </li>
+<li>Step 4 : <b> Make sure all the temperature is above 80 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller) </b></li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -280,30 +320,58 @@ If the ice did not melt </li>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></p>
 </figure>
 <ul>
-<li>Step 4 : Turn on the N2 valve  and close He valve together</li>
-<li>Step 5 : <i> FOURC &gt; <code>roomT</code> </i>   (# it will setup the temperature setpoints 130K and 110K in the Lakeshore controller Input A and input C and it will to reach the temperature 97K and 110K.)</li>
-<li>Step 6 : <i> FOURC &gt; <code>flow_set 6</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
+<li>Step 5 : Turn on the N2 valve  and close He valve together</li>
+<li>Step 6 : <i> FOURC &gt; <code>roomT</code> </i>   (# it will setup the temperature setpoints 130K and 110K in the Lakeshore controller Input A and input C and it will to reach the temperature 101K and 110K.)</li>
 <li>Step 7 : <i> FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 100K or any other desired temperature)</li>
 </ul>
-<p><b><i><u> Performing experiment above room temperature : 300K --&gt; 500K </u></i></b></p>
+<p><b><i><u>  300K --&gt; 500K : Performing experiment above room temperature </u></i></b></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>We are having problem with high temperature, talk to beamline scientist before doing anything</p>
+</div>
 <ul>
-<li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prephighT</code>  (# increase temperature to 1st and 2nd controller to 235K and 220K)</i></li>
-<li>Step 3 : <i> FOURC &gt; <code>flow_set 6</code></i></li>
-<li>Step 4 : Make sure in the controller 1 (Input A: 103K and B input C: 150K), it will to reach that temperature and stabilize.</li>
-<li>Step 5 : FOURC &gt; <code>te 480</code>    (# increase temperature to 400K)</li>
+<li>Step 1 : <b>Talk to beamline scientist </b></li>
+<li>Step 2 : Make sure N2 valve is open and He is closed</li>
+<li>
+<p>Step 3 : Physically <code>Turn off</code> compressor (Go to the end of the hutch)</p>
+</li>
+<li>
+<p>press <code>off</code> in the compressor (see the image below)</p>
+</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/compressor.jpeg?raw=true" width="300"></p>
+</figure>
+<ul>
+<li>Step 4 : <i> FOURC &gt; <code>te 300</code></i></li>
+<li>Step 5: <i> FOURC &gt; <code>turn_off_compressor</code>  (# increase temperature to 1st and 2nd controller to 300K and 300K)</i></li>
+<li>Step 5: Make sure in the controller 1 (Input A: 300K and B input C: 300K), it will to reach that temperature and stabilize.</li>
+<li>Step 6 : <i> FOURC &gt; <code>flow_set 6</code></i></li>
+<li>Step 7 : FOURC &gt; <code>te 480</code>    (# increase temperature to 400K)</li>
 </ul>
 <p><i> Note: Above 480K, it took long time to go 498K </i> </p>
-<p><b><i><u> Performing experiment from high temperature to room temperature : 500K --&gt; 300K </u></i></b></p>
+<p><b><i><u>  500K --&gt; 300K (Performing experiment from high temperature to room temperature )</u></i></b></p>
 <ul>
+<li>Step 1 : <b>Talk to beamline scientist </b></li>
 <li>Step 1 : Make sure N2 valve is open and He is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepnitrogen</code>  (# increase temperature to 1st and 2nd controller to 85K and 83K)</i></li>
-<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 85K and 83K.</li>
+<li>
+<p>Step 2 : Physically <code>turn on</code> the compressor (Go to the end of the hutch)</p>
+</li>
+<li>
+<p>press <code>on</code> in the compressor (see the image below)</p>
+</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/compressor.jpeg?raw=true" width="300"></p>
+</figure>
+<ul>
+<li>Step 3: <i> FOURC &gt; <code>roomT</code>  (# increase temperature to 1st and 2nd controller to 130K and 110K)</i></li>
+<li>Step 3 : Make sure in the controller  Input A and Input C, it will to reach the temperature 101K and 110K.</li>
 <li>Step 4 : FOURC &gt; <code>te 300</code>    (# increase temperature to 300K)</li>
 </ul>
 <p><b><i><u> Turn off the temperature controller </u></i></b></p>
 <ul>
-<li>Step 1 : Heat the temperature 300K, 300K, 300K</li>
+<li>Step 1 : Heat the temperature 300K, 300K, 300K </li>
 <li>Step 2 : close the compressor</li>
 <li>Step 3 : Wait until go to the required temperature</li>
 <li>Step 4 : Close the valve</li>
@@ -363,7 +431,8 @@ If the ice did not melt </li>
 <li>
 <p>Change the EPIC PVs range</p>
 </li>
-</ul></div>
+</ul></div></html>
+
               
             </div>
           </div><footer>
@@ -404,13 +473,14 @@ If the ice did not melt </li>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

@@ -8,7 +8,7 @@
     <title>HDRM - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/sample_alignment_HDRM/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Sample alignment</a>
     <ul class="current">
@@ -118,7 +119,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -166,19 +181,18 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Sample information &raquo;</li>
-          <li>Sample alignment &raquo;</li><li>HDRM</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Sample information</li>
+          <li class="breadcrumb-item">Sample alignment</li>
+      <li class="breadcrumb-item active">HDRM</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_HDRM.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_HDRM.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -196,18 +210,37 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150"></p>
 </figure>
-<h6 id="step-1-center-the-sample-to-the-beam"><i>Step 1:  Center the sample to the beam </i><a class="headerlink" href="#step-1-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
+<h6 id="step-1-manually-stage-center-the-sample-to-the-beam"><i>Step 1:  Manually stage:  center the sample to the beam </i><a class="headerlink" href="#step-1-manually-stage-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz2 0.1 (relative motion of the sample movement up (+) and down (-)) 
+        FOURC&gt; umv phi2 0
+        FOURC&gt; umv phi2 180
+        Move x and y to make the sample to the cursor
+        FOURC&gt; umv phi2 90
+        FOURC&gt; umv phi2 270
+        Do it iteratively until the center of the axis match the sample position
+</code></pre></div>
+
+<div class="admonition danger">
+<p class="admonition-title">Carefully and slowly insert the sample in the top of the sample stage</p>
+</div>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Qm2%20sample%20stage.png?raw=true" width="450"></p>
+</figure>
+<h6 id="step-1-automated-stage-center-the-sample-to-the-beam"><i>Step 1:  Automated stage: center the sample to the beam </i><a class="headerlink" href="#step-1-automated-stage-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
         FOURC&gt; umv phi 0
-        FOURC&gt; umv phi 180
+        FOURC&gt; umvr samx 0.1 (make sure you can see sample is moving towards cross +)
+        FOURC&gt; umv phi 180 (check the sample is coming back to cross + )
         Move x and y to make the sample to the cursor
         FOURC&gt; umv phi 90
-        FOURC&gt; umv phi 270
+        FOURC&gt; umvr samy 0.1 (make sure you can see sample is moving towards cross +)
+        FOURC&gt; umv phi 270 (check the sample is coming back to cross + )
+
         Do it iteratively until the center of the axis match the sample position
-</code></pre>
+</code></pre></div>
 
 <h6 id="step-2-create-file-structure"><i>Step 2 :  Create file structure </i><a class="headerlink" href="#step-2-create-file-structure" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>  a) Create newfile
+<div class="codehilite"><pre><span></span><code>  a) Create newfile
 
         FOURC&gt;newfile &lt;samplename&gt; 
         # samplename : chemical name of your sample, make sure you created folder in your directory
@@ -217,27 +250,27 @@
         i) Change the _mysample = &lt;sample_identifier&gt; 
         # _mysample is the sample identifier
         # save the file
-</code></pre>
+</code></pre></div>
 
 <div class="admonition danger">
 <p class="admonition-title">check the signals</p>
 </div>
 <h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>    FOURC&gt; qdo ./HDRMscans.mac  
+<div class="codehilite"><pre><span></span><code>    FOURC&gt; qdo ./HDRMscans.mac  
     # Notes: HDRMscans.mac contains all the script
-</code></pre>
+</code></pre></div>
 
 <h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>    FOURC&gt;heightscan
+<div class="codehilite"><pre><span></span><code>    FOURC&gt;heightscan
 
     a) Data will save at 'tiff' folder inside the user folder at id4b
     b) Check the quality of the datasets at nexpy
     b) Go to the best position of the sample 
         FOURC&gt; umv samz &lt;position of the sample&gt;
-</code></pre>
+</code></pre></div>
 
 <h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>  It will rotate the crystal three times at different chi and theta angle
+<div class="codehilite"><pre><span></span><code>  It will rotate the crystal three times at different chi and theta angle
 
     FOURC&gt; threextalscan 300 1
 
@@ -247,7 +280,7 @@
         - You can the change the exposure time (if needed)
 
     a) Data will save at raw6M in id4b folder
-</code></pre>
+</code></pre></div>
 
 <h4 id="quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video">Quick video on data collection (make sure you read the above instructions before watching the video)<a class="headerlink" href="#quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video" title="Permanent link">¶</a></h4>
 <iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -259,13 +292,13 @@
 <p class="admonition-title">Temperature modify and collect data</p>
 </div>
 <h6 id="change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere">Change temperature from 300K and 90 K- (if you are at Nitrogen atomosphere)<a class="headerlink" href="#change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere" title="Permanent link">¶</a></h6>
-<pre class="codehilite"><code>    FOURC&gt; te 100
+<div class="codehilite"><pre><span></span><code>    FOURC&gt; te 100
     # note: temperature here is 100 Kelvin
-</code></pre>
+</code></pre></div>
 
 <p>Make sure the temperature is stable before you run script</p>
-<pre class="codehilite"><code>    FOURC&gt; threextalscan 100 1
-</code></pre>
+<div class="codehilite"><pre><span></span><code>    FOURC&gt; threextalscan 100 1
+</code></pre></div>
 
 <div class="admonition danger">
 <p class="admonition-title">Practical guide of the temperature switch between nitrogen and helium</p>
@@ -279,7 +312,7 @@
 <p>Basic steps for single crystal thin-film sample alignment - HDRM. Detector height needs to change because of grazing incidence. Make sure you are able to see the samples (proper light arrangements)</p>
 </div>
 <p>Step 1:  Center the sample to the beam </p>
-<pre class="codehilite"><code>  a) Move chi, phi, and theta positions to their initial setup
+<div class="codehilite"><pre><span></span><code>  a) Move chi, phi, and theta positions to their initial setup
         FOURC&gt; umv chi 90   
         FOURC&gt; umv phi 0  
         FOURC&gt; umv th 0
@@ -288,70 +321,70 @@
         Check the signal at the diode 
         FOURC&gt; tw samz 0.01
         Move the sample in the Z-directions and cut the beam in half (for example: if the beam size is 300 microns, move 150 microns from the surface when the signal goes down)
-</code></pre>
+</code></pre></div>
 
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true" width="500"></p>
 </figure>
-<pre class="codehilite"><code>  c) Place cursor at center of the sample
+<div class="codehilite"><pre><span></span><code>  c) Place cursor at center of the sample
 
               FOURC&gt; umv phi 0
               FOURC&gt; umv phi 180
               FOURC&gt; umv phi 90
               FOURC&gt; umv phi 270
-</code></pre>
+</code></pre></div>
 
 <p>Step 2 :  Creating the file structure</p>
-<pre class="codehilite"><code>  a) Create newfile
+<div class="codehilite"><pre><span></span><code>  a) Create newfile
 
         FOURC&gt;newfile samplename
 
 
   b) Open HDRMscans.mac script for thin-film
         Change the sample ID
-</code></pre>
+</code></pre></div>
 
 <p>Step 3: Run HDRMscans.mac script from terminal</p>
-<pre class="codehilite"><code>      FOURC&gt; qdo ./HDRMscans.mac 
+<div class="codehilite"><pre><span></span><code>      FOURC&gt; qdo ./HDRMscans.mac 
       #Notes:HDRMscans.mac contains all the script
-</code></pre>
+</code></pre></div>
 
 <p>Step 3: Check the best height for the sample it will generate tiff file</p>
-<pre class="codehilite"><code>    FOURC&gt;powderscan 300 1
+<div class="codehilite"><pre><span></span><code>    FOURC&gt;powderscan 300 1
 
     a) Check the quality of the data sets at nexpy
     b) Go to the best position of the sample
-</code></pre>
+</code></pre></div>
 
 <p>Step 4: Run three rotation crystal scan </p>
-<pre class="codehilite"><code>    FOURC&gt; threxstalscan 300 1 
+<div class="codehilite"><pre><span></span><code>    FOURC&gt; threxstalscan 300 1 
     #Notes: Parameters: Temperature = 300, Sleep = 1
-</code></pre>
+</code></pre></div>
 
 <p>Step 5: Check data nexpy 
 (<i>please look at the Data visulization - Nexpy section </i>)</p>
 <h2 id="examples-of-temperature-dependent-scans">Examples of Temperature Dependent Scans<a class="headerlink" href="#examples-of-temperature-dependent-scans" title="Permanent link">¶</a></h2>
 <h4 id="300k-475k-at-25k-temperature-interval">300K- 475K at 25K temperature interval<a class="headerlink" href="#300k-475k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
 <p>Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize</p>
-<pre class="codehilite"><code>  def TScans_high_N2 '
+<div class="codehilite"><pre><span></span><code>  def TScans_high_N2 '
   te = 325
   for (loopT=325; loopT&lt;476; loopT=loopT+25){
   eval(sprintf("threextalscan %s 180",loopT))
   }
 
   '
-</code></pre>
+</code></pre></div>
 
 <h4 id="90k-300k-at-25k-temperature-interval">90K- 300K at 25K temperature interval<a class="headerlink" href="#90k-300k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
-<pre class="codehilite"><code>  def Tscans_low_to_high_N2 '
+<div class="codehilite"><pre><span></span><code>  def Tscans_low_to_high_N2 '
   for (loopT=90; loopT &lt; 301; loopT=loopT+15){
   eval(sprintf("threextalscan %s 180", loopT))
   }
   '
-</code></pre>
+</code></pre></div>
 
 <h4 id="90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval">90K- 100K at 2K temperature interval, 100K-126K at 5K interval and 125K-200K at 25K interval<a class="headerlink" href="#90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval" title="Permanent link">¶</a></h4>
-<pre class="codehilite"><code>  def HighTScans_different_range '
+<div class="codehilite"><pre><span></span><code>  def HighTScans_different_range '
   for (loopT=90; loopT &lt; 101; loopT=loopT+2){
   eval(sprintf("threextalscan_longexposure %s 180", loopT))
   }
@@ -365,20 +398,21 @@
   }
 
   '
-</code></pre>
+</code></pre></div>
 
 <h4 id="15k-90k-at-15k-temperature-interval">15K- 90K at 15K temperature interval<a class="headerlink" href="#15k-90k-at-15k-temperature-interval" title="Permanent link">¶</a></h4>
-<pre class="codehilite"><code>  def scans_low_to_high_He '
+<div class="codehilite"><pre><span></span><code>  def scans_low_to_high_He '
   for (loopT=15; loopT &lt; 91; loopT=loopT+15){
   eval(sprintf("threextalscan %s 180", loopT))
   }
   '
-</code></pre></div>
+</code></pre></div></div></html>
+
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample/" class="btn btn-neutral float-left" title="Sample mount"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../beamline_basics/" class="btn btn-neutral float-left" title="Beamline basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../sample_alignment_REXS/" class="btn btn-neutral float-right" title="REXS">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -407,20 +441,21 @@
         </span>
     
     
-      <span><a href="../sample/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../beamline_basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../sample_alignment_REXS/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

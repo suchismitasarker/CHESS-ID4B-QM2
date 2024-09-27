@@ -8,7 +8,7 @@
     <title>REXS - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/sample_alignment_REXS/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Sample alignment</a>
     <ul class="current">
@@ -118,7 +119,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -166,19 +181,18 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Sample information &raquo;</li>
-          <li>Sample alignment &raquo;</li><li>REXS</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Sample information</li>
+          <li class="breadcrumb-item">Sample alignment</li>
+      <li class="breadcrumb-item active">REXS</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_REXS.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_REXS.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -262,7 +276,7 @@
 <li><code>setroi 278 67 1 3</code> - Changing the vertical and horizontal sizes. Examples: 278 and 67 are minimum pixel dimension along x (vertical) and y (horizontal) axis whereas 1 is vertical pixel size (it is minimum) and 3 is horizontal pixel size.</li>
 </ul>
 <p>After setiing up the two peaks, you can set up the macros to optimize the peak positions</p>
-<pre class="codehilite"><code>  def alignfine '
+<div class="codehilite"><pre><span></span><code>  def alignfine '
         opens
         lup chi -0.2 0.2 50 0.1
         umv chi CEN
@@ -279,10 +293,10 @@
         closes
         wh
  ‘
-</code></pre>
+</code></pre></div>
 
 <p>To permform the L scan for (0 1 17) peaks </p>
-<pre class="codehilite"><code>  def getlscan '
+<div class="codehilite"><pre><span></span><code>  def getlscan '
         wh
         opens
         lscan 16.96 17.04 120 1
@@ -296,10 +310,10 @@
         moveE 11.215
         matchUE 3
   ‘
-</code></pre>
+</code></pre></div>
 
 <p>Perform two theta plan</p>
-<pre class="codehilite"><code>  def gettthscan2 ‘
+<div class="codehilite"><pre><span></span><code>  def gettthscan2 ‘
         wh
         alignfine
         opens
@@ -310,7 +324,8 @@
         th2th -0.04 0.04 80 1
         closes
   ‘
-</code></pre></div>
+</code></pre></div></div></html>
+
               
             </div>
           </div><footer>
@@ -351,13 +366,14 @@
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

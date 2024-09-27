@@ -8,7 +8,7 @@
     <title>NxRefine General Node - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/nxrefine_General_Node/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
     <ul>
@@ -120,7 +121,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -168,18 +183,17 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Data Analysis &raquo;</li><li>NxRefine General Node</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Data Analysis</li>
+      <li class="breadcrumb-item active">NxRefine General Node</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/nxrefine_General_Node.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/nxrefine_General_Node.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -205,34 +219,34 @@ Make sure you have permission for the desired folders,  before running the job i
 <ul>
 <li>
 <p>(ii) <b> Step 2 :</b> Login to lnx201</p>
-<pre class="codehilite"><code>ssh &lt;classe_id&gt;@lnx201.classe.cornell.edu
-</code></pre>
+<div class="codehilite"><pre><span></span><code>ssh &lt;classe_id&gt;@lnx201.classe.cornell.edu
+</code></pre></div>
 
 </li>
 <li>
 <p>(iii) <b> Step 3 :</b> Make sure you are at home directory</p>
-<pre class="codehilite"><code>cd 
+<div class="codehilite"><pre><span></span><code>cd 
 pwd
 /home/&lt;classe_id&gt;/
-</code></pre>
+</code></pre></div>
 
 </li>
 <li>
 <p>(iv) <b> Step 4 :</b> create nxserver settings</p>
-<pre class="codehilite"><code>mkdir -p  /home/&lt;classe_id&gt;/.nxserver/
-</code></pre>
+<div class="codehilite"><pre><span></span><code>mkdir -p  /home/&lt;classe_id&gt;/.nxserver/
+</code></pre></div>
 
 </li>
 <li>
 <p>(v) <b> Step 5 :</b>: Copy the nxserver setting</p>
-<pre class="codehilite"><code>cp /home/ss3428/.nxserver/settings.ini /home/&lt;classe_id&gt;/.nxserver/
-</code></pre>
+<div class="codehilite"><pre><span></span><code>cp /home/ss3428/.nxserver/settings.ini /home/&lt;classe_id&gt;/.nxserver/
+</code></pre></div>
 
 </li>
 <li>
 <p>(vi) <b> Step 6 :</b>: Go to the desired data analayis forder (it will your folder in aux)</p>
-<pre class="codehilite"><code>cd /nfs/chess/id4baux/2024-1/&lt;BTR-3946-a&gt;/
-</code></pre>
+<div class="codehilite"><pre><span></span><code>cd /nfs/chess/id4baux/2024-1/&lt;BTR-3946-a&gt;/
+</code></pre></div>
 
 </li>
 <li>
@@ -243,14 +257,14 @@ pwd
 </li>
 <li>
 <p>If you are nomachine, you can change the qsub_jobs_****.sh file directly based on the steps you want to perform in the data processing  </p>
-<pre class="codehilite"><code>vim qsub_jobs_&lt;name of the user&gt;.sh
-</code></pre>
+<div class="codehilite"><pre><span></span><code>vim qsub_jobs_&lt;name of the user&gt;.sh
+</code></pre></div>
 
 </li>
 <li>
 <p>(vii) <b> Step 8 : </b> Run the job in lnx201 (make sure path is correct)</p>
-<pre class="codehilite"><code>qsub -q all.q -l mem_free=350G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
-</code></pre>
+<div class="codehilite"><pre><span></span><code>qsub -q all.q -l mem_free=350G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
+</code></pre></div>
 
 </li>
 </ul>
@@ -260,30 +274,31 @@ pwd
 <ul>
 <li>
 <p>You can change mem_free = 200, below is the example</p>
-<pre class="codehilite"><code>qsub -q all.q -l mem_free=200G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
-</code></pre>
+<div class="codehilite"><pre><span></span><code>qsub -q all.q -l mem_free=200G -pe sge_pe 8 -hold_jid 8 -S /bin/bash /nfs/chess/id4baux/2024-1/postec-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
+</code></pre></div>
 
 </li>
 <li>
 <p>(viii) <b> Step 9 :</b> Check the status</p>
-<pre class="codehilite"><code>qstat
-</code></pre>
+<div class="codehilite"><pre><span></span><code>qstat
+</code></pre></div>
 
 </li>
 <li>
 <p>(ix) <b> Step 10 :</b> See the status ebaborately</p>
-<pre class="codehilite"><code>cat qsub_jobs_&lt;classe_id&gt;.sh.e7231424
-</code></pre>
+<div class="codehilite"><pre><span></span><code>cat qsub_jobs_&lt;classe_id&gt;.sh.e7231424
+</code></pre></div>
 
 </li>
 <li>
 <p>(x) <b> Step 11 :</b> Finally after you the data procesing</p>
-<pre class="codehilite"><code>cd /nfs/chess/id4baux/2024-1/
+<div class="codehilite"><pre><span></span><code>cd /nfs/chess/id4baux/2024-1/
 chmod -R 777 &lt;project_name&gt;
-</code></pre>
+</code></pre></div>
 
 </li>
-</ul></div>
+</ul></div></html>
+
               
             </div>
           </div><footer>
@@ -324,13 +339,14 @@ chmod -R 777 &lt;project_name&gt;
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

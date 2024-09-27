@@ -8,7 +8,7 @@
     <title>General node - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,21 +17,20 @@
         var mkdocs_page_url = "/ID4B_Codes_general_nodes/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-ABC123');
+        gtag('config', "G-ABC123");
       </script>
 </head>
 
@@ -63,6 +62,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Sample alignment</a>
     <ul>
@@ -120,7 +121,21 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../IC1_signal/">IC1 signal issues</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controlC_question/">Control C Questions</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beam_dump/">Beam dump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lost_fourc/">Missing SPEC</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../camera_image_stuck/">Camera image stuck</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../nexpy_crushed/">NexPy crushed</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lower_diode_signal/">Lower diode signal</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cryo_fail/">Cryostream sudden failure</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../comp_issues/">Computer Issues</a>
                 </li>
     </ul>
                   </li>
@@ -168,18 +183,17 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Home &raquo;</li>
-          <li>User Guide &raquo;</li>
-          <li>Data Analysis &raquo;</li><li>General node</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Data Analysis</li>
+      <li class="breadcrumb-item active">General node</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/ID4B_Codes_general_nodes.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/ID4B_Codes_general_nodes.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -196,8 +210,8 @@
 <div class="admonition tip">
 <p class="admonition-title">Want to process the data after leaving beamline?</p>
 <p>If you need more information <a href="https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro">CHESS computing farm access</a></p>
-<pre class="codehilite"><code>Using general nodes follow the below steps
-</code></pre>
+<div class="codehilite"><pre><span></span><code>Using general nodes follow the below steps
+</code></pre></div>
 
 </div>
 <ul>
@@ -228,7 +242,7 @@ b)  <code>chmod -R 777 (foldername)</code></p>
 <p class="admonition-title">STEP II :  Stack data</p>
 </div>
 <p>The script take all the detector's raw .cbf files and performed calibration. You can the get the <a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/codebase_for_use/stack_em_all_cbf_2022.py">stack_em_all_cbf_2022.py</a>. </p>
-<pre class="codehilite"><code>Step 1 :  the `python stack_em_all_cbf_2022.py` python script
+<div class="codehilite"><pre><span></span><code>Step 1 :  the `python stack_em_all_cbf_2022.py` python script
 Modify : 
         i) Project name : 
                         proj_name = "sarker-000-a/" (#project name)
@@ -246,28 +260,28 @@ Step 2 : Run python code
 
 Step 3 : Check data 
     After stacking is done the processed data will be avilable in id4baux folder
-</code></pre>
+</code></pre></div>
 
 <p>You can create bash script to run the stacking </p>
-<pre class="codehilite"><code>    #!  /bin/bash
+<div class="codehilite"><pre><span></span><code>    #!  /bin/bash
     python stack_em_all_cbf_2022.py CoTiO3 sample 11 50
     python stack_em_all_cbf_2022.py CoTiO3 sample 12 50
     python stack_em_all_cbf_2022.py CoTiO3 sample 13 50
-</code></pre>
+</code></pre></div>
 
 <p>===========================================================================</p>
 <div class="admonition tip">
 <p class="admonition-title">STEP III:  Find Bragg peaks</p>
 </div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/simple_peakfinder.py">simple_peakfinder.py</a> script</p>
-<pre class="codehilite"><code>Step 1: After stacking is done, take the whole stack from the id4aux data folder and run simple_peakfinder.py code
+<div class="codehilite"><pre><span></span><code>Step 1: After stacking is done, take the whole stack from the id4aux data folder and run simple_peakfinder.py code
 
     Usage: 
     python simple_peakfinder.py /full/path/to/stack/ 0.95
 
     Example: 
     &gt;&gt;&gt; python simple_peakfinder.py /nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/ 0.95
-</code></pre>
+</code></pre></div>
 
 <p>Would consider anything above 95% of max counts as a Bragg peak. You can change the thereshold  as needed. 
 Check the number of peaks, you find after running the code. In between 200-3000 is a good number.  </p>
@@ -276,12 +290,12 @@ Check the number of peaks, you find after running the code. In between 200-3000 
 <p class="admonition-title">STEP IV:  Solve orientation matrix</p>
 </div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/auto_ormfinder.py">auto_ormfinder.py</a> script </p>
-<pre class="codehilite"><code>Usage: 
+<div class="codehilite"><pre><span></span><code>Usage: 
 python auto_ormfinder.py */full/path/to/stack/ peakfilename.npy
 
 Example: 
 &gt;&gt;&gt;python auto_ormfinder.py /nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/ peaklist1.npy
-</code></pre>
+</code></pre></div>
 
 <div class="admonition danger">
 <p class="admonition-title">Please provide a space between pathname (/nfs/chess/id4baux/2022-3/sarker-0000-a/CoTiO3/sample/300/) and peaklist1.npy</p>
@@ -291,7 +305,7 @@ Example:
 <p class="admonition-title">STEP V:  Convert stacks of data to HKL volume</p>
 </div>
 <p><a href="https://github.com/suchismitasarker/CLASSE-id4b/blob/main/Pil6M_HKLConv_3D_2022.py">Pil6M_HKLConv_3D_2022.py</a> python script (edit to point to project, ormatrix, and define HKL grid)</p>
-<pre class="codehilite"><code>Step 1: Edit the script
+<div class="codehilite"><pre><span></span><code>Step 1: Edit the script
     i) Change the project name
                 projd = "/nfs/chess/id4baux/2022-3/sarker-0000-a"
                 sampldi = "/CoTiO3/sample/" 
@@ -310,7 +324,7 @@ python  Pil6M_HKLConv_3D_2022.py temperature
 
 Example:
 python Pil6M_HKLConv_3D_2022.py 50
-</code></pre>
+</code></pre></div>
 
 <div class="admonition tip">
 <p class="admonition-title">Runnning same sample at different temperature processing</p>
@@ -340,7 +354,8 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888</li>
 <li><a href="https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro">CHESS computing farm access</a></li>
 <li><a href="https://wiki.classe.cornell.edu/Computing/JupyterHub">CHESS jupyterhub</a></li>
 <li><a href="service-classe@cornell.edu">CLASSE-IT Service Requests </a></li>
-</ul></div>
+</ul></div></html>
+
               
             </div>
           </div><footer>
@@ -381,13 +396,14 @@ ssh -N -f -L localhost:8888:lnx306.classe.cornell.edu:8888</li>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

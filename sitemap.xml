@@ -2,152 +2,197 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Cryostat/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/FAQ/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/IC1_signal/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ID4B_Codes/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ID4B_Codes_general_nodes/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/PTZ_camera/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/SPEC_commands/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/SPEC_macros/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/beam_dump/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/beamline_basics/</loc>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/beamline_parameters/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/beamline_setup/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/camera_image_stuck/</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/comp_issues/</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/controlC_question/</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/cryo_fail/</loc>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/cryocooler/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/detector_information/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/diffractometer/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/energy_change/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/gas_flow/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/information/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/introduction/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/lost_fourc/</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/lower_diode_signal/</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/mostab/</loc>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/nexpy/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/nexpy_crushed/</loc>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/nxrefine/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/nxrefine_General_Node/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/publications/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/pymca/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/sample/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/sample_alignment_HDRM/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/sample_alignment_REXS/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/sample_env/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/temp/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
