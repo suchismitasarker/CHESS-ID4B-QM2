@@ -1,6 +1,8 @@
 
 
-### IC1 varies signal continuously 20/200 - maximum counts 
+### IC1 varies signal continuously fluctuating - maximum counts 
+
+![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Iron%20chamber%20Issue.png?raw=true){ width="500" }
 
 
 ##### Inform beamline scientist 
@@ -17,5 +19,8 @@
 * Step 7: wait untill it maximize IC1
 
 
-# ImageJ not working 
+
+
+
+
 

@@ -18,14 +18,36 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 </figure>
 
 
-######  <i>Step 1:  Center the sample to the beam </i>
 
+######  <i>Step 1:  Manually stage:  center the sample to the beam </i>
+
+            FOURC> umvr samz2 0.1 (relative motion of the sample movement up (+) and down (-)) 
+            FOURC> umv phi2 0
+            FOURC> umv phi2 180
+            Move x and y to make the sample to the cursor
+            FOURC> umv phi2 90
+            FOURC> umv phi2 270
+            Do it iteratively until the center of the axis match the sample position   
+
+
+
+!!! danger "Carefully and slowly insert the sample in the top of the sample stage"
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Qm2%20sample%20stage.png?raw=true){ width="450" }
+</figure>
+
+
+######  <i>Step 1:  Automated stage: center the sample to the beam </i>
             FOURC> umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
             FOURC> umv phi 0
-            FOURC> umv phi 180
+            FOURC> umvr samx 0.1 (make sure you can see sample is moving towards cross +)
+            FOURC> umv phi 180 (check the sample is coming back to cross + )
             Move x and y to make the sample to the cursor
             FOURC> umv phi 90
-            FOURC> umv phi 270
+            FOURC> umvr samy 0.1 (make sure you can see sample is moving towards cross +)
+            FOURC> umv phi 270 (check the sample is coming back to cross + )
+
             Do it iteratively until the center of the axis match the sample position     
 
 ######  <i>Step 2 :  Create file structure </i>

@@ -51,10 +51,12 @@ Motors
 
 ### To open the lakeshore
 
-* Open terminal
-*  > `css` 
-* The Lakeshore controller will open
-* Output (1(input A): stage 1 heater, 2(input C): Sample temperature, 3 (input B): Stage 2 heater ), you can control.
+* Step 1:Open terminal
+* Step 2: > `cd` 
+* Step 3:  > `/mnt/home/chess_id4b/.cs-studio` 
+* Step 4: click okay
+* Step 5: In the file you can find the recent window for lakeshore.opi
+* Step 6: click lakeshore 2
 * Change the  Range : Rang3/High  
 
 
