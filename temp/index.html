@@ -301,14 +301,14 @@ If the ice did not melt </li>
 <ul>
 <li>Step 7 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
 <li>Step 8 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot above)</li>
-<li>Step 8 : <i> FOURC &gt; <code>flow_set 11</code> </i></li>
+<li>Step 8 : <i> FOURC &gt; <code>flow_set 10</code> </i></li>
 <li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>   (# lowering temperature to 15K or others)</li>
 <li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions and you can STOP that by control C )</li>
 </ul>
 <p><b><i><u> 13K --&gt; 300K : Heating temperature of cryocooler  (change to He to N<sub>2</sub> flow)</u></i></b></p>
 <ul>
-<li>Step 1 : <i> FOURC &gt; <code>roomT</code> </i> (# it will setup the temperature setpoints 230K and 200K in the Lakeshore controller Input A and input C)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 240</code> </i> (# it will setup the desired sample temperature; here sample temperature is 240 K)</li>
+<li>Step 1 : <i> FOURC &gt; <code>prepN2_low</code> </i> (# it will setup the temperature setpoints 230K and 200K in the Lakeshore controller Input A and input C)</li>
+<li>Step 2 : <i> FOURC &gt; <code>te 260</code> </i> (# it will setup the desired sample temperature; here sample temperature is 240 K)</li>
 <li>Step 3: <i> FOURC &gt; <code>flow_set 6</code> </i> </li>
 <li>Step 4 : <b> Make sure all the temperature is above 80 K (Input A 87 K, Input B (sample temperature) and Input C 83K in PLD controller) </b></li>
 </ul>
