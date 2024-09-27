@@ -24,7 +24,15 @@ The procedure of mounting/changing the sample depends on the type of experiment 
 
 * <i><b> Step 4 </b></i>: Use GE vernish to glue the micromount to base 
 
+    <b> Here is the link for Adhesive </b>
+        [VGE -7031](https://www.lakeshore.com/products/categories/specification/temperature-products/cryogenic-accessories/varnish)
+
 * <i><b> Step 5 </b></i>: Make sure you do not tunch the metal part with the sample!!
+
+<b> Few other accessaries to to handle small samples: </b>
+
+* [Cryo Vials](https://www.mitegen.com/product/magnetic-cryovials/)
+* [Magnetic Wand](https://www.mitegen.com/product/magnetic-wand-with-rubber-grips/)
 
 
 ### Thin-film mounts
@@ -37,6 +45,9 @@ The procedure of mounting/changing the sample depends on the type of experiment 
 
 * <i><b> Step 2 </b></i>: Fiber glass  
       [Example : Fiberglass link ](https://www.amazon.com/Piece-Fiberglass-Solid-Blank-Inches/dp/B0052TVI0K/ref=sr_1_4?crid=3MWORZQB7IKUS&keywords=fiberglass+rod&qid=1681262833&sprefix=fiberglass+rod%2Caps%2C193&sr=8-4)
+
+* <i><b> Step 3 </b></i>: Adhesive
+      [Example: Link to the Adhesive used at CHESS](https://www.lakeshore.com/products/categories/specification/temperature-products/cryogenic-accessories/varnish)
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/thin-film%20samples1.png?raw=true){ width="500" }

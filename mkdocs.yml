@@ -6,7 +6,7 @@ site_name: CHESS ID4B QM2
 site_url: https://example.com/
 repo_url: https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md
 copyright: © Copyright 2024, CHESS ID4B Beamline
-generator: false
+#generator: false
 
 extra:
   generator: false
@@ -21,6 +21,7 @@ nav:
             - 'Sample information':
                 - Sample environment : sample_env.md
                 - Sample mount : sample.md
+                - Beamline basics: beamline_basics.md
                 - 'Sample alignment':
                     - HDRM : sample_alignment_HDRM.md
                     - REXS : sample_alignment_REXS.md
@@ -42,7 +43,14 @@ nav:
                 - Publication : publications.md
         - Troubleshooting :
             - IC1 signal issues : IC1_signal.md
+            - Control C Questions : controlC_question.md
             - Beam dump : beam_dump.md
+            - Missing SPEC : lost_fourc.md
+            - Camera image stuck : camera_image_stuck.md 
+            - NexPy crushed : nexpy_crushed.md 
+            - Lower diode signal : lower_diode_signal.md 
+            - Cryostream sudden failure: cryo_fail.md
+            - Computer Issues: comp_issues.md
         - Admin Documentation :
             - Beamline setup : beamline_setup.md
             - Cryostat : Cryostat.md
@@ -83,11 +91,6 @@ markdown_extensions:
       guess_lang: false
       use_pygments: true
 
-:root > * { --md-code-hl-string-color: #0FF1CE; }
-
-
-extra:
-  generator: false
 
 plugins:
     - mkdocs-video
