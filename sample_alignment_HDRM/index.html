@@ -269,7 +269,17 @@
         FOURC&gt; umv samz &lt;position of the sample&gt;
 </code></pre></div>
 
-<h6 id="step-5-run-three-rotation-crystal-scan"><i>Step 5: Run three rotation crystal scan </i><a class="headerlink" href="#step-5-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
+<h6 id="step-5-autotune-condition-talk-to-beamline-scientist"><i>Step 5 : Autotune condition (talk to beamline scientist)  </i><a class="headerlink" href="#step-5-autotune-condition-talk-to-beamline-scientist" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>  If the autotune is off in the mostab
+  a) FOURC&gt; opens (# Open the shutter)
+  b) Turn the knob slowly and maximize the counts in IC2
+  c) FOURC&gt; closes (# close the shutter)
+</code></pre></div>
+
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true" width="150"></p>
+</figure>
+<h6 id="step-6-run-three-rotation-crystal-scan"><i>Step 6: Run three rotation crystal scan </i><a class="headerlink" href="#step-6-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
 <div class="codehilite"><pre><span></span><code>  It will rotate the crystal three times at different chi and theta angle
 
     FOURC&gt; threextalscan 300 1
@@ -285,7 +295,7 @@
 <h4 id="quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video">Quick video on data collection (make sure you read the above instructions before watching the video)<a class="headerlink" href="#quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video" title="Permanent link">¶</a></h4>
 <iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h6 id="step-6-check-data-nexpy"><i>Step 6: Check data nexpy  </i><a class="headerlink" href="#step-6-check-data-nexpy" title="Permanent link">¶</a></h6>
+<h6 id="step-7-check-data-nexpy"><i>Step 7: Check data nexpy  </i><a class="headerlink" href="#step-7-check-data-nexpy" title="Permanent link">¶</a></h6>
 <p>Please look at the <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/">Data visualization</a> - Nexpy section</p>
 <p>=============================================================================</p>
 <div class="admonition type">
@@ -356,7 +366,17 @@
     b) Go to the best position of the sample
 </code></pre></div>
 
-<p>Step 4: Run three rotation crystal scan </p>
+<p>Step 4: Autotune condition (talk to beamline scientist)</p>
+<div class="codehilite"><pre><span></span><code>  If the autotune is off in the mostab
+  a) FOURC&gt; opens (# Open the shutter)
+  b) Turn the knob slowly and maximize the counts in IC2
+  c) FOURC&gt; closes (# close the shutter)
+</code></pre></div>
+
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true" width="150"></p>
+</figure>
+<p>Step 5: Run three rotation crystal scan </p>
 <div class="codehilite"><pre><span></span><code>    FOURC&gt; threxstalscan 300 1 
     #Notes: Parameters: Temperature = 300, Sleep = 1
 </code></pre></div>
