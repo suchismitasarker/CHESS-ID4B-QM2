@@ -69,7 +69,7 @@ If the ice did not melt
 
 * Step 6 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
 * Step 7 : Wait for base temperature (Input A ~5K Input C ~36K) to stabilize (look at the plot below)
-* Step 8 : <i> FOURC > `flow_set 13` </i>
+* Step 8 : <i> FOURC > `flow_set 10` </i>
 * Step 9 : <i> FOURC > `te 14` </i>   (# lowering temperature to 14K or others)
 * Step 10: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )
 
@@ -113,7 +113,7 @@ If the ice did not melt
 </figure>
 
 * Step 7 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
-* Step 8 : Wait for base temperature (Input A ~5K Input C ~41K) to stabilize (look at the plot above)
+* Step 8 : Wait for base temperature (Input A ~5K Input C ~30K) to stabilize (look at the plot above)
 * Step 8 : <i> FOURC > `flow_set 10` </i>
 * Step 9 : <i> FOURC > `te 15` </i>   (# lowering temperature to 15K or others)
 * Step 10: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions and you can STOP that by control C )

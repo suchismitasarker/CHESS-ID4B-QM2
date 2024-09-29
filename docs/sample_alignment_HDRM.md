@@ -68,7 +68,6 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 
 
-
 ######  <i>Step 3: Run HDRMscans.mac script from terminal </i>
  
         FOURC> qdo ./HDRMscans.mac  
@@ -85,7 +84,18 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
         b) Go to the best position of the sample 
             FOURC> umv samz <position of the sample>  
 
-######  <i>Step 5: Run three rotation crystal scan </i>
+###### <i>Step 5 : Autotune condition (talk to beamline scientist)  </i>
+      If the autotune is off in the mostab
+      a) FOURC> opens (# Open the shutter)
+      b) Turn the knob slowly and maximize the counts in IC2
+      c) FOURC> closes (# close the shutter)
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true){ width="150" }
+</figure>
+
+
+######  <i>Step 6: Run three rotation crystal scan </i>
       It will rotate the crystal three times at different chi and theta angle
 
         FOURC> threextalscan 300 1 
@@ -107,7 +117,7 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 
 
-######  <i>Step 6: Check data nexpy  </i>
+######  <i>Step 7: Check data nexpy  </i>
 Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/ ) - Nexpy section
 
 =============================================================================
@@ -182,7 +192,23 @@ Step 3: Check the best height for the sample it will generate tiff file
         a) Check the quality of the data sets at nexpy
         b) Go to the best position of the sample
 
-Step 4: Run three rotation crystal scan 
+
+
+Step 4: Autotune condition (talk to beamline scientist)
+
+      If the autotune is off in the mostab
+      a) FOURC> opens (# Open the shutter)
+      b) Turn the knob slowly and maximize the counts in IC2
+      c) FOURC> closes (# close the shutter)
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true){ width="150" }
+</figure>
+
+
+
+
+Step 5: Run three rotation crystal scan 
 
         FOURC> threxstalscan 300 1 
         #Notes: Parameters: Temperature = 300, Sleep = 1
