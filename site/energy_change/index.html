@@ -49,19 +49,21 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">User Guide</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Beamline information</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../introduction/">Introduction</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline information</a>
+                <li class="toctree-l2"><a class="reference internal" href="../publications/">Beamline Publications</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
+                <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline USER Guide</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="#">Sample information</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
@@ -89,6 +91,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../detailed_dataanalysis/">Detailed Data Analyis</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
                 <li class="toctree-l4"><a class="reference internal" href="../nexpy/">NeXpy</a>
@@ -109,9 +113,13 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../detector_information/">Detector</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../publications/">Publication</a>
+    </ul>
                 </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Things to check during beamtime</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../note/">Note</a>
                 </li>
     </ul>
                   </li>
@@ -225,31 +233,6 @@
 <li>Open an terminal </li>
 <li>type <code>fourc</code></li>
 <li>press <code>yes</code> if fourc ask questions to change motor values</li>
-</ul>
-<h4 id="step-1-if-you-lost-fourcspec-terminal">STEP 1: If you lost fourc/SPEC terminal<a class="headerlink" href="#step-1-if-you-lost-fourcspec-terminal" title="Permanent link">¶</a></h4>
-<ul>
-<li>Open terminal </li>
-<li>type <code>findspec</code> (it will provide all the spec information)</li>
-<li>Check the getPid number</li>
-<li>type <code>fg &lt;getPid number&gt;</code> (example # fg 21192) </li>
-</ul>
-<h5 id="step-2-talk-to-beamline-scientist">STEP 2: Talk to beamline scientist<a class="headerlink" href="#step-2-talk-to-beamline-scientist" title="Permanent link">¶</a></h5>
-<p>If you doesn't find anythng after STEP 1 fourc/SPEC terminal 
-* If you not find the SPEC terminal, then type below command
-* <code>kill -9 &lt;getPid number&gt;</code> (example# kill -9 21192)
-* Open a new terminal 
-* Type ‘fourc’</p>
-<h6 id="if-you-fourcspec-doesnt-work">If you fourc/SPEC doesn't work<a class="headerlink" href="#if-you-fourcspec-doesnt-work" title="Permanent link">¶</a></h6>
-<ul>
-<li>Open terminal </li>
-<li>type <code>quit</code></li>
-<li>type <code>fourc</code></li>
-</ul>
-<h5 id="if-spec-window-is-lost">If SPEC window is lost<a class="headerlink" href="#if-spec-window-is-lost" title="Permanent link">¶</a></h5>
-<ul>
-<li>Open an terminal </li>
-<li>type <code>findspec</code></li>
-<li>If it is hidding, then type <code>fg &lt;PID number&gt;</code></li>
 </ul>
 <h4 id="flux-calculator">Flux Calculator<a class="headerlink" href="#flux-calculator" title="Permanent link">¶</a></h4>
 <p><a href="https://www.chess.cornell.edu/userstechnical-resourcescalculators/ion-chamber-flux-calculator">CHESS Flux calculator</a> at the beamline</p>
@@ -434,7 +417,7 @@ shift+' to modify anything</p></div></html>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2024, CHESS ID4B Beamline</p>
+      <p>© Copyright 2025, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

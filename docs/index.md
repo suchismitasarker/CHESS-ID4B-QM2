@@ -3,11 +3,11 @@
   ![Image title](https://github.com/suchismitasarker/CHESS-photos/blob/main/CHESS-beamlineI.png?raw=true)
 </figure>
 
-# Welcome to CHESS ID4B - &#60QM&#62<sup>2</sup> Beamline Documentation!
+# Welcome to CHESS Quantum Materials Beamline Documentation!
 
-The &#60QM&#62<sup>2</sup> beamline is optimized to uncover intertwined quantum correlations of spins, charges and orbitals, over a wide temperature range and spanning entire phase diagrams. 
+The Q-Mapping for Quantum Materials &#60QM&#62<sup>2</sup> beamline is optimized to uncover intertwined quantum correlations of spins, charges and orbitals, over a wide temperature range and spanning entire phase diagrams. 
 
-For comprehensive documentation of its capabilities, please visit [&#60QM&#62<sup>2</sup> beamline](https://www.chess.cornell.edu/users/qm2-beamline). This document provides a collection of code snippets and equipment details that are essential for the operation of beamline ID4B at CHESS. If you encounter with any bug or like to have additional functionality, please send an to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a>.
+For comprehensive documentation of its capabilities, please visit [&#60QM&#62<sup>2</sup> beamline](https://www.chess.cornell.edu/users/qm2-beamline). This document provides a collection of code snippets and equipment details that are essential for the operation of beamline ID4B at CHESS. If you encounter with any bug or like to have additional functionality, please send an email to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a>.
 
 
 ### What does the beamline do?
@@ -30,7 +30,7 @@ For comprehensive documentation of its capabilities, please visit [&#60QM&#62<su
 ---
 
 ### Want to explore new sample environments?  
-Please send an to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a> and check our [sample environment page](https://suchismitasarker.github.io/CHESS-ID4B-QM2/sample_env/)
+Please send an email to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a> and check our [sample environment page](https://suchismitasarker.github.io/CHESS-ID4B-QM2/sample_env/)
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Quantum%20control.png?raw=true){ width="700" }
