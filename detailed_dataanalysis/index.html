@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/detailed_dataanalysis/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sample mount - CHESS ID4B QM2</title>
+    <title>Detailed Data Analyis - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sample mount";
-        var mkdocs_page_input_path = "sample.md";
-        var mkdocs_page_url = "/sample/";
+        var mkdocs_page_name = "Detailed Data Analyis";
+        var mkdocs_page_input_path = "detailed_dataanalysis.md";
+        var mkdocs_page_url = "/detailed_dataanalysis/";
       </script>
     
     <!--[if lt IE 9]>
@@ -57,13 +57,11 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline USER Guide</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
-    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="#">Sample information</a>
+    <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">Sample mount</a>
-    <ul class="current">
-    </ul>
+                <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
@@ -83,8 +81,8 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Data Analysis</a>
-    <ul>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Data Analysis</a>
+    <ul class="current">
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes/">Data processing</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../ID4B_Codes_general_nodes/">General node</a>
@@ -93,7 +91,17 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../detailed_dataanalysis/">Detailed Data Analyis</a>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Detailed Data Analyis</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#nxs-analysis-tool">NXS-ANALYSIS-TOOL</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orgui">orGUI</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#x-tec">X-TEC</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#structural-refinement">Structural Refinement</a>
+    </li>
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
@@ -194,10 +202,10 @@
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Beamline information</li>
-          <li class="breadcrumb-item">Sample information</li>
-      <li class="breadcrumb-item active">Sample mount</li>
+          <li class="breadcrumb-item">Data Analysis</li>
+      <li class="breadcrumb-item active">Detailed Data Analyis</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/detailed_dataanalysis.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -205,70 +213,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div><p>The procedure of mounting/changing the sample depends on the type of experiment performed ID4B.</p>
-<h3 id="single-crystal-mounts">Single-crystal mounts<a class="headerlink" href="#single-crystal-mounts" title="Permanent link">¶</a></h3>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample_mount.png?raw=true" width="600"></p>
-</figure>
-<ul>
-<li>
-<p><i><b> Step 1 </b></i>: You need goniometer-bases </p>
-<p><b>link for the base : B5 (SPINE Style) Goniometer Bases </b><br>
-<a href="https://www.mitegen.com/product/b5-spine-style-goniometer-bases/">SKU: GB-B5-R-20</a></p>
-</li>
-<li>
-<p><i><b> Step 2 </b></i>: Micromount :
-     MiTeGen is used for micromount pin. It is composed of thin polymer tips attached to beveled non-magnetic 0.025″ (0.64 mm) diameter stainless steel rods (pins).</p>
-<p><b>Below is the link for the sample tip </b><br>
-<a href="https://www.mitegen.com/product/dual-thickness-micromounts/">SKU: M2-L18SP-100</a> and the aperture Size is 100 μm.</p>
-</li>
-<li>
-<p><i><b> Step 3 </b></i>: Do not touch the tips with your hands. Always use tweezers along the pin shaft, not the tip.</p>
-</li>
-<li>
-<p><i><b> Step 4 </b></i>: Use GE vernish to glue the micromount to base </p>
-<p><b> Here is the link for Adhesive </b>
-    <a href="https://www.lakeshore.com/products/categories/specification/temperature-products/cryogenic-accessories/varnish">VGE -7031</a></p>
-</li>
-<li>
-<p><i><b> Step 5 </b></i>: Make sure you do not tunch the metal part with the sample!!</p>
-</li>
-</ul>
-<p><b> Few other accessaries to to handle small samples: </b></p>
-<ul>
-<li><a href="https://www.mitegen.com/product/magnetic-cryovials/">Cryo Vials</a></li>
-<li><a href="https://www.mitegen.com/product/magnetic-wand-with-rubber-grips/">Magnetic Wand</a></li>
-</ul>
-<h3 id="thin-film-mounts">Thin-film mounts<a class="headerlink" href="#thin-film-mounts" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p><i><b> Step 1 </b></i>: You need goniometer-bases </p>
-<p><b>link for the base : B5 (SPINE Style) Goniometer Bases </b><br>
-<a href="https://www.mitegen.com/product/b5-spine-style-goniometer-bases/">SKU: GB-B5-R-20</a></p>
-</li>
-<li>
-<p><i><b> Step 2 </b></i>: Fiber glass<br>
-<a href="https://www.amazon.com/Piece-Fiberglass-Solid-Blank-Inches/dp/B0052TVI0K/ref=sr_1_4?crid=3MWORZQB7IKUS&amp;keywords=fiberglass+rod&amp;qid=1681262833&amp;sprefix=fiberglass+rod%2Caps%2C193&amp;sr=8-4">Example : Fiberglass link </a></p>
-</li>
-<li>
-<p><i><b> Step 3 </b></i>: Adhesive
-      <a href="https://www.lakeshore.com/products/categories/specification/temperature-products/cryogenic-accessories/varnish">Example: Link to the Adhesive used at CHESS</a></p>
-</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/thin-film%20samples1.png?raw=true" width="500"></p>
-</figure>
-<h1 id="sample-shipment-details">Sample shipment details<a class="headerlink" href="#sample-shipment-details" title="Permanent link">¶</a></h1>
-<p>If you want to send the samples to CHESS, please follow the <a href="https://www.chess.cornell.edu/users/shipping">instructions here</a></p>
-<h1 id="air-sensitive-samples">Air sensitive samples<a class="headerlink" href="#air-sensitive-samples" title="Permanent link">¶</a></h1>
-<p>If coating needed, one of the example could be <a href="https://www.agc-chemicals.com/jp/en/fluorine/products/detail/index.html?pCode=JP-EN-F019#:~:text=CYTOP%C2%AE%20is%20a%20fluoropolymer,coat%2C%20and%20more%20are%20possible">this</a></p></div></html>
+                <div><h1 id="detailed-data-analysis-for-qm2-dataset">Detailed Data Analysis for QM2 Dataset<a class="headerlink" href="#detailed-data-analysis-for-qm2-dataset" title="Permanent link">¶</a></h1>
+<p>Make sure your dataset is completely processed with QM2 in-house software or Nxrefine software.Once you have HKLI.nxs files, you can start start to perform in-depth data analysis. </p>
+<p><b> In-depth data analysis (three different github links are below) </b>
+Different <b> github </b> links are provided below for the in-depth QM2 data analysis, if you have any questions, please send an email to <a href="ss3428@cornell.edu">beamlist scientist</a></p>
+<h3 id="nxs-analysis-tool"><a href="https://nxs-analysis-tools.readthedocs.io/en/latest/examples/index.html">NXS-ANALYSIS-TOOL</a><a class="headerlink" href="#nxs-analysis-tool" title="Permanent link">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Detailed Data Analysis of QM2 dataset - NXS-ANALYSIS-TOOL</p>
+<p>Once you have received the HKLI data from the QM2 beamline, you can visualize it using Jupyter Notebook. Additionally, you can perform various data analyses with <b> <a href="https://nxs-analysis-tools.readthedocs.io/en/latest/examples/index.html">nxs-analysis-tool</a> </b> develped by Dr. Steven Gomez.</p>
+<p>For 3D-PDF details, you can watch the <a href="https://www.youtube.com/watch?v=O4kexPa13ic">youtube video</a> by  Dr. Steven Gomez.</p>
+<div class="codehilite"><pre><span></span><code>The software enables you to:
+
+i)   Load data into Jupyter Notebook.
+ii)  Perform different slicing and visualization techniques.
+iii) Create line cuts
+iv)  Visualize temperature-dependent data.
+v)   Extract order parameters and 
+vi)   Symmetrize data
+vii)  Extract 3D-delta PDF.
+
+For access to the orGUI software, visit their GitHub repository: 
+                https://zenodo.org/records/14271047.
+</code></pre></div>
+
+<p><i> <b> If you use the software, please cite the software package: </b></i></p>
+<p>Steven Gomez Alvarado, &amp; Soren Bear. (2025). stevenjgomez/nxs_analysis_tools: v0.1.3 (v0.1.3). Zenodo. 
+https://doi.org/10.5281/zenodo.15206517   </p>
+</div>
+<h3 id="orgui"><a href="https://zenodo.org/records/14271047">orGUI</a><a class="headerlink" href="#orgui" title="Permanent link">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Thin-film data analysis - orGUI</p>
+<p>A team led by Dr. Timo Fuch developed <a href="https://zenodo.org/records/14271047">orGUI</a> is a software that can be used to determine the orientation of single crystal samples in X-ray diffraction experiments. Recently it is implemented at QM2 for thin-film sample for CTR meausrement. </p>
+<div class="codehilite"><pre><span></span><code>For access to the orGUI software, visit their GitHub repository:
+             https://zenodo.org/records/14271047.
+</code></pre></div>
+
+<p><i> <b> If you use the software, please cite the software package:</b></i></p>
+<p>Fuchs, T. (2024). orGUI: Orientation and Integration with 2D detectors (1.2.0). Zenodo.
+                 https://doi.org/10.5281/zenodo.14271047 <i> <b></b></i></p>
+</div>
+<h3 id="x-tec"><a href="https://www.pnas.org/doi/10.1073/pnas.2109665119">X-TEC</a><a class="headerlink" href="#x-tec" title="Permanent link">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Unsupervised Machine Learning with QM2 data - XTEC</p>
+<p>A team led by Dr. Kim, including Cornell physicists and computer scientists in collaboration with Dr. Jacob Ruff, has developed an innovative and interpretable machine learning algorithm for the Quantum Materials beamline at CHESS. This algorithm, known as XRD Temperature Clustering (X-TEC), is designed to analyze and interpret big data from modern X-ray diffraction experiments.</p>
+<p>You can find more details in their publication: <a href="https://www.pnas.org/doi/10.1073/pnas.2109665119">Harnessing interpretable and unsupervised machine learning to address big data from modern X-ray diffraction</a>.</p>
+<div class="codehilite"><pre><span></span><code>For access to the X-TEC software, visit their GitHub repository:
+             https://github.com/KimGroup/XTEC.
+</code></pre></div>
+
+</div>
+<h3 id="structural-refinement">Structural Refinement<a class="headerlink" href="#structural-refinement" title="Permanent link">¶</a></h3></div></html>
 
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample_env/" class="btn btn-neutral float-left" title="Sample environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../SPEC_commands/" class="btn btn-neutral float-right" title="ID4B-SPEC commands">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../nxrefine/" class="btn btn-neutral float-left" title="NxRefine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nexpy/" class="btn btn-neutral float-right" title="NeXpy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -296,10 +297,10 @@
         </span>
     
     
-      <span><a href="../sample_env/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../nxrefine/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../SPEC_commands/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../nexpy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

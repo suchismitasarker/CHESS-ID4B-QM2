@@ -49,19 +49,21 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Beamline information</a>
     <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../introduction/">Introduction</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline information</a>
+                <li class="toctree-l2"><a class="reference internal" href="../publications/">Beamline Publications</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
+                <li class="toctree-l2"><a class="reference internal" href="../beamline_parameters/">Beamline USER Guide</a>
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Sample information</a>
     <ul class="current">
                 <li class="toctree-l3"><a class="reference internal" href="../sample_env/">Sample environment</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../sample/">Sample mount</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../SPEC_commands/">ID4B-SPEC commands</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../beamline_basics/">Beamline basics</a>
                 </li>
@@ -93,6 +95,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../nxrefine/">NxRefine</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../detailed_dataanalysis/">Detailed Data Analyis</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
     <ul>
                 <li class="toctree-l4"><a class="reference internal" href="../nexpy/">NeXpy</a>
@@ -113,9 +117,13 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../detector_information/">Detector</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../publications/">Publication</a>
+    </ul>
                 </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Things to check during beamtime</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../note/">Note</a>
                 </li>
     </ul>
                   </li>
@@ -187,7 +195,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Home</li>
-          <li class="breadcrumb-item">User Guide</li>
+          <li class="breadcrumb-item">Beamline information</li>
           <li class="breadcrumb-item">Sample information</li>
       <li class="breadcrumb-item active">Temperature switch</li>
     <li class="wy-breadcrumbs-aside">
@@ -208,11 +216,11 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/temp_range.png?raw=true" width="800"></p>
 </figure>
-<p><b><i><u> 280K ---&gt; 300K : temperature range </u></i></b></p>
+<p><b><i><u> 300K ---&gt; 280K : temperature range </u></i></b></p>
 <ul>
 <li>Step 1 : Make sure N2 valve is open and helium (He) valve is closed</li>
 <li>Step 2: <i> FOURC &gt; <code>roomT</code>  (# set temperature to 1st and 2nd controller to 230K and 220K)</i></li>
-<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>181K </b> and <b>220K </b>.</li>
+<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>181K </b> and <b>220K </b> It can be lower if you are going from lower to higher temperature.</li>
 <li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
 <li>Step 5 : FOURC &gt; <code>te 300</code>    (# set the temperature to 300K)</li>
 </ul>
@@ -336,7 +344,7 @@ If the ice did not melt </li>
 <p>Step 3 : Physically <code>Turn off</code> compressor (Go to the end of the hutch)</p>
 </li>
 <li>
-<p>press <code>off</code> in the compressor (see the image below)</p>
+<p><b>Press <code>off</code> in the compressor (see the image below), send a message to the SLACK channel (this will help to track the compressor status and equipment condition)</b></p>
 </li>
 </ul>
 <figure>
@@ -358,7 +366,7 @@ If the ice did not melt </li>
 <p>Step 2 : Physically <code>turn on</code> the compressor (Go to the end of the hutch)</p>
 </li>
 <li>
-<p>press <code>on</code> in the compressor (see the image below)</p>
+<p><b>Press <code>on</code> in the compressor (see the image below), send a message to the SLACK channel (this will help to track the compressor status and equipment condition)</b></p>
 </li>
 </ul>
 <figure>
@@ -445,7 +453,7 @@ If the ice did not melt </li>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2024, CHESS ID4B Beamline</p>
+      <p>© Copyright 2025, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
