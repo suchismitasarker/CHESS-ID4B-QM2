@@ -18,11 +18,11 @@
 
 
 
-<b><i><u> 280K ---> 300K : temperature range </b></u>
+<b><i><u> 300K ---> 280K : temperature range </b></u>
 
 * Step 1 : Make sure N2 valve is open and helium (He) valve is closed
 * Step 2: <i> FOURC > `roomT`  (# set temperature to 1st and 2nd controller to 230K and 220K)
-* Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>181K </b> and <b>220K </b>.
+* Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>181K </b> and <b>220K </b> It can be lower if you are going from lower to higher temperature.
 * Step 4: <i> FOURC > `flow_set 6` ( # talk to Staff Scientist for the desired flow rate of your experimental setup)
 * Step 5 : FOURC > `te 300` </i>   (# set the temperature to 300K)
 
@@ -146,7 +146,7 @@ If the ice did not melt
 * Step 2 : Make sure N2 valve is open and He is closed
 * Step 3 : Physically `Turn off` compressor (Go to the end of the hutch)
 
-  * press `off` in the compressor (see the image below)
+  * <b>Press `off` in the compressor (see the image below), send a message to the SLACK channel (this will help to track the compressor status and equipment condition)</b>
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/compressor.jpeg?raw=true){ width="300" }
@@ -166,7 +166,7 @@ If the ice did not melt
 * Step 1 : Make sure N2 valve is open and He is closed
 * Step 2 : Physically `turn on` the compressor (Go to the end of the hutch)
 
-  * press `on` in the compressor (see the image below)
+  * <b>Press `on` in the compressor (see the image below), send a message to the SLACK channel (this will help to track the compressor status and equipment condition)</b>
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/compressor.jpeg?raw=true){ width="300" }

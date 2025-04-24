@@ -5,7 +5,7 @@
 site_name: CHESS ID4B QM2
 site_url: https://example.com/
 repo_url: https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md
-copyright: © Copyright 2024, CHESS ID4B Beamline
+copyright: © Copyright 2025, CHESS ID4B Beamline
 #generator: false
 
 extra:
@@ -14,13 +14,14 @@ extra:
 nav:
     - Home: 
         - Welcome : 'index.md'
-        - 'User Guide':
+        - 'Beamline information' :
             - Introduction: 'introduction.md'
-            - Beamline information : 'beamline_parameters.md'
-            - ID4B-SPEC commands: 'SPEC_commands.md'
+            - Beamline Publications : publications.md
+            - Beamline USER Guide : 'beamline_parameters.md'  
             - 'Sample information':
                 - Sample environment : sample_env.md
                 - Sample mount : sample.md
+                - ID4B-SPEC commands: 'SPEC_commands.md'
                 - Beamline basics: beamline_basics.md
                 - 'Sample alignment':
                     - HDRM : sample_alignment_HDRM.md
@@ -32,6 +33,7 @@ nav:
                 - General node : ID4B_Codes_general_nodes.md
                 - NxRefine General Node : nxrefine_General_Node.md
                 - NxRefine : nxrefine.md
+                - Detailed Data Analyis : detailed_dataanalysis.md
                 - 'Data visualization': 
                     - NeXpy : nexpy.md 
                     - pyMCA : pymca.md
@@ -39,8 +41,9 @@ nav:
                 - Cameras : PTZ_camera.md
                 - Diffractometer : diffractometer.md
                 - Cryocooler : cryocooler.md
-                - Detector : detector_information.md
-                - Publication : publications.md
+                - Detector : detector_information.md   
+        - 'Things to check during beamtime' :
+            - Note : note.md
         - Troubleshooting :
             - IC1 signal issues : IC1_signal.md
             - Control C Questions : controlC_question.md
@@ -94,6 +97,9 @@ markdown_extensions:
 
 plugins:
     - mkdocs-video
+
+#extra_css:
+#    - css/extra.css
 
 
 

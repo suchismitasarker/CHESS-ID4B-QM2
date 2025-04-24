@@ -1,19 +1,23 @@
 
-# Steps @Beamline
+
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/users_to_pub.png?raw=true)
 </figure>
 
-#### <b> Deadline for the proposal : </b> [CHESS Proposal Submission Deadline](https://www.chess.cornell.edu/users/chess-deadlines)
+## Plan to apply the beamline?
+
+* #### <b> Deadline for the proposal : </b> [CHESS Proposal Submission Deadline](https://www.chess.cornell.edu/users/chess-deadlines)
+
+* #### <b> Experimental hutch : </b> [Want to see the hutch?](https://my.matterport.com/show/?m=Sfd6R3am1wR)  Password: CHEXSQM2
+
+* #### <b> CHESS User Guide : </b> [CHESS User Guide](https://www.chess.cornell.edu/user-guide)
 
 
-#### <b> CHESS User Guide : </b> [CHESS User Guide](https://www.chess.cornell.edu/user-guide)
+* #### <b> CHESS User Agreement : </b> [CHESS User Agreement](https://www.chess.cornell.edu/user-agreement#:~:text=In%20exchange%20for%20use%20of,of%20the%20negligence%20of%20Cornell)
 
 
-#### <b> Experimental hutch : </b> [Want to see the hutch?](https://my.matterport.com/show/?m=Sfd6R3am1wR)  
 
-Password: CHEXSQM2
 
 # Data Policy 
 !!! hint "Data policy"
