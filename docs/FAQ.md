@@ -32,8 +32,11 @@
 
 
 ##### Q. How to recover if the computer fail?
+<i> Talk to the beamline scientist </i>
 
 
+##### Q. Can I run thin-film samples at the beamline? What is the minimum thickness of the sample that can be examind?
+<i> Yes, thin-film samples can be successfully run at the beamline. The thinnest sample examined so far has had a thickness of 3 nm. </i>
 
 
 

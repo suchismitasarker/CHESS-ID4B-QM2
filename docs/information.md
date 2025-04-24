@@ -1,3 +1,20 @@
+
+## Plan to apply the beamline?
+
+* #### <b> Deadline for the proposal : </b> [CHESS Proposal Submission Deadline](https://www.chess.cornell.edu/users/chess-deadlines)
+
+* #### <b> Experimental hutch : </b> [Want to see the hutch?](https://my.matterport.com/show/?m=Sfd6R3am1wR)  Password: CHEXSQM2
+
+* #### <b> CHESS User Guide : </b> [CHESS User Guide](https://www.chess.cornell.edu/user-guide)
+
+
+* #### <b> CHESS User Agreement : </b> [CHESS User Agreement](https://www.chess.cornell.edu/user-agreement#:~:text=In%20exchange%20for%20use%20of,of%20the%20negligence%20of%20Cornell)
+
+
+
+
+
+
 ## Before coming to the beamline, please <a href = "mailto: ss3428@cornell.edu">send an email to ID4B beamline</a> 
 
 
