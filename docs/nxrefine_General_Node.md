@@ -36,36 +36,13 @@ The code is written by Dr. Ray Osborn. More details will be available [NXRefine]
         qrsh -q interactive.q -l mem_free=350G -pe sge_pe 20
 
 
-======================================================================
 
- <i> <b> Talk to Beamline scientist before doing this steps 4,5,6. You only need to do that once </i> </b>
-
-* (iii) <b> Step 4 :</b> Make sure you are at home directory
-
-        cd 
-        pwd
-        /home/<classe_id>/
-
-* (iv) <b> Step 5 :</b> create nxserver settings
-
-        mkdir -p  /home/<classe_id>/.nxserver/
-
-
-* (v) <b> Step 6 :</b>: Copy the nxserver setting
-
-
-        cp /home/ss3428/.nxserver/settings.ini /home/<classe_id>/.nxserver/
-===================================================================
-
-
-
-
-* (vi) <b> Step 6 :</b>: Go to the desired data analayis forder (it will your folder in aux)
+* (vi) <b> Step 4 :</b>: Go to the desired data analayis forder (it will your folder in aux)
 
         cd /nfs/chess/id4baux/2024-1/<BTR-3946-a>/
 
 
-* (vi) <b> Step 7 :</b>: 
+* (vi) <b> Step 5 :</b>: 
 Changed the desired steps for nxrefine from the folder or if you know how to use vim, then do to change the qsub file and do that necessasy steps 
 
 * Make sure you have change the file path and the threshold of the nxfind of the sample
@@ -75,7 +52,7 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
         vim qsub_jobs_<name of the user>.sh 
 
 
-* (vii) <b> Step 8 : </b> Run the job in lnx201 (make sure path is correct)
+* (vii) <b> Step 6 : </b> Run the job in lnx201 (make sure path is correct)
 
         qsub -q all.q -l mem_free=350G -pe sge_pe 32 /nfs/chess/id4baux/2025-1/sarker-3946-a/qsub_jobs_<name of the file>.sh
 
@@ -103,3 +80,65 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
         Example: 
 
         chmod -R 777 /nfs/chess/id4baux/2025-1/sarker-3490-a
+
+## Want to reprocess the data with higher step size or better resolution?
+ 
+!!! hint "Reprocessing steps"
+
+    Once you have received the HKLI data from the QM2 beamline, you can visualize the data. If you want higher resolution in nxrefine trnasform stage and nxcombine you can modify that. Below is the help command to see what paramters you can change in `nxtransform` and `nxcombine` stage.
+
+
+        nxtransform --h
+        usage: nxtransform [-h] -d DIRECTORY [-e ENTRIES [ENTRIES ...]] [-qh QH QH QH] [-qk QK QK QK] [-ql QL QL QL] [-R] [-M] [-o] [-q]
+        Perform CCTW transform options:
+        -h, --help show this help message and exit
+        -d DIRECTORY, --directory DIRECTORY scan directory
+        -e ENTRIES [ENTRIES ...], --entries ENTRIES [ENTRIES ...] names of entries to be processed
+        -qh QH QH QH Qh - min, step, max
+        -qk QK QK QK Qk - min, step, max
+        -ql QL QL QL Ql - min, step, max
+        -R, --regular perform regular transform
+        -M, --mask perform transform with 3D mask
+        -o, --overwrite overwrite existing transforms
+        -q, --queue add to server task queue
+
+
+        nxcombine --h
+        usage: nxcombine [-h] [-d DIRECTORY] [-e ENTRIES [ENTRIES ...]] [-R] [-M] [-o] [-q]
+
+        Combine CCTW transforms
+
+        options:
+        -h, --help            show this help message and exit
+        -d DIRECTORY, --directory DIRECTORY
+                                scan directory
+        -e ENTRIES [ENTRIES ...], --entries ENTRIES [ENTRIES ...]
+                                names of entries to be combined.
+        -R, --regular         combine transforms
+        -M, --mask            combine transforms with 3D mask
+        -o, --overwrite       overwrite existing transform
+        -q, --queue           add to server task queue
+
+Now based on the `help` command, you can modify the script and add the `min` `stepsize` `max` for your desired data. For example, previously your HKLI and step size is below
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/transform.png?raw=true){ width="450"}
+</figure>
+
+However, you want to change that. To modify, you go your previous script and add `min` `stepsize` `max` in `nxtransform`.   
+I’ve provided an example of the script for general node lnx201. For clarity, I used the full path but you may want to modify it based on your directory structure and desired parameter values. Also, note that instead of using `nxreduce`, this workflow separates the process into two steps: `nxtransform` and `nxcombine`. In both cases, it is important that you `overwrite` the exsisting data.
+
+!!! hint "Modification of the script"
+
+
+
+                Comment out the below line
+                #nxreduce --directory ${USER_DIR}${TEMP} --entries f1 f2 f3 --transform --combine --regular
+
+                Add and modify below 
+                nxtransform --directory /nfs/chess/id4baux/2023-3/sarker-3828-a/nxrefine/AB3C5/sample1/16/ --entries f1 f2 f3 -qh -8 0.01 8 -qk -8 0.01 8 -ql -18 0.01 18 --regular --overwrite
+
+                and finally combine
+                nxcombine --directory /nfs/chess/id4baux/2023-3/sarker-3828-a/nxrefine/AB3C5/sample1/16/ --entries f1 f2 f3 --regular --overwrite
+
+After getting the data, visulize the HKLI and once you are satified with the stepsize, you set that as `parent file` again and reprocess rest of the dataset.
