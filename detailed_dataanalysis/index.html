@@ -95,21 +95,29 @@
     <ul class="current">
     <li class="toctree-l4"><a class="reference internal" href="#nxs-analysis-tool">NXS-ANALYSIS-TOOL</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#orgui">orGUI</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#x-tec">X-TEC</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#structural-refinement">Structural Refinement</a>
+    <li class="toctree-l4"><a class="reference internal" href="#quantum-materials-analysis-notebook">🔬 Quantum Materials Analysis Notebook</a>
     </li>
     </ul>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="#">Data visualization</a>
+                <li class="toctree-l3"><a class="reference internal" href="../practice_notebook/">Practice Analysis Notebook</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Google Colab - Practice Notebook </a>
     <ul>
-                <li class="toctree-l4"><a class="reference internal" href="../nexpy/">NeXpy</a>
+                <li class="toctree-l3"><a class="" href="https://colab.research.google.com/drive/13pxbP-x5YinKdkWpURBmMKRLp9SQCtqr?authuser=4#scrollTo=shP_EDON253l">Loading data (Colab)</a>
                 </li>
-                <li class="toctree-l4"><a class="reference internal" href="../pymca/">pyMCA</a>
+                <li class="toctree-l3"><a class="" href="https://colab.research.google.com/drive/1r1q5RReKN0aZyvmIvYZd-USKgWktEUBZ?authuser=4#scrollTo=eed93954-2c1b-446c-a69f-23572e6f2090">Temp Analysis (Colab)</a>
+                </li>
+                <li class="toctree-l3"><a class="" href="https://colab.research.google.com/drive/1HOgyH6LStXpYk2xE8yPmo8e4mL1lCqPX?authuser=4">Orthogonal cut (colab)</a>
                 </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Data visualization</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../nexpy/">NeXpy</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../pymca/">pyMCA</a>
                 </li>
     </ul>
                 </li>
@@ -231,13 +239,18 @@ vi)   Symmetrize data
 vii)  Extract 3D-delta PDF.
 
 For access to the orGUI software, visit their GitHub repository: 
-                https://zenodo.org/records/14271047.
+                 https://zenodo.org/records/15492957
 </code></pre></div>
 
 <p><i> <b> If you use the software, please cite the software package: </b></i></p>
 <p>Steven Gomez Alvarado, &amp; Soren Bear. (2025). stevenjgomez/nxs_analysis_tools: v0.1.3 (v0.1.3). Zenodo. 
 https://doi.org/10.5281/zenodo.15206517   </p>
 </div>
+<h2 id="quantum-materials-analysis-notebook">🔬 Quantum Materials Analysis Notebook<a class="headerlink" href="#quantum-materials-analysis-notebook" title="Permanent link">¶</a></h2>
+<h1 id="you-can-run-the-full-hdrm-processing-notebook-interactively-in-google-colab">You can run the full HDRM processing notebook interactively in Google Colab:<a class="headerlink" href="#you-can-run-the-full-hdrm-processing-notebook-interactively-in-google-colab" title="Permanent link">¶</a></h1>
+<p><a href="https://colab.research.google.com/drive/13pxbP-x5YinKdkWpURBmMKRLp9SQCtqr?authuser=4#scrollTo=shP_EDON253l" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab load QM2 data">
+</a></p>
 <h3 id="orgui"><a href="https://zenodo.org/records/14271047">orGUI</a><a class="headerlink" href="#orgui" title="Permanent link">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">Thin-film data analysis - orGUI</p>
@@ -250,6 +263,27 @@ https://doi.org/10.5281/zenodo.15206517   </p>
 <p>Fuchs, T. (2024). orGUI: Orientation and Integration with 2D detectors (1.2.0). Zenodo.
                  https://doi.org/10.5281/zenodo.14271047 <i> <b></b></i></p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">If you want to access orGUI through CHESS general node</p>
+<p>If you want to visulize raw data faster, then you need the access to the raw data from general server</p>
+<div class="codehilite"><pre><span></span><code>Follow the below steps: 
+i)   Talk to beamline scientist 
+            a) You need to create config file for the each samples to use the orGUI
+            b) You need to have the cif file
+ii)  Log in to the lnx201 general server
+            [....@lnx ~]&gt;&gt; ssh -Y &lt;username&gt;@lnx201.classe.cornell.edu
+iii) Link your proposal directory from the CHESS filesystem:        
+            [....@lnx201 ~]&gt;&gt;ln -s /nfs/chess/id4b/2025-2/&lt;proposal_name&gt; ~/&lt;proposal_name&gt;
+            (example)[....@lnx201 ~]&gt;&gt; ln -s /nfs/chess/id4b/2025-2/sarker-000-a ~/sarker-000-a
+iv)  Request Additional Memory and CPU Resources
+            [ss1234@lnx201 ~]&gt;&gt; qrsh -q interactive.q -l mem_free=200G -pe sge_pe 12
+v)   Activate the orGUI Environment
+            [ss1234@lnx308 ~]&gt;&gt;source /nfs/chess/sw/orGUI/bin/activate
+vi)  Launch orGUI
+            (orGUI)[ss1234@lnx308 ~]&gt;&gt; orGUI
+</code></pre></div>
+
+</div>
 <h3 id="x-tec"><a href="https://www.pnas.org/doi/10.1073/pnas.2109665119">X-TEC</a><a class="headerlink" href="#x-tec" title="Permanent link">¶</a></h3>
 <div class="admonition hint">
 <p class="admonition-title">Unsupervised Machine Learning with QM2 data - XTEC</p>
@@ -260,14 +294,26 @@ https://doi.org/10.5281/zenodo.15206517   </p>
 </code></pre></div>
 
 </div>
-<h3 id="structural-refinement">Structural Refinement<a class="headerlink" href="#structural-refinement" title="Permanent link">¶</a></h3></div></html>
+<h3 id="structural-refinement">Structural Refinement<a class="headerlink" href="#structural-refinement" title="Permanent link">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Single crystal refinement</p><p>QM2 data could be used for X-ray crystallography by commercial software packages such as Bruker’s APEX328[1] and Rigakus CrysAlisPro29[2]. Note: Beamline does directly support the structural refinement. However, if you need more information, talk to the beamline sscientist.</p>
+<ol>
+<li>
+<p>Bruker AXS Inc. Apex3 software suite for single-crystal x-ray diffraction. //www.bruker.com/en/products-and-solutions/diffractometers-and-x-ray-microscopes/single-crystal-x-ray-diffractometers sc-xrd-software/apex.html.</p>
+</li>
+<li>
+<p>Rigaku Oxford Diffraction. Crysalispro software system, version 1.171.38.46. https://rigaku.com/products/crystallography/x-ray-diffraction/crysalispro, 2017. Rigaku Corporation,Oxford, UK.</p>
+</li>
+</ol>
+
+</div></div></html>
 
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../nxrefine/" class="btn btn-neutral float-left" title="NxRefine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../nexpy/" class="btn btn-neutral float-right" title="NeXpy">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../practice_notebook/" class="btn btn-neutral float-right" title="Practice Analysis Notebook">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -298,7 +344,7 @@ https://doi.org/10.5281/zenodo.15206517   </p>
       <span><a href="../nxrefine/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../nexpy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../practice_notebook/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
