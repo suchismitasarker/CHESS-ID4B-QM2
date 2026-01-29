@@ -34,7 +34,12 @@ nav:
                 - NxRefine General Node : nxrefine_General_Node.md
                 - NxRefine : nxrefine.md
                 - Detailed Data Analyis : detailed_dataanalysis.md
-                - 'Data visualization': 
+                - Practice Analysis Notebook : practice_notebook.md
+            - 'Google Colab - Practice Notebook ':
+                - Loading data (Colab): https://colab.research.google.com/drive/13pxbP-x5YinKdkWpURBmMKRLp9SQCtqr?authuser=4#scrollTo=shP_EDON253l
+                - Temp Analysis (Colab): https://colab.research.google.com/drive/1r1q5RReKN0aZyvmIvYZd-USKgWktEUBZ?authuser=4#scrollTo=eed93954-2c1b-446c-a69f-23572e6f2090
+                - Orthogonal cut (colab) : https://colab.research.google.com/drive/1HOgyH6LStXpYk2xE8yPmo8e4mL1lCqPX?authuser=4 
+            - 'Data visualization': 
                     - NeXpy : nexpy.md 
                     - pyMCA : pymca.md
             - 'Beamline equipments' :
