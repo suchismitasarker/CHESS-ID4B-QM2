@@ -38,8 +38,8 @@
 ##### Q. Can I run thin-film samples at the beamline? What is the minimum thickness of the sample that can be examind?
 <i> Yes, thin-film samples can be successfully run at the beamline. The thinnest sample examined so far has had a thickness of 3 nm. </i>
 
-
-
+##### Q. What is the range of temperature beamline can measure?
+<i> FOr HDRM range of temperature is : 15K -110K and 110K-450K </i>
 
 
 

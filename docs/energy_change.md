@@ -37,6 +37,10 @@
 
 [Check absroption edge](http://skuld.bmsc.washington.edu/scatter/AS_periodic.html)
 
+### detector cover
+* `curt_up`
+* `curt_down`
+
 
 #### flyscan 
 * `flyscan_setup`

@@ -10,26 +10,38 @@ The Q-Mapping for Quantum Materials &#60QM&#62<sup>2</sup> beamline is optimized
 For comprehensive documentation of its capabilities, please visit [&#60QM&#62<sup>2</sup> beamline](https://www.chess.cornell.edu/users/qm2-beamline). This document provides a collection of code snippets and equipment details that are essential for the operation of beamline ID4B at CHESS. If you encounter with any bug or like to have additional functionality, please send an email to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a>.
 
 
-### What does the beamline do?
+### 🧪 X-ray Techniques Overview
+
+| Technique | Description |
+|-----------|-------------|
+| **HDRM**  | High Dynamic Reciprocal Space Mapping / XRD (Single crystal) |
+| **GIXRD** | Grazing Incidence X-ray Diffraction (thin-film ~ > 2 nm) |
+| **REXS**  | Resonant Elastic X-ray Scattering |
+| **3D-PDF**| 3D Pair-Distribution Function Analysis |
+| **DS**    | Diffuse Scattering |
+| **CoBRA** | Coherent Bragg Rod Analysis |
+
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/QM2%20beamline%202025%20v1.png?raw=true){ width="700" }
 </figure>
 
 
----
-
----
-
-
-### Publications:  [List of beamline publications](https://suchismitasarker.github.io/CHESS-ID4B-QM2/publications/)
-
 
 ---
 
 ---
 
-### Want to explore new sample environments?  
+
+###  Publications:  [List of beamline publications](https://suchismitasarker.github.io/CHESS-ID4B-QM2/publications/)
+
+
+---
+
+---
+
+
+### 🌡️ Want to explore new sample environments?  
 Please send an email to  <a href = "mailto: ss3428@cornell.edu"> ID4B beamline</a> and check our [sample environment page](https://suchismitasarker.github.io/CHESS-ID4B-QM2/sample_env/)
 
 <figure markdown>
