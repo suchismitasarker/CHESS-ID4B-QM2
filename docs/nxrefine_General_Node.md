@@ -26,14 +26,14 @@ The code is written by Dr. Ray Osborn. More details will be available [NXRefine]
 
 !!! danger "Change the < classe_id > to your own CLASSE ID" 
 
-* (ii) <b> Step 2 :</b> Login to lnx201
+* (ii) <b> Step 2 :</b> Open the terminal and login to lnx201
 
         ssh <classe_id>@lnx201.classe.cornell.edu
 
 
 * (iii) <b> Step 3 :</b> 
         
-        qrsh -q interactive.q -l mem_free=350G -pe sge_pe 20
+        qrsh -q interactive.q -l mem_free=200G -pe sge_pe 8
 
 
 
@@ -54,7 +54,7 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
 
 * (vii) <b> Step 6 : </b> Run the job in lnx201 (make sure path is correct)
 
-        qsub -q all.q -l mem_free=350G -pe sge_pe 32 /nfs/chess/id4baux/2025-1/sarker-3946-a/qsub_jobs_<name of the file>.sh
+        qsub -q all.q -l mem_free=250G -pe sge_pe 8 /nfs/chess/id4baux/2025-1/sarker-3946-a/qsub_jobs_<name of the file>.sh
 
 !!! danger "If it did not work, try to use less memory and submit the job again" 
 * You can change mem_free = 200, below is the example
@@ -73,13 +73,7 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
 
         cat qsub_jobs_<classe_id>.sh.e7231424
 
-* (x) <b> Step 11 :</b> Finally after you the data procesing
 
-        chmod -R 777 /nfs/chess/id4baux/2025-1/<project_name>
-
-        Example: 
-
-        chmod -R 777 /nfs/chess/id4baux/2025-1/sarker-3490-a
 
 ## Want to reprocess the data with higher step size or better resolution?
  

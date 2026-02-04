@@ -1,3 +1,3 @@
 
 
-© Copyright 2025, CHESS ID4B Beamline
+© Copyright 2026, CHESS ID4B Beamline
