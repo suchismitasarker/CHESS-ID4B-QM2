@@ -236,14 +236,14 @@
 </div>
 <ul>
 <li>
-<p>(ii) <b> Step 2 :</b> Login to lnx201</p>
+<p>(ii) <b> Step 2 :</b> Open the terminal and login to lnx201</p>
 <div class="codehilite"><pre><span></span><code>ssh &lt;classe_id&gt;@lnx201.classe.cornell.edu
 </code></pre></div>
 
 </li>
 <li>
 <p>(iii) <b> Step 3 :</b> </p>
-<div class="codehilite"><pre><span></span><code>qrsh -q interactive.q -l mem_free=350G -pe sge_pe 20
+<div class="codehilite"><pre><span></span><code>qrsh -q interactive.q -l mem_free=200G -pe sge_pe 8
 </code></pre></div>
 
 </li>
@@ -268,7 +268,7 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
 </li>
 <li>
 <p>(vii) <b> Step 6 : </b> Run the job in lnx201 (make sure path is correct)</p>
-<div class="codehilite"><pre><span></span><code>qsub -q all.q -l mem_free=350G -pe sge_pe 32 /nfs/chess/id4baux/2025-1/sarker-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
+<div class="codehilite"><pre><span></span><code>qsub -q all.q -l mem_free=250G -pe sge_pe 8 /nfs/chess/id4baux/2025-1/sarker-3946-a/qsub_jobs_&lt;name of the file&gt;.sh
 </code></pre></div>
 
 </li>
@@ -292,16 +292,6 @@ Changed the desired steps for nxrefine from the folder or if you know how to use
 <li>
 <p>(ix) <b> Step 10 :</b> See the status ebaborately</p>
 <div class="codehilite"><pre><span></span><code>cat qsub_jobs_&lt;classe_id&gt;.sh.e7231424
-</code></pre></div>
-
-</li>
-<li>
-<p>(x) <b> Step 11 :</b> Finally after you the data procesing</p>
-<div class="codehilite"><pre><span></span><code>chmod -R 777 /nfs/chess/id4baux/2025-1/&lt;project_name&gt;
-
-Example:
-
-chmod -R 777 /nfs/chess/id4baux/2025-1/sarker-3490-a
 </code></pre></div>
 
 </li>
@@ -375,7 +365,7 @@ I’ve provided an example of the script for general node lnx201. For clarity, I
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2025, CHESS ID4B Beamline</p>
+      <p>© Copyright 2026, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

@@ -229,12 +229,12 @@
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150"></p>
 </figure>
 <h6 id="step-1-manually-stage-center-the-sample-to-the-beam"><i>Step 1:  Manually stage:  center the sample to the beam </i><a class="headerlink" href="#step-1-manually-stage-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz2 0.1 (relative motion of the sample movement up (+) and down (-)) 
-        FOURC&gt; umv phi2 0
-        FOURC&gt; umv phi2 180
+<div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
+        FOURC&gt; umv phi 0
+        FOURC&gt; umv phi 180
         Move x and y to make the sample to the cursor
-        FOURC&gt; umv phi2 90
-        FOURC&gt; umv phi2 270
+        FOURC&gt; umv phi 90
+        FOURC&gt; umv phi 270
         Do it iteratively until the center of the axis match the sample position
 </code></pre></div>
 
@@ -258,31 +258,58 @@
 </code></pre></div>
 
 <h6 id="step-2-create-file-structure"><i>Step 2 :  Create file structure </i><a class="headerlink" href="#step-2-create-file-structure" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>  a) Create newfile
+<div class="codehilite"><pre><span></span><code>  a) Create newfile from the SPEC terminal
 
-        FOURC&gt;newfile &lt;samplename&gt; 
+        Srep 1: You need to provide acurate Element Name (K, Sc etc), special character does not work (.,:" etc)
+
+              FOURC&gt;newfile &lt;samplename&gt;
+
         # samplename : chemical name of your sample, make sure you created folder in your directory
 
 
-  b) Open HDRMscans.mac script and sort your path (sortmypathout)
-        i) Change the _mysample = &lt;sample_identifier&gt; 
+
+  Provide all the correct informations for metadata in the server
+  # Look the table in the googgle doc
+
+  | Sample name | chemical formula | Crystal Structure | Space group | Space group #| Unit cell parameters | 
+  | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :--------------------:
+  |   CeO2      |       CeO2       |       Cubic       |   Fm-3m     |    225         |a=5.41, b=5.41, c=5.41, alpha=90, beta=90, gamma=90
+  | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :---------------------:
+
+
+  * sample_chemical_formula -- Provide chemical formula of the sample (e.g AV3Sb5): CeO2
+  * crystal_system_rt -- Provide room temperature sample crystal system : cubic
+  * sample_space_group -- Provide the sample space group :Fm-3m
+  * sample_space_group_number -- Provide the sample space group number : 225
+  * sample_unit_cell -- Unit cell dimensions  (units: angstrom) :  a = 5.41, b = 5.41, c = 5.41, alpha = 90, beta = 90, gamma = 90
+  * phase_transition -- Will the sample undergo a phase transition during the experiment? If yes,what are the temperature and space group? (default: ):N.A
+</code></pre></div>
+
+<h6 id="step-3-open-hdrmscansmac-script-and-sort-your-path-sortmypathout"><i>Step 3: Open HDRMscans.mac script and sort your path (sortmypathout)<a class="headerlink" href="#step-3-open-hdrmscansmac-script-and-sort-your-path-sortmypathout" title="Permanent link">¶</a></i></h6>
+<div class="codehilite"><pre><span></span><code>        i) Go to the folder: /nfs/chess/id4b/&lt;cycle_number&gt;/&lt;proposal_id&gt;  
+        ii) Open HDRMscans.mac file in the folder location (this is not from SPEC terminal)
+        ii) Change the `_mysample` = &lt;sample_identifier&gt; (#inside the script)
         # _mysample is the sample identifier
         # save the file
 </code></pre></div>
 
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Alignment_file.png?raw=true" width="850"></p>
+</figure>
 <div class="admonition danger">
 <p class="admonition-title">check the signals</p>
 </div>
 <h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt; qdo ./HDRMscans.mac  
+<div class="codehilite"><pre><span></span><code>    # Any time you have modified .mac files, run the command from the terminal
+    FOURC&gt; qdo ./HDRMscans.mac 
     # Notes: HDRMscans.mac contains all the script
 </code></pre></div>
 
 <h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">¶</a></h6>
 <div class="codehilite"><pre><span></span><code>    FOURC&gt;heightscan
 
-    a) Data will save at 'tiff' folder inside the user folder at id4b
-    b) Check the quality of the datasets at nexpy
+    a) Data will save at 'tiff' folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/tiffs) inside the user folder at id4b
+    b) Check the quality of the datasets at nexpy, DONOT Double click the image, the program will crush
     b) Go to the best position of the sample 
         FOURC&gt; umv samz &lt;position of the sample&gt;
 </code></pre></div>
@@ -302,16 +329,17 @@
 
     FOURC&gt; threextalscan 300 1
 
+    # here parameter 300 is temperature and 1 is sleeping time
+
+    Note: DONOT forget to put the paramters (temerature and sleep time), otherwise, temperature controller will try to go to 0K
+
     #Notes: In the threextalscan 1st parameter is temperature 300K and the second parameter is waiting time 1 min
         - It will vary chi, theta and phi angle
         - Collect data phi 0-365 with 3650 images (1 degree/frame)
         - You can the change the exposure time (if needed)
 
-    a) Data will save at raw6M in id4b folder
+    a) Data will save at raw6M in id4b folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/raw6M )
 </code></pre></div>
-
-<h4 id="quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video">Quick video on data collection (make sure you read the above instructions before watching the video)<a class="headerlink" href="#quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video" title="Permanent link">¶</a></h4>
-<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <h6 id="step-7-check-data-nexpy"><i>Step 7: Check data nexpy  </i><a class="headerlink" href="#step-7-check-data-nexpy" title="Permanent link">¶</a></h6>
 <p>Please look at the <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/">Data visualization</a> - Nexpy section</p>
@@ -337,9 +365,31 @@
 <li>Go to the signal and click log scale</li>
 <li>Go to z tab and press forward (it will go through the images)</li>
 </ul>
+<h4 id="quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video">Quick video on data collection (make sure you read the above instructions before watching the video)<a class="headerlink" href="#quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video" title="Permanent link">¶</a></h4>
+<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <h4 id="quick-video-on-collected-data-visualization">Quick video on <i>  'collected data' </i>  visualization<a class="headerlink" href="#quick-video-on-collected-data-visualization" title="Permanent link">¶</a></h4>
 <iframe width="600" height="300" src="https://www.youtube.com/embed/iyH_1zRsjmg?si=pW0kxtrW19vN1Gd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<ul>
+<li>
+</ul>
+<h4 id="step-2-take-a-look-at-the-priliminary-data-after-data-collection_1"><i> Step 2 </i> : Take a look at the priliminary data after data collection<a class="headerlink" href="#step-2-take-a-look-at-the-priliminary-data-after-data-collection_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>Step1 : Go to 'File' tab</li>
+<li>Step 2 : Go to 'Import' tab </li>
+<li>Step 3: Go to 'Import image stack'</li>
+<li>Step 4: Go to desired file location</li>
+<li>Step 5: Select the folder (it will not show any images)</li>
+<li>
+<p>Step 6: Select the images (mostly 50-60 images)</p>
+</li>
+<li>
+<p>Double clicked the stack images</p>
+</li>
+<li>Go to the signal and click log scale</li>
+<li>Go to z tab and press forward (it will go through the images)</li>
+</ul>
 <p>=============================================================================</p>
 <div class="admonition type">
 <p class="admonition-title">Temperature modify and collect data</p>
@@ -483,7 +533,7 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>© Copyright 2025, CHESS ID4B Beamline</p>
+      <p>© Copyright 2026, CHESS ID4B Beamline</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
