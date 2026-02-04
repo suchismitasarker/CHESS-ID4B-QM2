@@ -21,12 +21,12 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 ######  <i>Step 1:  Manually stage:  center the sample to the beam </i>
 
-            FOURC> umvr samz2 0.1 (relative motion of the sample movement up (+) and down (-)) 
-            FOURC> umv phi2 0
-            FOURC> umv phi2 180
+            FOURC> umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
+            FOURC> umv phi 0
+            FOURC> umv phi 180
             Move x and y to make the sample to the cursor
-            FOURC> umv phi2 90
-            FOURC> umv phi2 270
+            FOURC> umv phi 90
+            FOURC> umv phi 270
             Do it iteratively until the center of the axis match the sample position   
 
 
@@ -52,16 +52,45 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 ######  <i>Step 2 :  Create file structure </i>
 
-      a) Create newfile 
+      a) Create newfile from the SPEC terminal 
 
-            FOURC>newfile <samplename> 
+            Srep 1: You need to provide acurate Element Name (K, Sc etc), special character does not work (.,:" etc)
+                  
+                  FOURC>newfile <samplename> 
+           
             # samplename : chemical name of your sample, make sure you created folder in your directory
+            
+            
+
+      Provide all the correct informations for metadata in the server
+      # Look the table in the googgle doc
+
+      | Sample name | chemical formula | Crystal Structure | Space group | Space group #| Unit cell parameters | 
+      | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :--------------------:
+      |   CeO2      |       CeO2       |       Cubic       |   Fm-3m     |    225         |a=5.41, b=5.41, c=5.41, alpha=90, beta=90, gamma=90
+      | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :---------------------:      
 
 
-      b) Open HDRMscans.mac script and sort your path (sortmypathout)
-            i) Change the _mysample = <sample_identifier> 
+      * sample_chemical_formula -- Provide chemical formula of the sample (e.g AV3Sb5): CeO2
+      * crystal_system_rt -- Provide room temperature sample crystal system : cubic
+      * sample_space_group -- Provide the sample space group :Fm-3m
+      * sample_space_group_number -- Provide the sample space group number : 225
+      * sample_unit_cell -- Unit cell dimensions  (units: angstrom) :  a = 5.41, b = 5.41, c = 5.41, alpha = 90, beta = 90, gamma = 90
+      * phase_transition -- Will the sample undergo a phase transition during the experiment? If yes,what are the temperature and space group? (default: ):N.A
+
+
+
+######  <i>Step 3: Open HDRMscans.mac script and sort your path (sortmypathout)
+            i) Go to the folder: /nfs/chess/id4b/<cycle_number>/<proposal_id>  
+            ii) Open HDRMscans.mac file in the folder location (this is not from SPEC terminal)
+            ii) Change the `_mysample` = <sample_identifier> (#inside the script)
             # _mysample is the sample identifier
             # save the file
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Alignment_file.png?raw=true){ width="850" }
+</figure>
+
 
 
 !!! danger "check the signals"
@@ -70,7 +99,8 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 ######  <i>Step 3: Run HDRMscans.mac script from terminal </i>
  
-        FOURC> qdo ./HDRMscans.mac  
+        # Any time you have modified .mac files, run the command from the terminal
+        FOURC> qdo ./HDRMscans.mac 
         # Notes: HDRMscans.mac contains all the script
 
 
@@ -79,8 +109,8 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
         FOURC>heightscan 
 
-        a) Data will save at 'tiff' folder inside the user folder at id4b
-        b) Check the quality of the datasets at nexpy
+        a) Data will save at 'tiff' folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/tiffs) inside the user folder at id4b
+        b) Check the quality of the datasets at nexpy, DONOT Double click the image, the program will crush
         b) Go to the best position of the sample 
             FOURC> umv samz <position of the sample>  
 
@@ -100,22 +130,16 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
         FOURC> threextalscan 300 1 
 
+        # here parameter 300 is temperature and 1 is sleeping time
+
+        Note: DONOT forget to put the paramters (temerature and sleep time), otherwise, temperature controller will try to go to 0K
+       
         #Notes: In the threextalscan 1st parameter is temperature 300K and the second parameter is waiting time 1 min
             - It will vary chi, theta and phi angle
             - Collect data phi 0-365 with 3650 images (1 degree/frame)
             - You can the change the exposure time (if needed)
 
-        a) Data will save at raw6M in id4b folder
-
-
-
-#### Quick video on data collection (make sure you read the above instructions before watching the video)
-
-
-<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-
+        a) Data will save at raw6M in id4b folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/raw6M )
 
 ######  <i>Step 7: Check data nexpy  </i>
 Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/ ) - Nexpy section
@@ -142,11 +166,33 @@ Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS
 * Go to z tab and press forward (it will go through the images)
 
 
+#### Quick video on data collection (make sure you read the above instructions before watching the video)
+
+
+<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 #### Quick video on <i>  'collected data' </i>  visualization 
 
 <iframe width="600" height="300" src="https://www.youtube.com/embed/iyH_1zRsjmg?si=pW0kxtrW19vN1Gd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+* 
+#### <i> Step 2 </i> : Take a look at the priliminary data after data collection 
+
+* Step1 : Go to 'File' tab
+* Step 2 : Go to 'Import' tab 
+* Step 3: Go to 'Import image stack'
+* Step 4: Go to desired file location
+* Step 5: Select the folder (it will not show any images)
+* Step 6: Select the images (mostly 50-60 images)
+
+* Double clicked the stack images
+* Go to the signal and click log scale
+* Go to z tab and press forward (it will go through the images)
+
+
 
 
 
