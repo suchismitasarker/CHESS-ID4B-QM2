@@ -29,6 +29,7 @@ Our standard cryosystem is broken. Below is the new cryosystem operations
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/updated_temp.png?raw=true){ width="900" }
 </figure>
 
+* Flow set is showing for a different cryo, maximum flow you should run is 12 ml/min
 
 
 ### Temperature panels at beamline
@@ -94,15 +95,9 @@ If the ice did not melt go to `te 260`
 </figure>
 
 * Step 6 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
-* Step 7 : <i> FOURC > `flow_set 10` </i> 
-* Step 8 : Wait for base temperature Input 1 (A) ~8.4K Input 2 (C) ~44K to stabilize 
-
-
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/2026%20temp%20partial.png?raw=true){ width="400" }
-</figure>
-
-* Step 9 : <i> FOURC > `te 15` </i>    (# To go to desired temperature (`te`) and change the `flow_set`look at the above plot)
+* Step 7 : <i> FOURC > `flow_set 12` </i> 
+* Step 8 : Wait for base temperature Input 1 (A) ~5K Input 2 (C) ~44K to stabilize 
+* Step 9 : <i> FOURC > `te 15` </i>    (# To go to desired temperature (`te`) )
 * Step 10: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions)
 * Step 11: <i> FOURC > <b>control C </i> </b> ; you can STOP rotation; DONOT run control C twice, the program will crush
 
@@ -143,12 +138,8 @@ If the ice did not melt go to `te 260`
 </figure>
 
 * Step 7 : <i> FOURC > `runninghelium` </i> (# it will setup the temperature in the Lakeshore controller)
-* Step 8 : Wait for base temperature (Input A ~8.5K Input C ~30K) to stabilize (Input A ~8.5K Input C ~45K)
-* Step 8 : <i> FOURC > `flow_set 15` </i> (flow_set 18 is only for 15K, if you want to go to high temperature slowly increase flowrate)
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/2026%20temp%20partial.png?raw=true){ width="400" }
-</figure>
-
+* Step 8 : Wait for base temperature (Input A ~5K Input C ~30K) to stabilize (Input A ~5K Input C ~44K)
+* Step 8 : <i> FOURC > `flow_set 12` </i> 
 * Step 9 : <i> FOURC > `te 15` </i>   (# make sure your `flow_set` is correct)
 * Step 10: <i> FOURC > `spin_xtal_phi` </i> (# rotate sample 360-->0 and 0-->360 degree in phi directions)
 * Step 11: <i> FOURC > <b>control C </i> </b> ; you can STOP rotation; DONOT run control C twice, the program will crush

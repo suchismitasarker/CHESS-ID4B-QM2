@@ -52,18 +52,17 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
 
 ######  <i>Step 2 :  Create file structure </i>
 
-      a) Create newfile from the SPEC terminal 
-
-            Srep 1: You need to provide acurate Element Name (K, Sc etc), special character does not work (.,:" etc)
+      # Create newfile from the SPEC terminal, you need to provide acurate Element Name (K, Sc etc), special character does not work (.,:" etc)
+      # samplename : chemical name of your sample, make sure you created folder in your directory
                   
                   FOURC>newfile <samplename> 
            
-            # samplename : chemical name of your sample, make sure you created folder in your directory
-            
+      
             
 
-      Provide all the correct informations for metadata in the server
       # Look the table in the googgle doc
+      Provide all the correct informations for metadata in the server
+      
 
       | Sample name | chemical formula | Crystal Structure | Space group | Space group #| Unit cell parameters | 
       | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :--------------------:
@@ -71,25 +70,35 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
       | :----------:| :---------------:| :----------------:| :---------: | :-----------:| :---------------------:      
 
 
-      * sample_chemical_formula -- Provide chemical formula of the sample (e.g AV3Sb5): CeO2
-      * crystal_system_rt -- Provide room temperature sample crystal system : cubic
-      * sample_space_group -- Provide the sample space group :Fm-3m
-      * sample_space_group_number -- Provide the sample space group number : 225
-      * sample_unit_cell -- Unit cell dimensions  (units: angstrom) :  a = 5.41, b = 5.41, c = 5.41, alpha = 90, beta = 90, gamma = 90
-      * phase_transition -- Will the sample undergo a phase transition during the experiment? If yes,what are the temperature and space group? (default: ):N.A
+      # sample_chemical_formula -- Provide chemical formula of the sample (e.g AV3Sb5): CeO2
+      # crystal_system_rt -- Provide room temperature sample crystal system : cubic
+      # sample_space_group -- Provide the sample space group :Fm-3m
+      # sample_space_group_number -- Provide the sample space group number : 225
+      # sample_unit_cell -- Unit cell dimensions  (units: angstrom) :  a = 5.41, b = 5.41, c = 5.41, alpha = 90, beta = 90, gamma = 90
+      # phase_transition -- Will the sample undergo a phase transition during the experiment? If yes,what are the temperature and space group? (default: ):N.A
 
 
 
-######  <i>Step 3: Open HDRMscans.mac script and sort your path (sortmypathout)
-            i) Go to the folder: /nfs/chess/id4b/<cycle_number>/<proposal_id>  
-            ii) Open HDRMscans.mac file in the folder location (this is not from SPEC terminal)
-            ii) Change the `_mysample` = <sample_identifier> (#inside the script)
-            # _mysample is the sample identifier
-            # save the file
+######  <i>Step 3: Open HDRMscans.mac script from folder and provide '_mysample' information
 
 <figure markdown>
   ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Alignment_file.png?raw=true){ width="850" }
 </figure>
+
+            i) Go to the folder (this is not from SPEC terminal): 
+            
+                        /nfs/chess/id4b/<cycle_number>/<proposal_id>  
+                        
+            ii) Open HDRMscans.mac file in the folder location 
+
+            ii) Change the 
+            
+                  `_mysample` = <sample_identifier> (#inside the script)
+
+                  # _mysample is the sample identifier
+                  # save the file
+
+
 
 
 
@@ -114,19 +123,34 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
         b) Go to the best position of the sample 
             FOURC> umv samz <position of the sample>  
 
-###### <i>Step 5 : Autotune condition (talk to beamline scientist)  </i>
-      If the autotune is off in the mostab
-      a) FOURC> opens (# Open the shutter)
-      b) Turn the knob slowly and maximize the counts in IC2
-      c) FOURC> closes (# close the shutter)
 
-<figure markdown>
-  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true){ width="150" }
-</figure>
+
+
+#### <i> Step 5 </i> : Take a look at the height scan data 
+
+* Step1 : Go to 'File' tab
+* Step 2 : Go to 'Import' tab 
+* Step 3: Go to 'Import image stack'
+* Step 4: Go to desired file location
+* Step 5: Select the folder (it will not show any images)
+* Step 6: Select the images (mostly 50-60 images)
+* Double clicked the stack images
+* Go to the signal and click log scale
+* Go to z tab and press forward (it will go through the images)
+* Find the maximum signal in the height
+* Go to the terminal FOURC > umv samz <best_sample_height>
+
+#### Quick video on <i> 'heightscan' </i> visualization (there is text below as well)
+<iframe width="600" height="300" src="https://www.youtube.com/embed/lC853bBnRas?si=OLcOmv5HoKCyejph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+* 
+
+
 
 
 ######  <i>Step 6: Run three rotation crystal scan </i>
-      It will rotate the crystal three times at different chi and theta angle
+       # It will rotate the crystal three times at different chi and theta angle
 
         FOURC> threextalscan 300 1 
 
@@ -139,19 +163,13 @@ High Dynamic Range Mapping (HDRM) is primarily a method for studying single crys
             - Collect data phi 0-365 with 3650 images (1 degree/frame)
             - You can the change the exposure time (if needed)
 
-        a) Data will save at raw6M in id4b folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/raw6M )
+        # Data will save at raw6M in id4b folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/raw6M )
+
 
 ######  <i>Step 7: Check data nexpy  </i>
 Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/ ) - Nexpy section
 
 
-#### Quick video on <i> 'heightscan' </i> visualization (there is text below as well)
-
-
-<iframe width="600" height="300" src="https://www.youtube.com/embed/lC853bBnRas?si=OLcOmv5HoKCyejph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-* 
 #### <i> Step 2 </i> : Take a look at the priliminary data after data collection 
 
 * Step1 : Go to 'File' tab
@@ -165,6 +183,12 @@ Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS
 * Go to the signal and click log scale
 * Go to z tab and press forward (it will go through the images)
 
+
+#### Quick video on <i>  'collected data' </i>  visualization 
+<iframe width="600" height="300" src="https://www.youtube.com/embed/iyH_1zRsjmg?si=pW0kxtrW19vN1Gd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+* 
 
 #### Quick video on data collection (make sure you read the above instructions before watching the video)
 
@@ -173,27 +197,20 @@ Please look at the [Data visualization](https://suchismitasarker.github.io/CHESS
 
 
 
-#### Quick video on <i>  'collected data' </i>  visualization 
-
-<iframe width="600" height="300" src="https://www.youtube.com/embed/iyH_1zRsjmg?si=pW0kxtrW19vN1Gd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-* 
-#### <i> Step 2 </i> : Take a look at the priliminary data after data collection 
-
-* Step1 : Go to 'File' tab
-* Step 2 : Go to 'Import' tab 
-* Step 3: Go to 'Import image stack'
-* Step 4: Go to desired file location
-* Step 5: Select the folder (it will not show any images)
-* Step 6: Select the images (mostly 50-60 images)
-
-* Double clicked the stack images
-* Go to the signal and click log scale
-* Go to z tab and press forward (it will go through the images)
 
 
 
+
+=============================================================================
+###### <i>Step 5 : Autotune condition (talk to beamline scientist)  </i>
+      If the autotune is off in the mostab
+      a) FOURC> opens (# Open the shutter)
+      b) Turn the knob slowly and maximize the counts in IC2
+      c) FOURC> closes (# close the shutter)
+
+<figure markdown>
+  ![Image title](https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true){ width="150" }
+</figure>
 
 
 

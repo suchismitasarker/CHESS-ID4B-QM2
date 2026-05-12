@@ -14,7 +14,7 @@ The code is written by Dr. Ray Osborn. More details will be available [NXRefine]
 ### Steps to use the NXRefine GUI at CHESS data analysis computer 
 
 * <i> Step 0 </i>: Create the nxrefine folder with correct calibration file 
-      Talk to beamline scientist if you have any questions)
+      Talk to beamline scientist if you have any questions
 
 * <i> Step 1 </i>: Link raw data to process data folder
 
@@ -74,9 +74,12 @@ The code is written by Dr. Ray Osborn. More details will be available [NXRefine]
 
 
 
+
 =================================================================
 
-## Running jobs from the terminal in general node, during beamtime
+
+
+## Running jobs from the personal laptop and submit the jobs to clusters
 
 
 !!! hint "During beamtime nxrefine "
@@ -91,32 +94,45 @@ The code is written by Dr. Ray Osborn. More details will be available [NXRefine]
             Step 2: In the beamline data analysis GUI nxrefine
             Import the data: https://www.youtube.com/watch?v=IAX8-wOgImc
 
-            Step 3: Beamline file qsub file change: 
-                  cd /nfs/chess/id4baux/2025-2/<proposal_id>/scripts/
-
-            Step 4: Change the permission in beamline data analysis computer and your own computer
-                  chmod -R 777 /nfs/chess/id4baux/<cycle_number>/<proposal_id>
 
 
-            Step 5: Modify the qsub script in the folder (below is the details)
+##### Modify the scripts
 
-            Step 4: Change the permission again in beamline data analysis computer and your own computer
-                   chmod -R 777 /nfs/chess/id4baux/<cycle_number>/<proposal_id>
+* Open terminal 1
 
-            Step 6: Submit the job from your own terminal
+            cd /nfs/chess/id4baux/<cycle_number>/<proposal_id>/scripts
 
-                  qsub -q all.q -l mem_free=200G -pe sge_pe 16 /nfs/chess/id4baux/2025-1/<proposal_id>/qsub_116.sh 
+* Copy and rename the script file name 
+            
+            cp qsub_suchi_FeNiCo_300.sh qsub_<username>_<sample_name>_<temp>.sh
+            
+* Open another terminal 2: Go to the desired folder where you load the data from id4b to id4baux nxrefine
+
+            cd /nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/<sample_name>/<sample_id>
+
+* Go back to terminal 1 : change the directory and temperature of the folder
 
 
+            Step 1: nano qsub_<username>_<sample_name>_<temp>.sh         
+            Step 2: USER_DIR='/nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/FeNiCo/S1/' # control+ E (go to the end of line), copy the sample directory from terminal 2
+            Step 3: Check below for Option 1 (no parent file) or Option 2 (parent file) details 
+            Step 4: for TEMP in 20; # provide the correct temperature
+            Step 5: control + O #save the file in nano
+            Step 6: press return
+            Step 7: control + X #exit editing
+            Step 8: cat qsub_<username>_<sample_name>_<temp>.sh #check the file again 
 
-##### Step 5 Details: How to change scripts:
+* Change the permission again in beamline data analysis computer (id4baux- permission terminal) and your own computer
 
-* Rename the file name of the script with temperature
-* Change the directory and temperature of the folder
+            chmod -R 777 /nfs/chess/id4baux/<cycle_number>/<proposal_id>
 
-                  Step 1: USER_DIR='/nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/FeNiCo/S1/'
-                  Step 2: for TEMP in 20;
+* Submit the job from your own terminal
 
+            qsub -q all.q -l mem_free=200G -pe sge_pe 16 /nfs/chess/id4baux/2025-1/<proposal_id>/qsub_116.sh 
+            
+* Check the status
+
+            qstat
 
 ### Option 1 : Parent file NOT available       
 * If the parent file is not avilable when you submit the jobs, run only below commands and Comment out other commands
