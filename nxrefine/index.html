@@ -71,6 +71,8 @@
     <ul>
                 <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
                 </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM_new/">HDRM-new</a>
+                </li>
                 <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
                 </li>
     </ul>
@@ -229,7 +231,7 @@
 <ul>
 <li>
 <p><i> Step 0 </i>: Create the nxrefine folder with correct calibration file 
-      Talk to beamline scientist if you have any questions)</p>
+      Talk to beamline scientist if you have any questions</p>
 </li>
 <li>
 <p><i> Step 1 </i>: Link raw data to process data folder</p>
@@ -293,7 +295,7 @@
 <iframe width="600" height="315" src="https://www.youtube.com/embed/EwwbVRqq308?si=u0m6DHsAH_AgnnOb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p>=================================================================</p>
-<h2 id="running-jobs-from-the-terminal-in-general-node-during-beamtime">Running jobs from the terminal in general node, during beamtime<a class="headerlink" href="#running-jobs-from-the-terminal-in-general-node-during-beamtime" title="Permanent link">¶</a></h2>
+<h2 id="running-jobs-from-the-personal-laptop-and-submit-the-jobs-to-clusters">Running jobs from the personal laptop and submit the jobs to clusters<a class="headerlink" href="#running-jobs-from-the-personal-laptop-and-submit-the-jobs-to-clusters" title="Permanent link">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">During beamtime nxrefine </p>
 <p>Steps for Data Analysis (during beamtime) </p>
@@ -302,29 +304,57 @@
 
     Step 2: In the beamline data analysis GUI nxrefine
     Import the data: https://www.youtube.com/watch?v=IAX8-wOgImc
-
-    Step 3: Beamline file qsub file change: 
-          cd /nfs/chess/id4baux/2025-2/&lt;proposal_id&gt;/scripts/
-
-    Step 4: Change the permission in beamline data analysis computer and your own computer
-          chmod -R 777 /nfs/chess/id4baux/&lt;cycle_number&gt;/&lt;proposal_id&gt;
-
-    Step 5: Modify the qsub script in the folder (below is the details)
-
-    Step 4: Change the permission again in beamline data analysis computer and your own computer
-           chmod -R 777 /nfs/chess/id4baux/&lt;cycle_number&gt;/&lt;proposal_id&gt;
-
-    Step 6: Submit the job from your own terminal
-
-          qsub -q all.q -l mem_free=200G -pe sge_pe 16 /nfs/chess/id4baux/2025-1/&lt;proposal_id&gt;/qsub_116.sh
 </code></pre></div>
 
 </div>
-<h5 id="step-5-details-how-to-change-scripts">Step 5 Details: How to change scripts:<a class="headerlink" href="#step-5-details-how-to-change-scripts" title="Permanent link">¶</a></h5>
+<h5 id="modify-the-scripts">Modify the scripts<a class="headerlink" href="#modify-the-scripts" title="Permanent link">¶</a></h5>
 <ul>
-<li>Rename the file name of the script with temperature</li>
-<li>Change the directory and temperature of the folder<div class="codehilite"><pre><span></span><code>          Step 1: USER_DIR='/nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/FeNiCo/S1/'
-          Step 2: for TEMP in 20;
+<li>
+<p>Open terminal 1</p>
+<div class="codehilite"><pre><span></span><code>    cd /nfs/chess/id4baux/&lt;cycle_number&gt;/&lt;proposal_id&gt;/scripts
+</code></pre></div>
+
+</li>
+<li>
+<p>Copy and rename the script file name </p>
+<div class="codehilite"><pre><span></span><code>    cp qsub_suchi_FeNiCo_300.sh qsub_&lt;username&gt;_&lt;sample_name&gt;_&lt;temp&gt;.sh
+</code></pre></div>
+
+</li>
+<li>
+<p>Open another terminal 2: Go to the desired folder where you load the data from id4b to id4baux nxrefine</p>
+<div class="codehilite"><pre><span></span><code>    cd /nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/&lt;sample_name&gt;/&lt;sample_id&gt;
+</code></pre></div>
+
+</li>
+<li>
+<p>Go back to terminal 1 : change the directory and temperature of the folder</p>
+<div class="codehilite"><pre><span></span><code>    Step 1: nano qsub_&lt;username&gt;_&lt;sample_name&gt;_&lt;temp&gt;.sh         
+    Step 2: USER_DIR='/nfs/chess/id4baux/2026-1/sarker-0000-a/nxrefine/FeNiCo/S1/' # control+ E (go to the end of line), copy the sample directory from terminal 2
+    Step 3: Check below for Option 1 (no parent file) or Option 2 (parent file) details 
+    Step 4: for TEMP in 20; # provide the correct temperature
+    Step 5: control + O #save the file in nano
+    Step 6: press return
+    Step 7: control + X #exit editing
+    Step 8: cat qsub_&lt;username&gt;_&lt;sample_name&gt;_&lt;temp&gt;.sh #check the file again
+</code></pre></div>
+
+</li>
+<li>
+<p>Change the permission again in beamline data analysis computer (id4baux- permission terminal) and your own computer</p>
+<div class="codehilite"><pre><span></span><code>    chmod -R 777 /nfs/chess/id4baux/&lt;cycle_number&gt;/&lt;proposal_id&gt;
+</code></pre></div>
+
+</li>
+<li>
+<p>Submit the job from your own terminal</p>
+<div class="codehilite"><pre><span></span><code>    qsub -q all.q -l mem_free=200G -pe sge_pe 16 /nfs/chess/id4baux/2025-1/&lt;proposal_id&gt;/qsub_116.sh
+</code></pre></div>
+
+</li>
+<li>
+<p>Check the status</p>
+<div class="codehilite"><pre><span></span><code>    qstat
 </code></pre></div>
 
 </li>

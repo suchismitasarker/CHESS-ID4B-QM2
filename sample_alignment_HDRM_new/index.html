@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample_alignment_HDRM/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/sample_alignment_HDRM_new/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>HDRM - CHESS ID4B QM2</title>
+    <title>HDRM-new - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "HDRM";
-        var mkdocs_page_input_path = "sample_alignment_HDRM.md";
-        var mkdocs_page_url = "/sample_alignment_HDRM/";
+        var mkdocs_page_name = "HDRM-new";
+        var mkdocs_page_input_path = "sample_alignment_HDRM_new.md";
+        var mkdocs_page_url = "/sample_alignment_HDRM_new/";
       </script>
     
     <!--[if lt IE 9]>
@@ -69,9 +69,9 @@
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Sample alignment</a>
     <ul class="current">
-                <li class="toctree-l4 current"><a class="reference internal current" href="./">HDRM</a>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
                 </li>
-                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM_new/">HDRM-new</a>
+                <li class="toctree-l4 current"><a class="reference internal current" href="./">HDRM-new</a>
                 </li>
                 <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
                 </li>
@@ -206,9 +206,9 @@
           <li class="breadcrumb-item">Beamline information</li>
           <li class="breadcrumb-item">Sample information</li>
           <li class="breadcrumb-item">Sample alignment</li>
-      <li class="breadcrumb-item active">HDRM</li>
+      <li class="breadcrumb-item active">HDRM-new</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_HDRM.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/sample_alignment_HDRM_new.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -217,7 +217,6 @@
             <div class="section" itemprop="articleBody">
               
                 <div><h1 id="welcome-to-chess-qm2-sample-alignment">Welcome to CHESS &lt;QM&gt;<sup>2</sup> Sample Alignment<a class="headerlink" href="#welcome-to-chess-qm2-sample-alignment" title="Permanent link">¶</a></h1>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-photos/blob/main/beamline.jpeg?raw=true" width="300"></p>
 <div class="admonition danger">
 <p class="admonition-title">High Dynamic Range Reciprocal Space Mapping (HDRM)</p>
 </div>
@@ -230,6 +229,9 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/goniometer1.png?raw=true" width="150"></p>
 </figure>
+<div class="admonition danger">
+<p class="admonition-title">Carefully and slowly insert the sample in the top of the sample stage</p>
+</div>
 <h6 id="step-1-manually-stage-center-the-sample-to-the-beam"><i>Step 1:  Manually stage:  center the sample to the beam </i><a class="headerlink" href="#step-1-manually-stage-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
 <div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
         FOURC&gt; umv phi 0
@@ -237,25 +239,6 @@
         Move x and y to make the sample to the cursor
         FOURC&gt; umv phi 90
         FOURC&gt; umv phi 270
-        Do it iteratively until the center of the axis match the sample position
-</code></pre></div>
-
-<div class="admonition danger">
-<p class="admonition-title">Carefully and slowly insert the sample in the top of the sample stage</p>
-</div>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Qm2%20sample%20stage.png?raw=true" width="450"></p>
-</figure>
-<h6 id="step-1-automated-stage-center-the-sample-to-the-beam"><i>Step 1:  Automated stage: center the sample to the beam </i><a class="headerlink" href="#step-1-automated-stage-center-the-sample-to-the-beam" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>        FOURC&gt; umvr samz 0.1 (relative motion of the sample movement up (+) and down (-)) 
-        FOURC&gt; umv phi 0
-        FOURC&gt; umvr samx 0.1 (make sure you can see sample is moving towards cross +)
-        FOURC&gt; umv phi 180 (check the sample is coming back to cross + )
-        Move x and y to make the sample to the cursor
-        FOURC&gt; umv phi 90
-        FOURC&gt; umvr samy 0.1 (make sure you can see sample is moving towards cross +)
-        FOURC&gt; umv phi 270 (check the sample is coming back to cross + )
-
         Do it iteratively until the center of the axis match the sample position
 </code></pre></div>
 
@@ -286,35 +269,64 @@
   # phase_transition -- Will the sample undergo a phase transition during the experiment? If yes,what are the temperature and space group? (default: ):N.A
 </code></pre></div>
 
-<h6 id="step-3-open-hdrmscansmac-script-from-folder-and-provide-_mysample-information"><i>Step 3: Open HDRMscans.mac script from folder and provide '_mysample' information<a class="headerlink" href="#step-3-open-hdrmscansmac-script-from-folder-and-provide-_mysample-information" title="Permanent link">¶</a></i></h6>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Alignment_file.png?raw=true" width="850"></p>
-</figure>
-<div class="codehilite"><pre><span></span><code>        i) Go to the folder (this is not from SPEC terminal):
-
-                    /nfs/chess/id4b/&lt;cycle_number&gt;/&lt;proposal_id&gt;
-
-        ii) Open HDRMscans.mac file in the folder location
-
-        ii) Change the
-
-              `_mysample` = &lt;sample_identifier&gt; (#inside the script)
-
-              # _mysample is the sample identifier
-              # save the file
-</code></pre></div>
-
-<div class="admonition danger">
-<p class="admonition-title">check the signals</p>
-</div>
 <h6 id="step-3-run-hdrmscansmac-script-from-terminal"><i>Step 3: Run HDRMscans.mac script from terminal </i><a class="headerlink" href="#step-3-run-hdrmscansmac-script-from-terminal" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>    # Any time you have modified .mac files, run the command from the terminal
-    FOURC&gt; qdo ./HDRMscans.mac 
-    # Notes: HDRMscans.mac contains all the script
+<p>New experiment, you need start and run  HDRMscans.mac which contains all the script</p>
+<div class="codehilite"><pre><span></span><code>            FOURC&gt; qdo ./HDRMscans_new.mac
+
+
+        Reading file "/nfs/chess/id4b/2026-2/sarker-0000-a/HDRMscans_new.mac".
+
+        ================================================
+                HDRM MACRO SYSTEM LOADED
+        ================================================
+
+        Welcome! Start with: setup_scan_parameters
+        help or show_commands- command list
 </code></pre></div>
 
-<h6 id="step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position"><i>Step 4 : If you want to check the best height for the sample (finding smaller sample best position) </i><a class="headerlink" href="#step-4-if-you-want-to-check-the-best-height-for-the-sample-finding-smaller-sample-best-position" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt;heightscan
+<h6 id="step-4-show-commands-from-the-script"><i>Step 4: Show commands from the script </i><a class="headerlink" href="#step-4-show-commands-from-the-script" title="Permanent link">¶</a></h6>
+<p>show_comand script will show availble commands at the terminal</p>
+<div class="codehilite"><pre><span></span><code>            FOURC&gt; show_commands
+
+
+
+        === QUICK COMMAND REFERENCE ===
+
+        setup_scan_parameters     - Setup (run first!)
+        heightscan               - Height scan (default params)
+        heightscan &lt;s&gt; &lt;e&gt; &lt;n&gt; &lt;t&gt; - Height scan (custom)
+        powderscan &lt;temp&gt; &lt;sleep&gt; - Powder scan
+        threextalscan &lt;temp&gt; &lt;sleep&gt; - Main HDRM scan
+        low_temp_scan            - Default 20K-130K
+        low_temp_scan_custom     - Custom low temp
+        warmup                   - Default 140K-270K
+        warmup_custom            - Custom warmup
+        cooldown [start end step] - Cooldown sequence
+        spin_xtal_phi            - Continuous spin
+        spin_ice                 - Ice continuous spin
+        help                     - Full help
+        Type command name for details.
+</code></pre></div>
+
+<h6 id="step-5-run-setup_scan_parameters-script-from-terminal"><i>Step 5: Run setup_scan_parameters script from terminal </i><a class="headerlink" href="#step-5-run-setup_scan_parameters-script-from-terminal" title="Permanent link">¶</a></h6>
+<p>SETUP:
+  setup_scan_parameters    - Set sample name and count time (RUN THIS FIRST!)</p>
+<div class="codehilite"><pre><span></span><code>    FOURC&gt; setup_scan_parameters
+
+    === SCAN SETUP ===
+    Enter sample name [default: standard/]:  ()? sample1
+    Enter count time [default: 0.1]:  (0)? 0.1 (#this is exposure time)
+
+
+    # provide the sample name
+    # if the chemical name of your sample is same, however, it is different sample of the same batch, you need to change the setup_scan_parameters.
+</code></pre></div>
+
+<h6 id="step-6-run-heightscan-script-from-terminal"><i>Step 6: Run heightscan script from terminal </i><a class="headerlink" href="#step-6-run-heightscan-script-from-terminal" title="Permanent link">¶</a></h6>
+<p>SETUP:
+   heightscan               - Run height scan with default parameters (-0.6 0.6 60 0.2)
+   heightscan <start> <end> <steps> <exp_time> - Run custom height scan</exp_time></steps></end></start></p>
+<div class="codehilite"><pre><span></span><code>        FOURC&gt; heightscan
 
     a) Data will save at 'tiff' folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/tiffs) inside the user folder at id4b
     b) Check the quality of the datasets at nexpy, DONOT Double click the image, the program will crush
@@ -322,30 +334,27 @@
         FOURC&gt; umv samz &lt;position of the sample&gt;
 </code></pre></div>
 
-<h4 id="step-5-take-a-look-at-the-height-scan-data"><i> Step 5 </i> : Take a look at the height scan data<a class="headerlink" href="#step-5-take-a-look-at-the-height-scan-data" title="Permanent link">¶</a></h4>
-<ul>
-<li>Step1 : Go to 'File' tab</li>
-<li>Step 2 : Go to 'Import' tab </li>
-<li>Step 3: Go to 'Import image stack'</li>
-<li>Step 4: Go to desired file location</li>
-<li>Step 5: Select the folder (it will not show any images)</li>
-<li>Step 6: Select the images (mostly 50-60 images)</li>
-<li>Double clicked the stack images</li>
-<li>Go to the signal and click log scale</li>
-<li>Go to z tab and press forward (it will go through the images)</li>
-<li>Find the maximum signal in the height</li>
-<li>Go to the terminal FOURC &gt; umv samz <best_sample_height></best_sample_height></li>
-</ul>
+<h4 id="step-7-take-a-look-at-the-height-scan-data"><i> Step 7 </i> : Take a look at the height scan data<a class="headerlink" href="#step-7-take-a-look-at-the-height-scan-data" title="Permanent link">¶</a></h4>
+<div class="codehilite"><pre><span></span><code>    * Step1 : Go to 'File' tab
+    * Step 2 : Go to 'Import' tab 
+    * Step 3: Go to 'Import image stack'
+    * Step 4: Go to desired file location
+    * Step 5: Select the folder (it will not show any images)
+    * Step 6: Select the images (mostly 50-60 images)
+    * Double clicked the stack images
+    * Go to the signal and click log scale
+    * Go to z tab and press forward (it will go through the images)
+    * Find the maximum signal in the height
+    * Go to the terminal FOURC &gt; umv samz &lt;best_sample_height&gt;
+</code></pre></div>
+
 <h4 id="quick-video-on-heightscan-visualization-there-is-text-below-as-well">Quick video on <i> 'heightscan' </i> visualization (there is text below as well)<a class="headerlink" href="#quick-video-on-heightscan-visualization-there-is-text-below-as-well" title="Permanent link">¶</a></h4>
 <iframe width="600" height="300" src="https://www.youtube.com/embed/lC853bBnRas?si=OLcOmv5HoKCyejph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<ul>
-<li>
-</ul>
-<h6 id="step-6-run-three-rotation-crystal-scan"><i>Step 6: Run three rotation crystal scan </i><a class="headerlink" href="#step-6-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
+<h6 id="step-8-collect-data-at-room-temperature-run-three-rotation-crystal-scan"><i>Step 8: Collect data at room temperature - Run three rotation crystal scan </i><a class="headerlink" href="#step-8-collect-data-at-room-temperature-run-three-rotation-crystal-scan" title="Permanent link">¶</a></h6>
 <div class="codehilite"><pre><span></span><code>   # It will rotate the crystal three times at different chi and theta angle
 
-    FOURC&gt; threextalscan 300 1
+            FOURC&gt; threextalscan 300 1
 
     # here parameter 300 is temperature and 1 is sleeping time
 
@@ -359,181 +368,104 @@
     # Data will save at raw6M in id4b folder (Example : /nfs/chess/id4b/2026-1/sarker-0000-a/raw6M )
 </code></pre></div>
 
-<h6 id="step-7-check-data-nexpy"><i>Step 7: Check data nexpy  </i><a class="headerlink" href="#step-7-check-data-nexpy" title="Permanent link">¶</a></h6>
-<p>Please look at the <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/nexpy/">Data visualization</a> - Nexpy section</p>
-<h4 id="step-2-take-a-look-at-the-priliminary-data-after-data-collection"><i> Step 2 </i> : Take a look at the priliminary data after data collection<a class="headerlink" href="#step-2-take-a-look-at-the-priliminary-data-after-data-collection" title="Permanent link">¶</a></h4>
-<ul>
-<li>Step1 : Go to 'File' tab</li>
-<li>Step 2 : Go to 'Import' tab </li>
-<li>Step 3: Go to 'Import image stack'</li>
-<li>Step 4: Go to desired file location</li>
-<li>Step 5: Select the folder (it will not show any images)</li>
-<li>
-<p>Step 6: Select the images (mostly 50-60 images)</p>
-</li>
-<li>
-<p>Double clicked the stack images</p>
-</li>
-<li>Go to the signal and click log scale</li>
-<li>Go to z tab and press forward (it will go through the images)</li>
-</ul>
-<h4 id="quick-video-on-collected-data-visualization">Quick video on <i>  'collected data' </i>  visualization<a class="headerlink" href="#quick-video-on-collected-data-visualization" title="Permanent link">¶</a></h4>
-<iframe width="600" height="300" src="https://www.youtube.com/embed/iyH_1zRsjmg?si=pW0kxtrW19vN1Gd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<ul>
-<li>
-</ul>
-<h4 id="quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video">Quick video on data collection (make sure you read the above instructions before watching the video)<a class="headerlink" href="#quick-video-on-data-collection-make-sure-you-read-the-above-instructions-before-watching-the-video" title="Permanent link">¶</a></h4>
-<iframe width="600" height="305" src="https://www.youtube.com/embed/qsAZLayF4Ow?si=oIitQSArHTU1FunV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<p>=============================================================================</p>
-<h6 id="step-5-autotune-condition-talk-to-beamline-scientist"><i>Step 5 : Autotune condition (talk to beamline scientist)  </i><a class="headerlink" href="#step-5-autotune-condition-talk-to-beamline-scientist" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>  If the autotune is off in the mostab
-  a) FOURC&gt; opens (# Open the shutter)
-  b) Turn the knob slowly and maximize the counts in IC2
-  c) FOURC&gt; closes (# close the shutter)
-</code></pre></div>
-
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true" width="150"></p>
-</figure>
-<p>=============================================================================</p>
-<div class="admonition type">
-<p class="admonition-title">Temperature modify and collect data</p>
-</div>
-<h6 id="change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere">Change temperature from 300K and 90 K- (if you are at Nitrogen atomosphere)<a class="headerlink" href="#change-temperature-from-300k-and-90-k-if-you-are-at-nitrogen-atomosphere" title="Permanent link">¶</a></h6>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt; te 100
-    # note: temperature here is 100 Kelvin
-</code></pre></div>
-
-<p>Make sure the temperature is stable before you run script</p>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt; threextalscan 100 1
-</code></pre></div>
-
+<h6 id="different-temperaturescan-commands"><i>Different temperaturescan commands </i><a class="headerlink" href="#different-temperaturescan-commands" title="Permanent link">¶</a></h6>
 <div class="admonition danger">
-<p class="admonition-title">Practical guide of the temperature switch between nitrogen and helium</p>
-<p>Click the link for details
-        <a href="https://suchismitasarker.github.io/CHESS-ID4B-QM2/temp/">Nitrogen --&gt; Helium and Helium --&gt; Nitrogen</a></p>
+<p class="admonition-title">You need to follow "Temperature switch" instruction manual befor running any command!</p><div class="codehilite"><pre><span></span><code>    low_temp_scan                                   - Default scan: 15K to 110K (step 15K)
+    low_temp_scan_custom                            - Interactive custom low temp scan
+    low_temp_scan_custom &lt;start&gt; &lt;end&gt; &lt;step&gt;       - Custom low temp scan
+    warmup                                          - Default: 120K-290K with gas controls
+    warmup_custom                                   - Interactive custom warmup sequence
+    warmup_custom &lt;start&gt; &lt;end&gt; &lt;step&gt;              - Custom warmup sequence
+    cooldown                                        - Interactive cooldown sequence
+    cooldown &lt;start&gt; &lt;end&gt; &lt;step&gt;                   - Custom cooldown sequence
+</code></pre></div>
+
+
 </div>
-<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h6>
-<p>=============================================================================</p>
-<div class="admonition hint">
-<p class="admonition-title">Thin-film Alignment</p>
-<p>Basic steps for single crystal thin-film sample alignment - HDRM. Detector height needs to change because of grazing incidence. Make sure you are able to see the samples (proper light arrangements)</p>
-</div>
-<p>Step 1:  Center the sample to the beam </p>
-<div class="codehilite"><pre><span></span><code>  a) Move chi, phi, and theta positions to their initial setup
-        FOURC&gt; umv chi 90   
-        FOURC&gt; umv phi 0  
-        FOURC&gt; umv th 0
-
-  b) Perform height adjustment
-        Check the signal at the diode 
-        FOURC&gt; tw samz 0.01
-        Move the sample in the Z-directions and cut the beam in half (for example: if the beam size is 300 microns, move 150 microns from the surface when the signal goes down)
+<h6 id="step-run-temperaturescan-scan"><i>Step: Run temperaturescan scan </i><a class="headerlink" href="#step-run-temperaturescan-scan" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>    spin_xtal_phi            - Spin sample continuously (phi 0-360)
+    spin_ice                 - CONTINUOUS spinning for ice samples
+    spin_xtal_phi_10min      - Spin sample 5 cycles (10 min approx)
+    spin_xtal_phi_20min      - Spin sample 10 cycles (20 min approx)
 </code></pre></div>
 
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/signals1.png?raw=true" width="500"></p>
-</figure>
-<div class="codehilite"><pre><span></span><code>  c) Place cursor at center of the sample
-
-              FOURC&gt; umv phi 0
-              FOURC&gt; umv phi 180
-              FOURC&gt; umv phi 90
-              FOURC&gt; umv phi 270
+<h6 id="short-workflow"><i> SHORT WORKFLOW </i><a class="headerlink" href="#short-workflow" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>    1. setup_scan_parameters  (set your sample name and count time)
+    2. heightscan            (check sample quality)
+    3. threextalscan 300 1   (main HDRM measurement)
+    4. warmup/cooldown       (temperature series)
 </code></pre></div>
 
-<p>Step 2 :  Creating the file structure</p>
-<div class="codehilite"><pre><span></span><code>  a) Create newfile
+<h6 id="utility"><i> UTILITY </i><a class="headerlink" href="#utility" title="Permanent link">¶</a></h6>
+<div class="codehilite"><pre><span></span><code>    help                     - Show this help message
+    show_commands            - Show command reminders
 
-        FOURC&gt;newfile samplename
 
 
-  b) Open HDRMscans.mac script for thin-film
-        Change the sample ID
-</code></pre></div>
+    FOURC&gt; help
 
-<p>Step 3: Run HDRMscans.mac script from terminal</p>
-<div class="codehilite"><pre><span></span><code>      FOURC&gt; qdo ./HDRMscans.mac 
-      #Notes:HDRMscans.mac contains all the script
-</code></pre></div>
+    === HDRM MACRO HELP ===
+    Available commands:
 
-<p>Step 3: Check the best height for the sample it will generate tiff file</p>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt;powderscan 300 1
+    SETUP:
+    setup_scan_parameters    - Set sample name and count time (RUN THIS FIRST!)
 
-    a) Check the quality of the data sets at nexpy
-    b) Go to the best position of the sample
-</code></pre></div>
+    SCANS:
+    heightscan               - Run height scan with default parameters (-0.6 0.6 60 0.2)
+    heightscan &lt;start&gt; &lt;end&gt; &lt;steps&gt; &lt;exp_time&gt; - Run custom height scan
+    powderscan &lt;temperature&gt; &lt;sleep_time&gt;       - Run powder diffraction scan
+    threextalscan &lt;temperature&gt; &lt;sleep_time&gt;    - Run main HDRM scan
 
-<p>Step 4: Autotune condition (talk to beamline scientist)</p>
-<div class="codehilite"><pre><span></span><code>  If the autotune is off in the mostab
-  a) FOURC&gt; opens (# Open the shutter)
-  b) Turn the knob slowly and maximize the counts in IC2
-  c) FOURC&gt; closes (# close the shutter)
-</code></pre></div>
+    TEMPERATURE SCANS:
+    low_temp_scan            - Default scan: 20K to 130K (step 20K)
+    low_temp_scan_custom     - Interactive custom low temp scan
+    low_temp_scan_custom &lt;start&gt; &lt;end&gt; &lt;step&gt; - Custom low temp scan
+    warmup                   - Default: 140K-270K with gas controls
+    warmup_custom            - Interactive custom warmup sequence
+    warmup_custom &lt;start&gt; &lt;end&gt; &lt;step&gt; - Custom warmup sequence
+    cooldown                 - Interactive cooldown sequence
+    cooldown &lt;start&gt; &lt;end&gt; &lt;step&gt; - Custom cooldown sequence
 
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/mostab.png?raw=true" width="150"></p>
-</figure>
-<p>Step 5: Run three rotation crystal scan </p>
-<div class="codehilite"><pre><span></span><code>    FOURC&gt; threxstalscan 300 1 
-    #Notes: Parameters: Temperature = 300, Sleep = 1
-</code></pre></div>
+    SAMPLE SPINNING:
+    spin_xtal_phi            - Spin sample continuously (phi 0-360)
+    spin_ice                 - CONTINUOUS spinning for ice samples
+    spin_xtal_phi_10min      - Spin sample 5 cycles (10 min approx)
+    spin_xtal_phi_20min      - Spin sample 10 cycles (20 min approx)
 
-<p>Step 5: Check data nexpy 
-(<i>please look at the Data visulization - Nexpy section </i>)</p>
-<h2 id="examples-of-temperature-dependent-scans">Examples of Temperature Dependent Scans<a class="headerlink" href="#examples-of-temperature-dependent-scans" title="Permanent link">¶</a></h2>
-<h4 id="300k-475k-at-25k-temperature-interval">300K- 475K at 25K temperature interval<a class="headerlink" href="#300k-475k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
-<p>Step 1: Follow the instruction of temprature switch 300K-500K and the temperature to stabilize</p>
-<div class="codehilite"><pre><span></span><code>  def TScans_high_N2 '
-  te = 325
-  for (loopT=325; loopT&lt;476; loopT=loopT+25){
-  eval(sprintf("threextalscan %s 180",loopT))
-  }
+    UTILITY:
+    help                     - Show this help message
+    show_commands           - Show command reminders
 
-  '
-</code></pre></div>
+    WORKFLOW:
+    1. setup_scan_parameters  (set your sample name and count time)
+    2. heightscan            (check sample quality)
+    3. powderscan 300 1      (optional: powder diffraction)
+    4. threextalscan 300 1   (main HDRM measurement)
+    5. warmup/cooldown       (temperature series)
 
-<h4 id="90k-300k-at-25k-temperature-interval">90K- 300K at 25K temperature interval<a class="headerlink" href="#90k-300k-at-25k-temperature-interval" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code>  def Tscans_low_to_high_N2 '
-  for (loopT=90; loopT &lt; 301; loopT=loopT+15){
-  eval(sprintf("threextalscan %s 180", loopT))
-  }
-  '
-</code></pre></div>
+    ICE SAMPLE WORKFLOW:
+    1. setup_scan_parameters
+    2. heightscan
+    3. spin_ice (start continuous spinning)
+    4. In another terminal: run threextalscan &lt;temp&gt; &lt;sleep&gt;
 
-<h4 id="90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval">90K- 100K at 2K temperature interval, 100K-126K at 5K interval and 125K-200K at 25K interval<a class="headerlink" href="#90k-100k-at-2k-temperature-interval-100k-126k-at-5k-interval-and-125k-200k-at-25k-interval" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code>  def HighTScans_different_range '
-  for (loopT=90; loopT &lt; 101; loopT=loopT+2){
-  eval(sprintf("threextalscan_longexposure %s 180", loopT))
-  }
-
-  for (loopT=100; loopT &lt; 126; loopT=loopT+5){
-  eval(sprintf("threextalscan_longexposure %s 180", loopT))
-  }
-
-  for (loopT=125; loopT &lt; 200; loopT=loopT+25){
-  eval(sprintf("threextalscan_longexposure %s 180", loopT))
-  }
-
-  '
-</code></pre></div>
-
-<h4 id="15k-90k-at-15k-temperature-interval">15K- 90K at 15K temperature interval<a class="headerlink" href="#15k-90k-at-15k-temperature-interval" title="Permanent link">¶</a></h4>
-<div class="codehilite"><pre><span></span><code>  def scans_low_to_high_He '
-  for (loopT=15; loopT &lt; 91; loopT=loopT+15){
-  eval(sprintf("threextalscan %s 180", loopT))
-  }
-  '
+    EXAMPLES:
+    setup_scan_parameters
+    heightscan
+    low_temp_scan            # Default 20K-130K
+    low_temp_scan_custom 50 200 30  # 50K to 200K in 30K steps
+    warmup                   # Default 140K-270K
+    warmup_custom 150 300 25 # 150K to 300K in 25K steps
+    cooldown 300 100 20     # 300K to 100K in 20K steps
+    spin_ice
 </code></pre></div></div></html>
 
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../beamline_basics/" class="btn btn-neutral float-left" title="Beamline basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../sample_alignment_HDRM_new/" class="btn btn-neutral float-right" title="HDRM-new">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sample_alignment_HDRM/" class="btn btn-neutral float-left" title="HDRM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sample_alignment_REXS/" class="btn btn-neutral float-right" title="REXS">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -561,10 +493,10 @@
         </span>
     
     
-      <span><a href="../beamline_basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sample_alignment_HDRM/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../sample_alignment_HDRM_new/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sample_alignment_REXS/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

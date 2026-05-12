@@ -71,6 +71,8 @@
     <ul>
                 <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM/">HDRM</a>
                 </li>
+                <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_HDRM_new/">HDRM-new</a>
+                </li>
                 <li class="toctree-l4"><a class="reference internal" href="../sample_alignment_REXS/">REXS</a>
                 </li>
     </ul>
@@ -236,6 +238,9 @@
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/updated_temp.png?raw=true" width="900"></p>
 </figure>
+<ul>
+<li>Flow set is showing for a different cryo, maximum flow you should run is 12 ml/min</li>
+</ul>
 <h3 id="temperature-panels-at-beamline">Temperature panels at beamline<a class="headerlink" href="#temperature-panels-at-beamline" title="Permanent link">¶</a></h3>
 <figure>
 <p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/temp_panel.png?raw=true" width="800"></p>
@@ -293,14 +298,9 @@ If the ice did not melt go to <code>te 260</code></li>
 </figure>
 <ul>
 <li>Step 6 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 7 : <i> FOURC &gt; <code>flow_set 10</code> </i> </li>
-<li>Step 8 : Wait for base temperature Input 1 (A) ~8.4K Input 2 (C) ~44K to stabilize </li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/2026%20temp%20partial.png?raw=true" width="400"></p>
-</figure>
-<ul>
-<li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>    (# To go to desired temperature (<code>te</code>) and change the <code>flow_set</code>look at the above plot)</li>
+<li>Step 7 : <i> FOURC &gt; <code>flow_set 12</code> </i> </li>
+<li>Step 8 : Wait for base temperature Input 1 (A) ~5K Input 2 (C) ~44K to stabilize </li>
+<li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>    (# To go to desired temperature (<code>te</code>) )</li>
 <li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions)</li>
 <li>Step 11: <i> FOURC &gt; <b>control C </b></i>  ; you can STOP rotation; DONOT run control C twice, the program will crush</li>
 </ul>
@@ -340,13 +340,8 @@ If the ice did not melt go to <code>te 260</code></li>
 </figure>
 <ul>
 <li>Step 7 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 8 : Wait for base temperature (Input A ~8.5K Input C ~30K) to stabilize (Input A ~8.5K Input C ~45K)</li>
-<li>Step 8 : <i> FOURC &gt; <code>flow_set 15</code> </i> (flow_set 18 is only for 15K, if you want to go to high temperature slowly increase flowrate)</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/2026%20temp%20partial.png?raw=true" width="400"></p>
-</figure>
-<ul>
+<li>Step 8 : Wait for base temperature (Input A ~5K Input C ~30K) to stabilize (Input A ~5K Input C ~44K)</li>
+<li>Step 8 : <i> FOURC &gt; <code>flow_set 12</code> </i> </li>
 <li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>   (# make sure your <code>flow_set</code> is correct)</li>
 <li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions)</li>
 <li>Step 11: <i> FOURC &gt; <b>control C </b></i>  ; you can STOP rotation; DONOT run control C twice, the program will crush</li>
