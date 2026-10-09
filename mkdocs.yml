@@ -25,9 +25,11 @@ nav:
                 - Beamline basics: beamline_basics.md
                 - 'Sample alignment':
                     - HDRM : sample_alignment_HDRM.md
+                    - HDRM-UI : sample_alignment_HDRM_UI.md
                     - HDRM-new : sample_alignment_HDRM_new.md
                     - REXS : sample_alignment_REXS.md
                 - Temperature switch : temp.md
+                - Temperature UI switch : temp_UI.md
                 - Gas flow control : gas_flow.md
             - 'Data Analysis':
                 - Data processing : ID4B_Codes.md
