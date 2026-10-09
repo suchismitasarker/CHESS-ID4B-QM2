@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/temp/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/temp_UI/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Temperature switch - CHESS ID4B QM2</title>
+    <title>Temperature UI switch - CHESS ID4B QM2</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Temperature switch";
-        var mkdocs_page_input_path = "temp.md";
-        var mkdocs_page_url = "/temp/";
+        var mkdocs_page_name = "Temperature UI switch";
+        var mkdocs_page_input_path = "temp_UI.md";
+        var mkdocs_page_url = "/temp_UI/";
       </script>
     
     <!--[if lt IE 9]>
@@ -79,17 +79,19 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">Temperature switch</a>
+                <li class="toctree-l3"><a class="reference internal" href="../temp/">Temperature switch</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Temperature UI switch</a>
     <ul class="current">
     <li class="toctree-l4"><a class="reference internal" href="#consult-beamline-scientist-before-changing-any-temperatures">Consult beamline scientist before changing any temperatures</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#manual-cryosystem">Manual Cryosystem</a>
+    <li class="toctree-l4"><a class="reference internal" href="#temperature-panels-at-beamline">Temperature panels at beamline</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#hutch-cryosystem">Hutch Cryosystem</a>
+    <li class="toctree-l4"><a class="reference internal" href="#data-collection-in-the-helium-condition">Data Collection in the helium condition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#data-collection-in-the-helium-condition_1">Data Collection in the helium condition</a>
     </li>
     </ul>
-                </li>
-                <li class="toctree-l3"><a class="reference internal" href="../temp_UI/">Temperature UI switch</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../gas_flow/">Gas flow control</a>
                 </li>
@@ -217,9 +219,9 @@
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Beamline information</li>
           <li class="breadcrumb-item">Sample information</li>
-      <li class="breadcrumb-item active">Temperature switch</li>
+      <li class="breadcrumb-item active">Temperature UI switch</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/README.md/edit/master/docs/temp_UI.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -229,62 +231,129 @@
               
                 <div><h1 id="practical-guide-of-the-temperature-switch-between-nitrogen-and-helium">Practical guide of the temperature switch between nitrogen and helium<a class="headerlink" href="#practical-guide-of-the-temperature-switch-between-nitrogen-and-helium" title="Permanent link">¶</a></h1>
 <h4 id="consult-beamline-scientist-before-changing-any-temperatures">Consult beamline scientist before changing any temperatures<a class="headerlink" href="#consult-beamline-scientist-before-changing-any-temperatures" title="Permanent link">¶</a></h4>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/sample-cryo1.png?raw=true" width="500"></p>
-</figure>
-<h3 id="manual-cryosystem">Manual Cryosystem<a class="headerlink" href="#manual-cryosystem" title="Permanent link">¶</a></h3>
-<p>Our standard cryosystem is broken. Below is the new cryosystem operations</p>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/new_cryo.png?raw=true" width="800"></p>
-</figure>
-<h2 id="hutch-cryosystem">Hutch Cryosystem<a class="headerlink" href="#hutch-cryosystem" title="Permanent link">¶</a></h2>
 <h6 id="the-cryocooler-is-highly-sensitive-to-obtain-an-accurate-temperature-reading-please-adhere-to-the-following-instructions-note-that-the-temperature-change-occurs-gradually-so-be-patient-it-requires-time-to-reach-the-desired-temperature">The cryocooler is highly sensitive. To obtain an accurate temperature reading, please adhere to the following instructions. Note that the temperature change occurs gradually, so be patient! It requires time to reach the desired temperature.<a class="headerlink" href="#the-cryocooler-is-highly-sensitive-to-obtain-an-accurate-temperature-reading-please-adhere-to-the-following-instructions-note-that-the-temperature-change-occurs-gradually-so-be-patient-it-requires-time-to-reach-the-desired-temperature" title="Permanent link">¶</a></h6>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/updated_temp.png?raw=true" width="900"></p>
-</figure>
-<ul>
-<li>Flow set is showing for a different cryo, maximum flow you should run is 12 ml/min</li>
-</ul>
 <h3 id="temperature-panels-at-beamline">Temperature panels at beamline<a class="headerlink" href="#temperature-panels-at-beamline" title="Permanent link">¶</a></h3>
 <figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/temp_panel.png?raw=true" width="800"></p>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Overview%20Temp.png?raw=true" width="800"></p>
 </figure>
-<p><b><i><u> 300K ---&gt; 280K : temperature range </u></i></b></p>
+<p><b><i><u>  300K --&gt; 15K : Room Temperature to base (change N<sub>2</sub> to He flow)</u></i></b></p>
 <ul>
-<li>Step 1 : Make sure nitrorgen (N2) valve is open and helium (He) valve is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>roomT</code>  (# set temperature to Input 1 : 220K and Input 3: 200K in screen 3)</i></li>
-<li>Step 3 : Make sure in the controller Channel A (Input 1) and Channel C (Input 3) will to reach the temperature <b>107K </b> and <b>196K </b> at screen 1.  It will be significantly lower if you are going from lower to higher temperature. </li>
-<li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
-<li>Step 5 : FOURC &gt; <code>te 300</code>    (# set the sample temperature (Input 2) to 300K - green plot at screen 1)</li>
-<li>Step 6 : Wait until the sample reach the desired temperature before collecting the data</li>
+<li>Step 1 : Go to the <code>Gas Prep</code> User Interface tab</li>
+<li>Step 2 : Look for  <code>Gas Prep Macro</code> User Interface tab</li>
 </ul>
-<p><b><i><u> 200K ---&gt; 270 K : Temperature range </u></i></b></p>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/gras%20prep%20tab.png?raw=true" width="600"></p>
+</figure>
 <ul>
-<li>Step 1 : Make sure nitrorgen (N2) valve is open and helium (He) valve is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepN2_high</code>  (# set temperature to Input 1 : 165K and Input 3: 160K in screen 3)</i></li>
-<li>Step 3 : Make sure in the controller Channel A (Input 1) and Channel C (Input 3) will to reach the temperature <b>120K </b> and <b>160K </b>. The final temperature might be lower if you are going from lower to higher temperature</li>
-<li>Step 4: <i> FOURC &gt; <code>flow_set 6</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
-<li>Step 5 : FOURC &gt; <code>te 200</code>     (# set the sample temperature (Input 2) to 200K- green plot at screen 1)</li>
-<li>Step 6 : Wait until the sample reach the desired temperature before collecting the data</li>
+<li>Step 3-a : Run <code>prepswitch</code></li>
 </ul>
-<p><b><i><u> 160K ---&gt; 200K : Temperature range </u></i></b></p>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Prepswitch.png?raw=true" width="800"></p>
+</figure>
 <ul>
-<li>Step 1 : Make sure nitrorgen (N2) valve is open and helium (He) valve is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepN2_medium</code>  (# set temperature Input 1: 130K and Input 3: 110K in screen 3)</i></li>
-<li>Step 3 : Make sure in the controller Channel A (Input 1) and Channel C (Input 3) will to reach the temperature <b>101K </b> and <b>110K </b>.</li>
-<li>Step 4: <i> FOURC &gt; <code>flow_set 9</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
-<li>Step 5 : FOURC &gt; <code>te 160</code>     (# set the sample temperature (Input 2) to 160K- green plotat screen 1)</li>
-<li>Step 6 : Wait until the sample reach the desired temperature before collecting the data</li>
+<li>Step 3-b : Change the  <code>flow_set 12</code> </li>
 </ul>
-<p><b><i><u> 130K --&gt; 150K : Temperature range </u></i></b></p>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/flow_set.png?raw=true" width="800"></p>
+</figure>
 <ul>
-<li>Step 1 : Make sure nitrorgen (N2) valve is open and helium (He) valve is closed</li>
-<li>Step 2: <i> FOURC &gt; <code>prepN2_low</code>  (# set temperature Input 1: 87K and Input 3: 85K in screen 3)</i></li>
-<li>Step 3 : Make sure in the controller A (Input A) and C (input C) will to reach the temperature <b>87K </b> and <b>85K </b>.</li>
-<li>Step 4: <i> FOURC &gt; <code>flow_set 12</code> ( # talk to Staff Scientist for the desired flow rate of your experimental setup)</i></li>
-<li>Step 5 : FOURC &gt; <code>te 130</code>    (# set the sample temperature (Input 2) to 130K - green plot at screen 1)</li>
-<li>Step 6 : Wait until the sample reach the desired temperature before collecting the data</li>
+<li>Step 4-a : Looks at the QM2 dashboad and check until the temperature of the channel A and C is stabilize to ~100K and ~96K</li>
 </ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/prepswitch%20dashboard%201.png?raw=true" width="800"></p>
+</figure>
+<ul>
+<li>Step 4-b : <i> In User Interface tab, put <code>target temp (te) 240</code> </i> (# set the sample temperature to 240K)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/set_temp.png?raw=true" width="800"></p>
+</figure>
+<ul>
+<li>Step 5: <i> You need to wait until the temperature of the sample is 240K (Make sure you do not have ice)</i></li>
+<li>Step 6-a : Turn on the Helium (He) valve  and close nitrogen (N2) valve together, as soon as you do that run the next command</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500"></p>
+</figure>
+<ul>
+<li>Step 6-b : Go to the <code>Gas Prep</code> User Interface tab</li>
+<li>Step 6-c : Run <code>runninghelium</code>  (# it will setup the temperature in the Lakeshore controller)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/Run%20runninghelium.png?raw=true" width="500"></p>
+</figure>
+<ul>
+<li>Step 6-d : Change the  <code>flow_set 17</code> </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/flow_set.png?raw=true" width="800"></p>
+</figure>
+<ul>
+<li>Step 6-e: Spin the crystal at the bottom of the User Interface with <code>Start</code> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions)</li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/spin_crystal.png?raw=true" width="800"></p>
+</figure>
+<ul>
+<li>
+<p>Step 8-a : Wait for base temperature (Input A ~9K Input C ~55K) to stabilize </p>
+</li>
+<li>
+<p>Step 9 :  <code>Stop</code> Spin Control</p>
+</li>
+<li>Step 10-a : Put <code>target temp (te) 15</code>  (# set the sample temperature to 15K)</li>
+<li>Step 10-b: Spin the crystal <code>Start</code> until it achieved desired temperature </li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/spin_crystal.png?raw=true" width="800"></p>
+</figure>
+<ul>
+<li>Step 11: <code>Stop</code> Spin Control</li>
+</ul>
+<h3 id="data-collection-in-the-helium-condition">Data Collection in the helium condition<a class="headerlink" href="#data-collection-in-the-helium-condition" title="Permanent link">¶</a></h3>
+<p><b><i><u> Data Collection 15K --&gt; 110K : in the helium condition </u></i></b></p>
+<ul>
+<li>Step 1 : Go to <code>Low Temp Scan</code> tab </li>
+<li>Step 2 : Change <code>Start temp</code>,  <code>End temp</code>, <code>Step size</code>, <code>Spin cycle/step</code> - steps in between temperature</li>
+<li>Step 3 : Click <code>Preview</code></li>
+<li>Step 4 : Click <code>Run Low Temp Scan</code></li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/low_temp_15_110K.png?raw=true" width="800"></p>
+</figure>
+<p><b><i><u> 15K --&gt; 300K : Heating temperature of cryocooler  (change to He to N<sub>2</sub> flow)</u></i></b></p>
+<ul>
+<li>Step 1-a : <i> User Interface 'Gas Prep' tab, <code>Run prepswitch</code> </i> (# it will setup the temperature in the Lakeshore controller channel A = 100K and channel C = 95K)</li>
+<li>Step 1-b : <i> User Interface 'Gas Prep' tab, <code>target temp (te) 240</code> </i> (# set the sample temperature to 240K )</li>
+<li>Step 1-c: <i> User Interface 'Gas Prep' tab, <code>flow_set 13</code> </i> </li>
+<li>Step 2 : <b> Make sure all the temperatures (channel A, B, C) are above 80 K ---&gt;(Input 1 (A) &gt;96 K, Input 2 (sample temperature)&gt;200K and Input 3 (C) 85K in PLD controller) </b></li>
+<li>Step 3 :<b> Send message to SLACK channel once all the channels (A,B.C) are above 80K and before switching it to nitrogen from helium</b></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>N<sub>2</sub> in all conditions should be above 80K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;80K)</p>
+</div>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></p>
+</figure>
+<ul>
+<li>Step 4 : Turn on the N2 valve  and close He valve together</li>
+<li>Step 5-a : User Interface 'Gas Prep' tab, <code>roomT</code>    (# it will setup the temperature setpoints 222K and 220K in the Lakeshore controller Input A and input C and it will to reach the temperature 100K and 146K.)</li>
+<li>Step 5-b: <i> User Interface 'Gas Prep' tab, <code>flow_set 10</code> </i> </li>
+<li>Step 6 : User Interface 'Gas Prep' tab,<code>target temp (te) 300</code>    (# increase temperature to 300K or any other desired temperature)</li>
+</ul>
+<h3 id="data-collection-in-the-helium-condition_1">Data Collection in the helium condition<a class="headerlink" href="#data-collection-in-the-helium-condition_1" title="Permanent link">¶</a></h3>
+<p><b><i><u> Data Collection 120K --&gt; 300K : in the helium condition </u></i></b></p>
+<ul>
+<li>Step 1 : Go to <code>Warmup</code> tab </li>
+<li>Step 2 : Change <code>Start temp</code>,  <code>End temp</code>, <code>Step size</code>, <code>Spin cycle/step</code> - steps in between temperature</li>
+<li>Step 3 : Cick <code>Enable</code></li>
+<li>Step 4 : Click <code>Preview</code></li>
+<li>Step 5 : Click <code>Run Warmup</code></li>
+</ul>
+<figure>
+<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/warmup.png?raw=true" width="800"></p>
+</figure>
 <div class="admonition danger">
 <p class="admonition-title">Nitrogen to helium switch : Please use Helium sensibly!</p>
 </div>
@@ -329,46 +398,6 @@ If the ice did not melt go to <code>te 260</code></li>
 </figure>
 <ul>
 <li>Step 6 : <i> FOURC &gt; <code>te 135</code> </i>   (# increase temperature to 135K or any other desired temperature)</li>
-</ul>
-<p><b><i><u>  300K --&gt; 15K : Room Temperature to base (change N<sub>2</sub> to He flow)</u></i></b></p>
-<ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepswitch</code> </i> (# it will setup the temperature in the Lakeshore controller channel A/Input 1 = 100K and channel C/Input 3 = 95K, A &gt; 90, B &gt;85 are the good number to switch from N2 to helium)</li>
-<li>Step 2 : <i> FOURC &gt; Wait until the temperature of the channel A and C is stabilize to ~96K and ~87K</i></li>
-<li>Step 3 : <i> FOURC &gt; <code>te 240</code> </i> (# set the sample temperature (Input 2) to 240K - green plot at screen 1)</li>
-<li>Step 4 : <i> FOURC &gt; <code>flow_set 10</code> </i></li>
-<li>Step 5: <i> You need to wait until the temperature of the sample is 240K (Make sure you do not have ice)</i></li>
-<li>Step 6 : Turn on the Helium (He) valve  and close nitrogen (N2) valve together, as soon as you do that run the next command</li>
-</ul>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/He%20open%203.png?raw=true" width="500"></p>
-</figure>
-<ul>
-<li>Step 7 : <i> FOURC &gt; <code>runninghelium</code> </i> (# it will setup the temperature in the Lakeshore controller)</li>
-<li>Step 8 : Wait for base temperature (Input A ~5K Input C ~30K) to stabilize (Input A ~5K Input C ~44K)</li>
-<li>Step 8 : <i> FOURC &gt; <code>flow_set 12</code> </i> </li>
-<li>Step 9 : <i> FOURC &gt; <code>te 15</code> </i>   (# make sure your <code>flow_set</code> is correct)</li>
-<li>Step 10: <i> FOURC &gt; <code>spin_xtal_phi</code> </i> (# rotate sample 360--&gt;0 and 0--&gt;360 degree in phi directions)</li>
-<li>Step 11: <i> FOURC &gt; <b>control C </b></i>  ; you can STOP rotation; DONOT run control C twice, the program will crush</li>
-</ul>
-<p><b><i><u> 15K --&gt; 300K : Heating temperature of cryocooler  (change to He to N<sub>2</sub> flow)</u></i></b></p>
-<ul>
-<li>Step 1 : <i> FOURC &gt; <code>prepswitch</code> </i> (# it will setup the temperature in the Lakeshore controller channel A/Input 1 = 100K and channel C/Input 3 = 95K, A &gt; 90, B &gt;85 are the good number to switch from N2 to helium)</li>
-<li>Step 2 : <i> FOURC &gt; <code>te 240</code> </i> (# set the sample temperature (Input 2) to 240K - green plot at screen 1)</li>
-<li>Step 3: <i> FOURC &gt; <code>flow_set 10</code> </i> </li>
-<li>Step 4 : <b> Make sure all the temperatures (channel A, B, C) are above 80 K ---&gt;(Input 1 (A) &gt;96 K, Input 2 (sample temperature)&gt;200K and Input 3 (C) 85K in PLD controller) </b></li>
-<li>Step 5 :<b> Send message to SLACK channel once all the channels (A,B.C) are above 80K and before switching it to nitrogen from helium</b></li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>N<sub>2</sub> in all conditions should be above 80K (N<sub>2</sub> (channel A, B, C) --&gt; all temperature--&gt;80K)</p>
-</div>
-<figure>
-<p><img alt="Image title" src="https://github.com/suchismitasarker/CHESS-ID4B-QM2/blob/main/pictures/N2%20open2.png?raw=true" width="600"></p>
-</figure>
-<ul>
-<li>Step 6 : Turn on the N2 valve  and close He valve together</li>
-<li>Step 7 : <i> FOURC &gt; <code>roomT</code> </i>   (# it will setup the temperature setpoints 222K and 220K in the Lakeshore controller Input A and input C and it will to reach the temperature 107K and 186K.)</li>
-<li>Step 8 : <i> FOURC &gt; <code>te 300</code> </i>   (# increase temperature to 300K or any other desired temperature)</li>
 </ul>
 <p><b><i><u>  300K --&gt; 500K : Performing experiment at high temperature </u></i></b></p>
 <ul>
@@ -502,8 +531,8 @@ If the ice did not melt go to <code>te 260</code></li>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample_alignment_REXS/" class="btn btn-neutral float-left" title="REXS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../temp_UI/" class="btn btn-neutral float-right" title="Temperature UI switch">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../temp/" class="btn btn-neutral float-left" title="Temperature switch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gas_flow/" class="btn btn-neutral float-right" title="Gas flow control">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -531,10 +560,10 @@ If the ice did not melt go to <code>te 260</code></li>
         </span>
     
     
-      <span><a href="../sample_alignment_REXS/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../temp/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../temp_UI/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../gas_flow/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
